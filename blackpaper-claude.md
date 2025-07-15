@@ -1,4 +1,1243 @@
-function generateAuditReport(
+**ERC-3643 Compliance Framework**: The protocol implements comprehensive regulatory compliance through the ERC-3643 standard, enhanced with zero-knowledge proofs for privacy-preserving verification. This enables:
+- Automated KYC/AML/CFT compliance checking
+- Real-time enforcement of investment limits and foreign ownership restrictions
+- Privacy-preserving verification of regulatory requirements
+- Seamless integration with national identity systems like Rwanda's NIDA
+
+**zkTLS Oracle System**: The integration of zero-knowledge Transport Layer Security enables trustless verification of external data sources, providing:
+- Cryptographically verifiable price feeds from traditional exchanges
+- Proof-of-reserves verification for stablecoin backing
+- Tamper-resistant data integration from legacy financial systems
+
+**Cross-Chain Architecture**: The protocol's multi-chain deployment strategy optimizes for different use cases:
+- Ethereum mainnet for maximum liquidity and composability
+- Layer 2 solutions for cost-efficient high-frequency operations
+- Native bridging mechanisms for seamless cross-chain asset movement
+
+**Account Abstraction Integration**: ERC-4337 implementation provides institutional-grade user experience:
+- Multi-signature wallet support for institutional governance
+- Gas abstraction allowing fees to be paid in local currency stablecoins
+- Session keys for automated operations
+- Hardware Security Module integration for maximum security
+
+#### Regulatory Innovation Summary
+
+**Local Currency Integration**: Unlike existing DeFi protocols that operate primarily in USD, Sereel enables local currency stablecoins to participate in sophisticated financial markets, addressing:
+- Currency risk management for local institutions
+- Regulatory requirements for local currency exposure
+- Compliance with capital controls and foreign exchange regulations
+
+**Automated Compliance Monitoring**: The protocol implements real-time compliance monitoring that:
+- Automatically flags suspicious transactions based on AML rules
+- Enforces investment limits and foreign ownership restrictions
+- Generates regulatory reports in required formats
+- Maintains comprehensive audit trails for regulatory review
+
+**Digital Identity Integration**: The Rwanda case study demonstrates how national digital identity systems can be integrated with global blockchain networks while maintaining privacy and security.
+
+### 8.2 Expected Impact on African Capital Markets
+
+The Sereel Protocol's implementation is expected to create transformative effects across African capital markets, addressing structural inefficiencies that have historically limited economic development.
+
+#### Capital Market Efficiency Improvements
+
+**Reduced Settlement Times**: Traditional African exchanges operate with T+3 settlement cycles, creating counterparty risk and reducing capital efficiency. Sereel's blockchain-based settlement reduces this to near-instantaneous finality, improving capital efficiency by over 4,000%.
+
+**Lower Transaction Costs**: The protocol's unified architecture eliminates multiple intermediary fees present in traditional systems:
+- Traditional total costs: 0.24-0.59% per transaction
+- Sereel total costs: 0.05-0.15% per transaction  
+- Cost reduction: 60-80% savings for institutional participants
+
+**Enhanced Liquidity**: The unified liquidity pool mechanism addresses the fundamental challenge of shallow liquidity in African markets. By enabling the same capital to serve multiple functions simultaneously, effective liquidity increases by 2-3x for the same amount of deployed capital.
+
+**Derivatives Market Development**: Most African exchanges lack sophisticated derivatives markets. Sereel enables immediate deployment of options, futures, and other derivatives without requiring traditional clearing infrastructure that costs millions to establish.
+
+#### Institutional Access and Participation
+
+**Pension Fund Optimization**: African pension funds typically achieve 5-8% annual returns due to limited investment options. Sereel's protocol enables these institutions to access 18-35% yields while maintaining regulatory compliance and appropriate risk management.
+
+**Banking Sector Efficiency**: Commercial banks can earn 8-10% yields on reserve deposits that traditionally earn 3-5%, representing a 100% improvement in reserve utilization efficiency.
+
+**Insurance Company Investment**: Insurance companies gain access to higher-yielding investments that match their long-term liability profiles while maintaining liquidity for claims processing.
+
+**Asset Management Growth**: Local asset managers can offer sophisticated investment products previously unavailable in African markets, expanding their addressable market and fee-generating capabilities.
+
+#### Cross-Border Capital Flow Enhancement
+
+**Reduced Friction**: Traditional cross-border investments in African markets face significant friction from:
+- Complex regulatory approval processes
+- Currency conversion costs and risks
+- Settlement delays and counterparty risks
+- Limited investment product availability
+
+Sereel's compliance-first approach enables international investors to participate in African markets while automatically maintaining compliance with local regulations.
+
+**Regional Integration**: The protocol's multi-chain architecture enables better integration between African economies, facilitating:
+- Regional investment flows
+- Currency swap mechanisms
+- Shared liquidity pools
+- Harmonized regulatory compliance
+
+#### Economic Development Implications
+
+**SME Financing**: Improved capital market efficiency enables better financing options for small and medium enterprises, which represent 90% of African businesses but receive limited institutional investment.
+
+**Infrastructure Investment**: Efficient bond markets facilitated by the protocol enable better infrastructure financing, crucial for Africa's development needs.
+
+**Financial Inclusion**: The protocol's compliance framework enables broader participation in capital markets while maintaining appropriate investor protection.
+
+### 8.3 The Path Forward
+
+The Sereel Protocol's development and deployment represent the first phase of a broader transformation in African capital markets. The path forward involves systematic expansion, continuous innovation, and deeper integration with both traditional and digital financial systems.
+
+#### Phase 1: Foundation and Proof of Concept (Months 1-6)
+
+**Rwanda Implementation**: The initial deployment focuses on the Rwanda Stock Exchange integration, serving as a comprehensive proof of concept for the protocol's capabilities. Key milestones include:
+- Tokenization of 5-10 major RSE securities (Bank of Kigali, MTN Rwanda, etc.)
+- Integration with Rwanda's NIDA digital identity system
+- Deployment of initial vault configurations with local RWF stablecoin pairs
+- Achievement of $25M in tokenized assets
+
+**Technical Infrastructure**: Core protocol development includes:
+- Comprehensive security audits by leading blockchain security firms
+- Integration testing with Rwanda's regulatory framework
+- Performance optimization for African internet infrastructure
+- Development of institutional-grade user interfaces
+
+**Regulatory Validation**: Establishment of regulatory precedents through:
+- Close collaboration with Rwanda's Capital Market Authority
+- Development of standardized compliance reporting mechanisms
+- Creation of regulatory sandbox frameworks for other African jurisdictions
+- Documentation of best practices for institutional DeFi adoption
+
+#### Phase 2: Regional Expansion (Months 7-18)
+
+**Multi-Exchange Integration**: Expansion to additional African exchanges:
+- Johannesburg Stock Exchange (South Africa): Africa's largest and most sophisticated market
+- Botswana Stock Exchange: Regional hub for Southern African markets
+- Tanzania Dar es Salaam Stock Exchange: Key East African market
+- Nigerian Exchange Group: Africa's second-largest market by capitalization
+
+**Cross-Border Functionality**: Development of regional financial infrastructure:
+- Inter-exchange liquidity sharing mechanisms
+- Regional payment rails for cross-border transactions
+- Harmonized compliance frameworks across multiple jurisdictions
+- Development of regional stablecoin infrastructure
+
+**Institutional Onboarding**: Systematic onboarding of institutional participants:
+- Major African banks and their treasury operations
+- Regional pension funds and insurance companies
+- International institutional investors seeking African exposure
+- Development finance institutions and impact investors
+
+#### Phase 3: Continental Scale and Global Integration (Months 19-36)
+
+**Comprehensive Coverage**: Expansion to all 23+ African stock exchanges, creating a continent-wide unified capital market infrastructure.
+
+**Global Connectivity**: Integration with international financial markets:
+- Cross-chain bridges to major DeFi protocols
+- Integration with traditional financial market infrastructure
+- Development of Africa-to-global investment products
+- Establishment of continental price discovery mechanisms
+
+**Advanced Features**: Implementation of next-generation capabilities:
+- AI-powered portfolio optimization and risk management
+- Advanced derivatives markets including exotic options and structured products
+- Integration with emerging technologies like restaking and liquid staking
+- Development of Africa-specific financial products
+
+#### Long-Term Vision: Transforming Global Financial Architecture
+
+The Sereel Protocol's ultimate vision extends beyond Africa to demonstrate how blockchain technology can create more efficient, inclusive, and accessible financial systems globally. Key elements of this vision include:
+
+**Developing Market Template**: The African implementation serves as a template for other developing regions, demonstrating how blockchain-based financial infrastructure can enable economic leapfrogging similar to mobile money's impact on payments.
+
+**Institutional DeFi Standard**: Establishment of Sereel as the global standard for institutional participation in decentralized finance, with implementations across multiple continents and regulatory frameworks.
+
+**Global Financial Integration**: Creation of seamless connections between developing and developed market capital markets, enabling efficient capital flows and reducing the cost of capital for emerging economies.
+
+**Technological Innovation**: Continued advancement of blockchain-based financial infrastructure, including:
+- Next-generation consensus mechanisms optimized for financial applications
+- Advanced privacy-preserving technologies for regulatory compliance
+- Integration with central bank digital currencies (CBDCs)
+- Development of quantum-resistant cryptographic systems
+
+#### Success Metrics and Milestones
+
+**Quantitative Targets**:
+- $5-10M ARR by 2027 through 0.5% annual fees on tokenized assets
+- $500M+ in tokenized assets across African exchanges
+- 100+ institutional participants across 20+ African countries
+- 90%+ reduction in settlement times and transaction costs
+
+**Qualitative Impact**:
+- Establishment of regulatory frameworks for institutional DeFi globally
+- Demonstration of blockchain technology's potential for financial inclusion
+- Creation of new investment products and opportunities for African institutions
+- Contribution to Africa's economic development through improved capital market efficiency
+
+**Technological Advancement**:
+- Open-source protocol adoption by other regional financial systems
+- Integration with traditional financial infrastructure globally
+- Development of next-generation compliance and risk management tools
+- Establishment of new standards for cross-border financial transactions
+
+#### Conclusion
+
+The Sereel Protocol represents more than a technological innovation; it embodies a fundamental shift toward more efficient, inclusive, and accessible financial systems. By addressing the specific needs of African capital markets while maintaining global compatibility, the protocol demonstrates how blockchain technology can create meaningful economic impact.
+
+The path forward requires continued collaboration between technologists, regulators, and traditional financial institutions. Success depends on maintaining the delicate balance between innovation and compliance, efficiency and security, local adaptation and global standards.
+
+As Africa's economies continue to grow and integrate with global markets, the Sereel Protocol provides the infrastructure necessary to ensure this growth is sustainable, inclusive, and beneficial for all participants. The vision of efficient, blockchain-based capital markets serving 1.4 billion Africans is not just a technological possibility—it is an economic imperative for the continent's continued development.
+
+Through systematic implementation, continuous innovation, and unwavering commitment to regulatory compliance, the Sereel Protocol will establish the foundation for Africa's financial future while creating a template for similar transformations globally. The revolution in African capital markets is not just beginning—it is inevitable.
+
+## References
+
+Bitcoin: A Peer-to-Peer Electronic Cash System. Satoshi Nakamoto. 2008. https://bitcoin.org/bitcoin.pdf
+
+Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform. Vitalik Buterin. 2014. https://ethereum.org/whitepaper/
+
+Cryptoeconomics: An Introduction. https://policyreview.info/glossary/cryptoeconomics
+
+Zero-Knowledge Proofs for Set Membership: Efficient, Succinct, Modular. Daniel Benarroch, Matteo Campanelli, Dario Fiore, Kobi Gurkan, Dimitris Kolonelos. 2023. https://eprint.iacr.org/2023/964
+
+An approximate introduction to how zk-SNARKs are possible. Vitalik Buterin. 2017. https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6
+
+The Purple Paper: Ethereum 2.0 Networking Specification. Nikolai Fichtner. https://nikolai.fyi/purple/
+
+TradFi Tomorrow: DeFi and the Rise of Extensible Finance. Paradigm Research. 2025. https://www.paradigm.xyz/2025/03/tradfi-tomorrow-defi-and-the-rise-of-extensible-finance
+
+EVM From Scratch: A Developer's Guide to Ethereum Virtual Machine. https://evm-from-scratch.xyz/content/01_intro
+
+Understanding Fees in EIP-1559. Barnabé Monnot. https://barnabe.substack.com/p/understanding-fees-in-eip1559
+
+The Pricing of Options and Corporate Liabilities. Fischer Black, Myron Scholes. 1973. https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf
+
+The Clarity for Payment Stablecoins Act of 2025. S. 394, 119th Congress. https://www.congress.gov/bill/119th-congress/senate-bill/394/text
+
+Draft Law Regulating Virtual Asset Business in Rwanda. Republic of Rwanda. 2025. https://bitcoinke.io/wp-content/uploads/2025/03/Draft-Law-Regulating-Virtual-Asset-Business-in-Rwanda-BitKE.pdf
+
+Stablecoins in Africa Part I: The Rise of Dollar-Denominated Digital Assets. Lava VC. https://writing.lavavc.io/p/stablecoins-in-africa-part-i
+
+Ubuntu Tribe: Tokenized Gold Platform. https://utribe.one/
+
+Some DEX Traders May Be Picking Up Pennies in Front of a Freight Train. Mologoko. LinkedIn. https://www.linkedin.com/pulse/some-dex-traders-may-picking-up-pennies-front-freight-mologoko-vpzme/
+
+zkTLS: Zero-Knowledge Transport Layer Security. David Heath, Vladimir Kolesnikov, Stanislav Peceny. 2024. https://arxiv.org/pdf/2409.17670
+
+EVM Deep Dives: The Path to Shadowy Super Coding. Noxx. https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy
+
+ERC-3643: T-REX - Token for Regulated EXchanges. https://eips.ethereum.org/EIPS/eip-3643
+
+ERC-4337: Account Abstraction Using Alt Mempool. https://eips.ethereum.org/EIPS/eip-4337
+
+Morpho Protocol Documentation. https://docs.morpho.org/
+
+Uniswap V4 Core. https://github.com/Uniswap/v4-core
+
+Aave Protocol Documentation. https://docs.aave.com/
+
+Compound Protocol Documentation. https://docs.compound.finance/
+
+Lido Protocol Documentation. https://docs.lido.fi/
+
+EigenLayer Protocol Documentation. https://docs.eigenlayer.xyz/
+
+Ribbon Finance Documentation. https://docs.ribbon.finance/
+
+Ethena Protocol Documentation. https://docs.ethena.fi/
+
+Rwanda Stock Exchange Market Data. https://www.rse.rw/
+
+Bank of Kigali Annual Report. https://www.bk.rw/
+
+MTN Rwanda Financial Statements. https://www.mtn.rw/
+
+National Bank of Rwanda Publications. https://www.bnr.rw/
+
+Rwanda Development Board Investment Guide. https://rdb.rw/
+
+East African Community Capital Markets Development. https://www.eac.int/
+
+African Securities Exchanges Association. https://www.asea.org/
+
+World Bank: Africa's Infrastructure Development. https://www.worldbank.org/en/region/afr
+
+International Monetary Fund: Sub-Saharan Africa Economic Outlook. https://www.imf.org/
+
+African Development Bank: African Economic Outlook. https://www.afdb.org/
+
+Chainlink Price Feeds Documentation. https://docs.chain.link/
+
+The Graph Protocol Documentation. https://thegraph.com/docs/
+
+OpenZeppelin Security Audits. https://openzeppelin.com/security-audits/
+
+Gnosis Safe Documentation. https://docs.gnosis-safe.io/
+
+Multisig Wallet Best Practices. https://github.com/gnosis/safe-contracts
+
+zkSync Documentation. https://docs.zksync.io/
+
+Starknet Documentation. https://docs.starknet.io/
+
+Polygon Documentation. https://docs.polygon.technology/
+
+Arbitrum Documentation. https://developer.arbitrum.io/
+
+Optimism Documentation. https://docs.optimism.io/
+
+Layer Zero Protocol Documentation. https://layerzero.gitbook.io/
+
+Axelar Network Documentation. https://docs.axelar.dev/
+
+Wormhole Bridge Documentation. https://docs.wormhole.com/
+
+Threshold Network Documentation. https://docs.threshold.network/
+
+Keep Network Documentation. https://docs.keep.network/
+
+NuCypher Documentation. https://docs.nucypher.com/
+
+Aztec Protocol Documentation. https://docs.aztec.network/
+
+Mina Protocol Documentation. https://docs.minaprotocol.com/
+
+Zcash Protocol Documentation. https://z.cash/technology/
+
+Monero Documentation. https://www.getmonero.org/resources/
+
+Tornado Cash Research (Historical). https://tornado.cash/
+
+Financial Action Task Force Guidelines. https://www.fatf-gafi.org/
+
+Basel Committee on Banking Supervision. https://www.bis.org/bcbs/
+
+International Organization of Securities Commissions. https://www.iosco.org/
+
+Financial Stability Board Reports. https://www.fsb.org/
+
+Bank for International Settlements Research. https://www.bis.org/
+
+European Banking Authority Guidelines. https://www.eba.europa.eu/
+
+Securities and Exchange Commission (US) Guidance. https://www.sec.gov/
+
+Commodity Futures Trading Commission (US) Guidance. https://www.cftc.gov/
+
+Financial Conduct Authority (UK) Guidance. https://www.fca.org.uk/
+
+European Securities and Markets Authority. https://www.esma.europa.eu/
+
+Swiss Financial Market Supervisory Authority. https://www.finma.ch/
+
+Monetary Authority of Singapore. https://www.mas.gov.sg/
+
+Japan Financial Services Agency. https://www.fsa.go.jp/en/
+
+Reserve Bank of Australia. https://www.rba.gov.au/
+
+Bank of Canada Research. https://www.bankofcanada.ca/research/
+
+European Central Bank Publications. https://www.ecb.europa.eu/
+
+Federal Reserve Economic Data. https://fred.stlouisfed.org/
+
+International Finance Corporation. https://www.ifc.org/
+
+World Economic Forum Reports. https://www.weforum.org/
+
+McKinsey Global Institute. https://www.mckinsey.com/mgi
+
+Boston Consulting Group Research. https://www.bcg.com/
+
+Deloitte Blockchain Research. https://www2.deloitte.com/blockchain
+
+PwC Blockchain Analysis. https://www.pwc.com/blockchain
+
+KPMG Fintech Reports. https://home.kpmg/fintech
+
+EY Blockchain Research. https://www.ey.com/blockchain
+
+CoinDesk Research. https://www.coindesk.com/research/
+
+Messari Research. https://messari.io/research
+
+Dune Analytics. https://dune.com/
+
+DeFiPulse Analytics. https://defipulse.com/
+
+Token Terminal. https://tokenterminal.com/
+
+CoinGecko Research. https://www.coingecko.com/research
+
+CoinMarketCap Research. https://coinmarketcap.com/research/
+
+Binance Research. https://research.binance.com/
+
+Crypto.com Research. https://crypto.com/research
+
+Huobi Research. https://www.huobi.com/research
+
+OKX Research. https://www.okx.com/research
+
+Bitfinex Research. https://www.bitfinex.com/research
+
+Kraken Intelligence. https://kraken.com/intelligence
+
+Gemini Research. https://www.gemini.com/research    function checkInvestorEligibility(address investor) internal view returns (bool) {
+        // Check if investor is verified through NIDA
+        if (!nidaVerifier.isVerified(investor)) {
+            return false;
+        }
+        
+        // Check if investor is approved by RSE
+        if (!rseApprovedBrokers[investor] && investorClassification[investor] == 0) {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    function checkForeignOwnershipLimits(address investor, uint256 amount) internal view returns (bool) {
+        if (isRwandanResident(investor)) {
+            return true; // No limits for Rwandan residents
+        }
+        
+        uint256 currentForeignOwnership = calculateForeignOwnership();
+        uint256 totalSupply = IERC20(msg.sender).totalSupply();
+        uint256 maxForeignOwnership = totalSupply * MAX_FOREIGN_OWNERSHIP / 10000;
+        
+        return currentForeignOwnership + amount <= maxForeignOwnership;
+    }
+}
+```
+
+#### Market Making for RSE Securities
+
+```solidity
+contract RSEMarketMaker {
+    struct MarketMakingPool {
+        address stockToken;
+        address stablecoin;
+        uint256 stockReserves;
+        uint256 stablecoinReserves;
+        uint256 totalLiquidity;
+        uint256 lpTokenSupply;
+        uint256 tradingFee;
+        bool isActive;
+    }
+    
+    mapping(address => MarketMakingPool) public pools;
+    mapping(address => uint256) public lpTokenBalances;
+    
+    function createMarketMakingPool(
+        address stockToken,
+        uint256 stockAmount,
+        uint256 stablecoinAmount
+    ) external onlyRSE {
+        require(pools[stockToken].stockToken == address(0), "Pool already exists");
+        
+        // Transfer initial liquidity
+        IERC20(stockToken).transferFrom(msg.sender, address(this), stockAmount);
+        IERC20(rwfStablecoin).transferFrom(msg.sender, address(this), stablecoinAmount);
+        
+        // Calculate initial LP tokens
+        uint256 initialLiquidity = sqrt(stockAmount * stablecoinAmount);
+        
+        pools[stockToken] = MarketMakingPool({
+            stockToken: stockToken,
+            stablecoin: address(rwfStablecoin),
+            stockReserves: stockAmount,
+            stablecoinReserves: stablecoinAmount,
+            totalLiquidity: initialLiquidity,
+            lpTokenSupply: initialLiquidity,
+            tradingFee: 30, // 0.3%
+            isActive: true
+        });
+        
+        lpTokenBalances[msg.sender] = initialLiquidity;
+        
+        emit MarketMakingPoolCreated(stockToken, stockAmount, stablecoinAmount);
+    }
+    
+    function swap(
+        address stockToken,
+        uint256 amountIn,
+        uint256 minAmountOut,
+        bool stockToStablecoin
+    ) external returns (uint256 amountOut) {
+        MarketMakingPool storage pool = pools[stockToken];
+        require(pool.isActive, "Pool not active");
+        
+        // Calculate output amount using constant product formula
+        if (stockToStablecoin) {
+            amountOut = getAmountOut(amountIn, pool.stockReserves, pool.stablecoinReserves, pool.tradingFee);
+            require(amountOut >= minAmountOut, "Insufficient output amount");
+            
+            // Execute swap
+            IERC20(stockToken).transferFrom(msg.sender, address(this), amountIn);
+            IERC20(pool.stablecoin).transfer(msg.sender, amountOut);
+            
+            // Update reserves
+            pool.stockReserves += amountIn;
+            pool.stablecoinReserves -= amountOut;
+        } else {
+            amountOut = getAmountOut(amountIn, pool.stablecoinReserves, pool.stockReserves, pool.tradingFee);
+            require(amountOut >= minAmountOut, "Insufficient output amount");
+            
+            // Execute swap
+            IERC20(pool.stablecoin).transferFrom(msg.sender, address(this), amountIn);
+            IERC20(stockToken).transfer(msg.sender, amountOut);
+            
+            // Update reserves
+            pool.stablecoinReserves += amountIn;
+            pool.stockReserves -= amountOut;
+        }
+        
+        emit Swap(msg.sender, stockToken, amountIn, amountOut, stockToStablecoin);
+        
+        return amountOut;
+    }
+    
+    function getAmountOut(
+        uint256 amountIn,
+        uint256 reserveIn,
+        uint256 reserveOut,
+        uint256 tradingFee
+    ) internal pure returns (uint256) {
+        require(amountIn > 0, "Invalid input amount");
+        require(reserveIn > 0 && reserveOut > 0, "Invalid reserves");
+        
+        uint256 amountInWithFee = amountIn * (10000 - tradingFee);
+        uint256 numerator = amountInWithFee * reserveOut;
+        uint256 denominator = reserveIn * 10000 + amountInWithFee;
+        
+        return numerator / denominator;
+    }
+}
+```
+
+### 7.2 Commercial Bank Integration Architecture
+
+Commercial banks in Rwanda, such as Bank of Kigali and Equity Bank, can integrate with the Sereel Protocol to earn yield on their RWF reserves while maintaining regulatory compliance and liquidity requirements.
+
+#### Bank Integration Smart Contract
+
+```solidity
+contract CommercialBankIntegration {
+    struct BankAccount {
+        address bankAddress;
+        string bankName;
+        string licenseNumber;
+        uint256 reserveRequirement;
+        uint256 currentReserves;
+        uint256 sereelDeposits;
+        uint256 lastAuditDate;
+        bool isActive;
+    }
+    
+    mapping(address => BankAccount) public registeredBanks;
+    mapping(address => uint256) public bankYieldEarned;
+    
+    address public nationalBankOfRwanda;
+    uint256 public minimumReserveRatio = 500; // 5%
+    
+    function registerBank(
+        address bankAddress,
+        string calldata bankName,
+        string calldata licenseNumber,
+        uint256 reserveRequirement
+    ) external onlyNationalBank {
+        registeredBanks[bankAddress] = BankAccount({
+            bankAddress: bankAddress,
+            bankName: bankName,
+            licenseNumber: licenseNumber,
+            reserveRequirement: reserveRequirement,
+            currentReserves: 0,
+            sereelDeposits: 0,
+            lastAuditDate: block.timestamp,
+            isActive: true
+        });
+        
+        emit BankRegistered(bankAddress, bankName, licenseNumber);
+    }
+    
+    function depositReserves(
+        address vaultAddress,
+        uint256 amount
+    ) external onlyRegisteredBank {
+        BankAccount storage bank = registeredBanks[msg.sender];
+        
+        // Verify bank can make this deposit while maintaining reserves
+        uint256 availableForDeposit = calculateAvailableForDeposit(msg.sender);
+        require(amount <= availableForDeposit, "Insufficient available reserves");
+        
+        // Transfer RWF stablecoin to vault
+        rwfStablecoin.transferFrom(msg.sender, vaultAddress, amount);
+        
+        // Deposit into Sereel vault
+        ISereelVault(vaultAddress).depositStablecoinOnly(amount);
+        
+        // Update bank records
+        bank.sereelDeposits += amount;
+        
+        emit BankDeposit(msg.sender, vaultAddress, amount);
+    }
+    
+    function withdrawReserves(
+        address vaultAddress,
+        uint256 shareAmount
+    ) external onlyRegisteredBank {
+        BankAccount storage bank = registeredBanks[msg.sender];
+        
+        // Calculate withdrawal amount
+        uint256 withdrawalAmount = ISereelVault(vaultAddress).calculateWithdrawal(shareAmount);
+        
+        // Withdraw from vault
+        ISereelVault(vaultAddress).withdraw(shareAmount);
+        
+        // Update bank records
+        bank.sereelDeposits -= withdrawalAmount;
+        
+        emit BankWithdrawal(msg.sender, vaultAddress, withdrawalAmount);
+    }
+    
+    function calculateAvailableForDeposit(address bankAddress) public view returns (uint256) {
+        BankAccount storage bank = registeredBanks[bankAddress];
+        
+        // Calculate required reserves
+        uint256 totalDeposits = getTotalBankDeposits(bankAddress);
+        uint256 requiredReserves = totalDeposits * minimumReserveRatio / 10000;
+        
+        // Available = Current Reserves - Required Reserves
+        if (bank.currentReserves > requiredReserves) {
+            return bank.currentReserves - requiredReserves;
+        }
+        
+        return 0;
+    }
+    
+    function updateBankReserves(
+        address bankAddress,
+        uint256 newReserveAmount
+    ) external onlyNationalBank {
+        registeredBanks[bankAddress].currentReserves = newReserveAmount;
+        registeredBanks[bankAddress].lastAuditDate = block.timestamp;
+        
+        emit BankReservesUpdated(bankAddress, newReserveAmount);
+    }
+}
+```
+
+#### Yield Distribution for Banks
+
+```solidity
+contract BankYieldDistribution {
+    struct YieldPeriod {
+        uint256 startTime;
+        uint256 endTime;
+        uint256 totalYield;
+        mapping(address => uint256) bankShares;
+        mapping(address => bool) claimed;
+    }
+    
+    mapping(uint256 => YieldPeriod) public yieldPeriods;
+    uint256 public currentPeriod;
+    
+    function calculateBankYield(
+        address bankAddress,
+        address vaultAddress
+    ) external view returns (uint256) {
+        uint256 bankShares = ISereelVault(vaultAddress).balanceOf(bankAddress);
+        uint256 totalShares = ISereelVault(vaultAddress).totalSupply();
+        uint256 totalYield = ISereelVault(vaultAddress).calculateTotalYield();
+        
+        if (totalShares == 0) return 0;
+        
+        return totalYield * bankShares / totalShares;
+    }
+    
+    function distributeYield(
+        address[] calldata banks,
+        address vaultAddress
+    ) external onlyYieldDistributor {
+        uint256 totalYield = ISereelVault(vaultAddress).claimYield();
+        
+        YieldPeriod storage period = yieldPeriods[currentPeriod];
+        period.startTime = block.timestamp - 30 days;
+        period.endTime = block.timestamp;
+        period.totalYield = totalYield;
+        
+        for (uint256 i = 0; i < banks.length; i++) {
+            address bank = banks[i];
+            uint256 bankShares = ISereelVault(vaultAddress).balanceOf(bank);
+            uint256 totalShares = ISereelVault(vaultAddress).totalSupply();
+            
+            if (bankShares > 0) {
+                uint256 bankYield = totalYield * bankShares / totalShares;
+                period.bankShares[bank] = bankYield;
+                
+                // Transfer yield to bank
+                rwfStablecoin.transfer(bank, bankYield);
+                
+                emit YieldDistributed(bank, bankYield, currentPeriod);
+            }
+        }
+        
+        currentPeriod++;
+    }
+}
+```
+
+### 7.3 Asset Manager and Pension Fund Technical Integration
+
+Pension funds and asset managers can leverage the Sereel Protocol to create diversified investment portfolios with enhanced yields while maintaining fiduciary responsibilities.
+
+#### Pension Fund Integration
+
+```solidity
+contract PensionFundIntegration {
+    struct PensionFund {
+        address fundAddress;
+        string fundName;
+        uint256 totalAssets;
+        uint256 sereelAllocation;
+        uint256 maxRiskLevel;
+        address[] authorizedManagers;
+        bool isActive;
+    }
+    
+    mapping(address => PensionFund) public pensionFunds;
+    mapping(address => mapping(address => uint256)) public fundVaultPositions;
+    
+    function registerPensionFund(
+        address fundAddress,
+        string calldata fundName,
+        uint256 maxRiskLevel,
+        address[] calldata managers
+    ) external onlyRegulator {
+        pensionFunds[fundAddress] = PensionFund({
+            fundAddress: fundAddress,
+            fundName: fundName,
+            totalAssets: 0,
+            sereelAllocation: 0,
+            maxRiskLevel: maxRiskLevel,
+            authorizedManagers: managers,
+            isActive: true
+        });
+        
+        emit PensionFundRegistered(fundAddress, fundName, maxRiskLevel);
+    }
+    
+    function createCuratedVault(
+        address[] calldata assets,
+        uint256[] calldata allocations,
+        uint256 riskLevel
+    ) external onlyAuthorizedManager returns (address) {
+        require(assets.length == allocations.length, "Mismatched arrays");
+        require(riskLevel <= pensionFunds[msg.sender].maxRiskLevel, "Exceeds risk limit");
+        
+        // Verify total allocation equals 100%
+        uint256 totalAllocation = 0;
+        for (uint256 i = 0; i < allocations.length; i++) {
+            totalAllocation += allocations[i];
+        }
+        require(totalAllocation == 10000, "Invalid allocation");
+        
+        // Deploy curated vault
+        address vaultAddress = vaultFactory.createCuratedVault(
+            assets,
+            allocations,
+            riskLevel
+        );
+        
+        fundVaultPositions[msg.sender][vaultAddress] = 0;
+        
+        emit CuratedVaultCreated(msg.sender, vaultAddress, assets, allocations);
+        
+        return vaultAddress;
+    }
+    
+    function investInVault(
+        address vaultAddress,
+        uint256 amount
+    ) external onlyAuthorizedManager {
+        PensionFund storage fund = pensionFunds[msg.sender];
+        
+        // Check investment limits
+        require(amount <= calculateMaxInvestment(msg.sender), "Exceeds investment limit");
+        
+        // Transfer funds and invest
+        rwfStablecoin.transferFrom(msg.sender, address(this), amount);
+        
+        // Approve vault to spend tokens
+        rwfStablecoin.approve(vaultAddress, amount);
+        
+        // Invest in vault
+        uint256 shares = ISereelVault(vaultAddress).depositStablecoinOnly(amount);
+        
+        // Update fund records
+        fund.sereelAllocation += amount;
+        fundVaultPositions[msg.sender][vaultAddress] += shares;
+        
+        emit PensionFundInvestment(msg.sender, vaultAddress, amount, shares);
+    }
+    
+    function calculateMaxInvestment(address fundAddress) internal view returns (uint256) {
+        PensionFund storage fund = pensionFunds[fundAddress];
+        
+        // Rwanda pension regulations typically allow 15-20% in alternative investments
+        uint256 maxAllocation = fund.totalAssets * 1500 / 10000; // 15%
+        
+        return maxAllocation > fund.sereelAllocation ? maxAllocation - fund.sereelAllocation : 0;
+    }
+}
+```
+
+#### Asset Manager Portfolio Construction
+
+```solidity
+contract AssetManagerPortfolio {
+    struct Portfolio {
+        address manager;
+        string portfolioName;
+        uint256 totalValue;
+        uint256 targetYield;
+        uint256 maxDrawdown;
+        mapping(address => uint256) vaultAllocations;
+        address[] vaults;
+        bool isActive;
+    }
+    
+    mapping(address => Portfolio) public portfolios;
+    mapping(address => uint256) public managerFees;
+    
+    function createPortfolio(
+        string calldata portfolioName,
+        uint256 targetYield,
+        uint256 maxDrawdown
+    ) external returns (address) {
+        address portfolioAddress = address(new PortfolioContract(
+            msg.sender,
+            portfolioName,
+            targetYield,
+            maxDrawdown
+        ));
+        
+        Portfolio storage portfolio = portfolios[portfolioAddress];
+        portfolio.manager = msg.sender;
+        portfolio.portfolioName = portfolioName;
+        portfolio.totalValue = 0;
+        portfolio.targetYield = targetYield;
+        portfolio.maxDrawdown = maxDrawdown;
+        portfolio.isActive = true;
+        
+        emit PortfolioCreated(portfolioAddress, msg.sender, portfolioName);
+        
+        return portfolioAddress;
+    }
+    
+    function optimizePortfolio(
+        address portfolioAddress,
+        address[] calldata vaults,
+        uint256[] calldata allocations
+    ) external onlyManager(portfolioAddress) {
+        Portfolio storage portfolio = portfolios[portfolioAddress];
+        
+        // Clear existing allocations
+        for (uint256 i = 0; i < portfolio.vaults.length; i++) {
+            portfolio.vaultAllocations[portfolio.vaults[i]] = 0;
+        }
+        
+        // Set new allocations
+        portfolio.vaults = vaults;
+        for (uint256 i = 0; i < vaults.length; i++) {
+            portfolio.vaultAllocations[vaults[i]] = allocations[i];
+        }
+        
+        // Rebalance portfolio
+        rebalancePortfolio(portfolioAddress);
+        
+        emit PortfolioOptimized(portfolioAddress, vaults, allocations);
+    }
+    
+    function rebalancePortfolio(address portfolioAddress) internal {
+        Portfolio storage portfolio = portfolios[portfolioAddress];
+        
+        for (uint256 i = 0; i < portfolio.vaults.length; i++) {
+            address vault = portfolio.vaults[i];
+            uint256 targetAllocation = portfolio.vaultAllocations[vault];
+            uint256 currentValue = ISereelVault(vault).balanceOf(portfolioAddress);
+            uint256 targetValue = portfolio.totalValue * targetAllocation / 10000;
+            
+            if (currentValue < targetValue) {
+                // Need to buy more
+                uint256 buyAmount = targetValue - currentValue;
+                ISereelVault(vault).depositStablecoinOnly(buyAmount);
+            } else if (currentValue > targetValue) {
+                // Need to sell some
+                uint256 sellAmount = currentValue - targetValue;
+                ISereelVault(vault).withdraw(sellAmount);
+            }
+        }
+    }
+}
+```
+
+### 7.4 Cross-Border Capital Flow Mechanisms
+
+The Sereel Protocol enables efficient cross-border capital flows between African countries and global markets while maintaining regulatory compliance.
+
+#### Cross-Border Payment Rails
+
+```solidity
+contract CrossBorderPaymentRails {
+    struct CountryConfig {
+        string countryCode;
+        address localStablecoin;
+        address centralBank;
+        uint256 dailyLimit;
+        uint256 transactionLimit;
+        bool isActive;
+    }
+    
+    mapping(string => CountryConfig) public countryConfigs;
+    mapping(bytes32 => bool) public processedTransfers;
+    
+    function setupCountry(
+        string calldata countryCode,
+        address localStablecoin,
+        address centralBank,
+        uint256 dailyLimit,
+        uint256 transactionLimit
+    ) external onlyAdmin {
+        countryConfigs[countryCode] = CountryConfig({
+            countryCode: countryCode,
+            localStablecoin: localStablecoin,
+            centralBank: centralBank,
+            dailyLimit: dailyLimit,
+            transactionLimit: transactionLimit,
+            isActive: true
+        });
+        
+        emit CountryConfigured(countryCode, localStablecoin, centralBank);
+    }
+    
+    function initiateCrossBorderTransfer(
+        string calldata fromCountry,
+        string calldata toCountry,
+        uint256 amount,
+        address recipient
+    ) external returns (bytes32) {
+        require(countryConfigs[fromCountry].isActive, "From country not supported");
+        require(countryConfigs[toCountry].isActive, "To country not supported");
+        require(amount <= countryConfigs[fromCountry].transactionLimit, "Exceeds transaction limit");
+        
+        bytes32 transferId = keccak256(abi.encodePacked(
+            fromCountry,
+            toCountry,
+            amount,
+            recipient,
+            msg.sender,
+            block.timestamp
+        ));
+        
+        require(!processedTransfers[transferId], "Transfer already processed");
+        
+        // Lock source currency
+        address fromStablecoin = countryConfigs[fromCountry].localStablecoin;
+        IERC20(fromStablecoin).transferFrom(msg.sender, address(this), amount);
+        
+        // Calculate exchange rate and fees
+        uint256 exchangeRate = getExchangeRate(fromCountry, toCountry);
+        uint256 fees = calculateFees(amount);
+        uint256 outputAmount = (amount - fees) * exchangeRate / 1e18;
+        
+        // Mint destination currency
+        address toStablecoin = countryConfigs[toCountry].localStablecoin;
+        IMintable(toStablecoin).mint(recipient, outputAmount);
+        
+        processedTransfers[transferId] = true;
+        
+        emit CrossBorderTransferInitiated(
+            transferId,
+            fromCountry,
+            toCountry,
+            amount,
+            outputAmount,
+            recipient
+        );
+        
+        return transferId;
+    }
+    
+    function getExchangeRate(
+        string calldata fromCountry,
+        string calldata toCountry
+    ) internal view returns (uint256) {
+        // In practice, this would query forex oracles
+        // For simplicity, returning 1:1 rate
+        return 1e18;
+    }
+    
+    function calculateFees(uint256 amount) internal pure returns (uint256) {
+        // 0.5% fee
+        return amount * 50 / 10000;
+    }
+}
+```
+
+#### Regional Liquidity Pools
+
+```solidity
+contract RegionalLiquidityPool {
+    struct LiquidityPool {
+        address[] supportedTokens;
+        mapping(address => uint256) reserves;
+        mapping(address => uint256) weights;
+        uint256 totalLiquidity;
+        uint256 swapFee;
+        bool isActive;
+    }
+    
+    mapping(string => LiquidityPool) public regionalPools;
+    mapping(address => mapping(string => uint256)) public lpTokenBalances;
+    
+    function createRegionalPool(
+        string calldata region,
+        address[] calldata tokens,
+        uint256[] calldata weights,
+        uint256 swapFee
+    ) external onlyRegionalBank {
+        require(tokens.length == weights.length, "Mismatched arrays");
+        
+        LiquidityPool storage pool = regionalPools[region];
+        pool.supportedTokens = tokens;
+        pool.swapFee = swapFee;
+        pool.isActive = true;
+        
+        uint256 totalWeight = 0;
+        for (uint256 i = 0; i < tokens.length; i++) {
+            pool.weights[tokens[i]] = weights[i];
+            totalWeight += weights[i];
+        }
+        
+        require(totalWeight == 10000, "Weights must sum to 100%");
+        
+        emit RegionalPoolCreated(region, tokens, weights, swapFee);
+    }
+    
+    function addLiquidity(
+        string calldata region,
+        address[] calldata tokens,
+        uint256[] calldata amounts
+    ) external returns (uint256 lpTokens) {
+        LiquidityPool storage pool = regionalPools[region];
+        require(pool.isActive, "Pool not active");
+        require(tokens.length == amounts.length, "Mismatched arrays");
+        
+        // Calculate LP tokens to mint
+        if (pool.totalLiquidity == 0) {
+            // Initial liquidity
+            lpTokens = sqrt(amounts[0] * amounts[1]);
+        } else {
+            // Proportional liquidity
+            uint256 ratio = amounts[0] * 1e18 / pool.reserves[tokens[0]];
+            lpTokens = pool.totalLiquidity * ratio / 1e18;
+        }
+        
+        // Transfer tokens and update reserves
+        for (uint256 i = 0; i < tokens.length; i++) {
+            IERC20(tokens[i]).transferFrom(msg.sender, address(this), amounts[i]);
+            pool.reserves[tokens[i]] += amounts[i];
+        }
+        
+        pool.totalLiquidity += lpTokens;
+        lpTokenBalances[msg.sender][region] += lpTokens;
+        
+        emit LiquidityAdded(region, msg.sender, tokens, amounts, lpTokens);
+        
+        return lpTokens;
+    }
+    
+    function swapInRegionalPool(
+        string calldata region,
+        address tokenIn,
+        address tokenOut,
+        uint256 amountIn,
+        uint256 minAmountOut
+    ) external returns (uint256 amountOut) {
+        LiquidityPool storage pool = regionalPools[region];
+        require(pool.isActive, "Pool not active");
+        
+        // Calculate output using weighted pool math
+        amountOut = calculateWeightedSwap(
+            pool.reserves[tokenIn],
+            pool.reserves[tokenOut],
+            pool.weights[tokenIn],
+            pool.weights[tokenOut],
+            amountIn,
+            pool.swapFee
+        );
+        
+        require(amountOut >= minAmountOut, "Insufficient output");
+        
+        // Execute swap
+        IERC20(tokenIn).transferFrom(msg.sender, address(this), amountIn);
+        IERC20(tokenOut).transfer(msg.sender, amountOut);
+        
+        // Update reserves
+        pool.reserves[tokenIn] += amountIn;
+        pool.reserves[tokenOut] -= amountOut;
+        
+        emit RegionalSwap(region, msg.sender, tokenIn, tokenOut, amountIn, amountOut);
+        
+        return amountOut;
+    }
+    
+    function calculateWeightedSwap(
+        uint256 reserveIn,
+        uint256 reserveOut,
+        uint256 weightIn,
+        uint256 weightOut,
+        uint256 amountIn,
+        uint256 swapFee
+    ) internal pure returns (uint256) {
+        // Weighted pool formula: y = x * (1 - (1 - dx/x)^(wx/wy))
+        uint256 amountInWithFee = amountIn * (10000 - swapFee) / 10000;
+        uint256 base = (reserveIn * 1e18) / (reserveIn + amountInWithFee);
+        uint256 exponent = weightIn * 1e18 / weightOut;
+        uint256 power = rpow(base, exponent);
+        
+        return reserveOut * (1e18 - power) / 1e18;
+    }
+}
+```
+
+### 7.5 Multi-Chain Deployment Scenarios
+
+The Sereel Protocol's multi-chain architecture enables deployment across various blockchain networks to optimize for different use cases and regulatory requirements.
+
+#### Multi-Chain Deployment Manager
+
+```solidity
+contract MultiChainDeploymentManager {
+    struct ChainConfig {
+        uint256 chainId;
+        string chainName;
+        address vaultFactory;
+        address compliance;
+        address priceOracle;
+        address bridge;
+        bool isActive;
+        uint256 deploymentDate;
+    }
+    
+    mapping(uint256 => ChainConfig) public chainConfigs;
+    mapping(address => mapping(uint256 => address)) public crossChainVaults;
+    
+    function deployToNewChain(
+        uint256 chainId,
+        string calldata chainName,
+        address governance
+    ) external onlyAdmin returns (address[] memory) {
+        require(chainConfigs[chainId].chainId == 0, "Chain already configured");
+        
+        // Deploy core contracts
+        address vaultFactory = deployVaultFactory(governance);
+        address compliance = deployCompliance(governance);
+        address priceOracle = deployPriceOracle(governance);
+        address bridge = deployBridge(governance);
+        
+        chainConfigs[chainId] = ChainConfig({
+            chainId: chainId,
+            chainName: chainName,
+            vaultFactory: vaultFactory,
+            compliance: compliance,
+            priceOracle: priceOracle,
+            bridge: bridge,
+            isActive: true,
+            deploymentDate: block.timestamp
+        });
+        
+        address[] memory deployedContracts = new address[](4);
+        deployedContracts[0] = vaultFactory;
+        deployedContracts[1] = compliance;
+        deployedContracts[2] = priceOracle;
+        deployedContracts[3] = bridge;
+        
+        emit ChainDeployed(chainId, chainName, deployedContracts);
+        
+        return deployedContracts;
+    }
+    
+    function createCrossChainVault(
+        address baseVault,
+        uint256[] calldata targetChains
+    ) external returns (address[] memory) {
+        address[] memory crossChainVaults = new address[](targetChains.length);
+        
+        for (uint256 i = 0; i < targetChains.length; i++) {
+            uint256 chainId = targetChains[i];
+            require(chainConfigs[chainId].isActive, "Chain not active");
+            
+            // Create vault on target chain
+            address targetVault = IVaultFactory(chainConfigs[chainId].vaultFactory).createCrossChainVault(
+                baseVault,
+                block.chainid
+            );
+            
+            crossChainVaults[i] = targetVault;
+            
+            emit CrossChainVaultCreated(baseVault, targetVault, chainId);
+        }
+        
+        return crossChainVaults;
+    }
+    
+    function synchronizeVaultState(
+        address baseVault,
+        uint256 targetChain
+    ) external {
+        require(chainConfigs[targetChain].isActive, "Target chain not active");
+        
+        // Get vault state from base chain
+        VaultState memory state = ISereelVault(baseVault).getVaultState();
+        
+        // Send state update to target chain
+        IBridge(chainConfigs[block.chainid].bridge).sendMessage(
+            targetChain,
+            crossChainVaults[baseVault][targetChain],
+            abi.encodeWithSelector(
+                ISereelVault.updateVaultState.selector,
+                state
+            )
+        );
+        
+        emit VaultStateSynchronized(baseVault, targetChain);
+    }
+}
+```
+
+## 8. Conclusion
+
+### 8.1 Summary of Key Innovations
+
+The Sereel Protocol represents a fundamental advancement in blockchain-based financial infrastructure, specifically designed to address the unique challenges facing institutional participants in emerging markets. Through a combination of technical innovations and regulatory compliance mechanisms, the protocol creates a bridge between traditional African capital markets and the global DeFi ecosystem.
+
+#### Technical Innovation Summary
+
+**Unified Liquidity Pools**: The protocol's most significant innovation is the creation of unified liquidity pools that simultaneously serve multiple financial functions. Through intelligent rehypothecation, a single pool of assets can provide:
+- Automated market making liquidity earning 4-8% APY
+- Collateralized lending capacity generating 6-12% APY  
+- Options market backing yielding 8-15% APY
+- Combined total yields of 18-35% APY
+
+This represents a 2-3x improvement in capital efficiency compared to traditional single-purpose protocols.
+
+**ERC-3643 Compliance Framework**:    function generateAuditReport(
         address user,
         uint256 fromTimestamp,
         uint256 toTimestamp
@@ -630,7 +1869,262 @@ contract SereelLiquidityBridge {
 
 ### 6.5 Security Audits and Best Practices
 
-The Sereel Protocol implements comprehensive         if (sectorInvestment + amount > limits.sectorLimit) {
+The Sereel Protocol implements comprehensive security measures and follows industry best practices to protect user funds and maintain system integrity.
+
+#### Security Framework
+
+```solidity
+contract SereelSecurityManager {
+    enum SecurityLevel {
+        LOW,
+        MEDIUM,
+        HIGH,
+        CRITICAL
+    }
+    
+    struct SecurityEvent {
+        uint256 eventId;
+        SecurityLevel level;
+        address contractAddress;
+        bytes4 functionSelector;
+        string description;
+        uint256 timestamp;
+        bool isResolved;
+    }
+    
+    mapping(uint256 => SecurityEvent) public securityEvents;
+    mapping(address => bool) public pausedContracts;
+    
+    uint256 public eventCount;
+    
+    function reportSecurityEvent(
+        SecurityLevel level,
+        address contractAddress,
+        bytes4 functionSelector,
+        string calldata description
+    ) external onlySecurityOfficer {
+        uint256 eventId = eventCount++;
+        
+        securityEvents[eventId] = SecurityEvent({
+            eventId: eventId,
+            level: level,
+            contractAddress: contractAddress,
+            functionSelector: functionSelector,
+            description: description,
+            timestamp: block.timestamp,
+            isResolved: false
+        });
+        
+        // Automatic response based on severity
+        if (level == SecurityLevel.CRITICAL) {
+            pausedContracts[contractAddress] = true;
+            emit EmergencyPause(contractAddress, eventId);
+        }
+        
+        emit SecurityEventReported(eventId, level, contractAddress, description);
+    }
+    
+    function resolveSecurityEvent(
+        uint256 eventId,
+        bool resumeOperations
+    ) external onlySecurityCouncil {
+        require(!securityEvents[eventId].isResolved, "Event already resolved");
+        
+        securityEvents[eventId].isResolved = true;
+        
+        if (resumeOperations) {
+            pausedContracts[securityEvents[eventId].contractAddress] = false;
+            emit OperationsResumed(securityEvents[eventId].contractAddress, eventId);
+        }
+        
+        emit SecurityEventResolved(eventId, resumeOperations);
+    }
+}
+```
+
+#### Access Control Implementation
+
+```solidity
+contract SereelAccessControl {
+    bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
+    bytes32 public constant OPERATOR_ROLE = keccak256("OPERATOR_ROLE");
+    bytes32 public constant EMERGENCY_ROLE = keccak256("EMERGENCY_ROLE");
+    bytes32 public constant COMPLIANCE_ROLE = keccak256("COMPLIANCE_ROLE");
+    
+    mapping(bytes32 => mapping(address => bool)) public hasRole;
+    mapping(bytes32 => address) public roleAdmin;
+    
+    modifier onlyRole(bytes32 role) {
+        require(hasRole[role][msg.sender], "Access denied");
+        _;
+    }
+    
+    function grantRole(bytes32 role, address account) external {
+        require(hasRole[roleAdmin[role]][msg.sender], "Not role admin");
+        
+        hasRole[role][account] = true;
+        
+        emit RoleGranted(role, account, msg.sender);
+    }
+    
+    function revokeRole(bytes32 role, address account) external {
+        require(hasRole[roleAdmin[role]][msg.sender], "Not role admin");
+        
+        hasRole[role][account] = false;
+        
+        emit RoleRevoked(role, account, msg.sender);
+    }
+    
+    function renounceRole(bytes32 role) external {
+        hasRole[role][msg.sender] = false;
+        
+        emit RoleRenounced(role, msg.sender);
+    }
+}
+```
+
+## 7. Use Cases and Implementation Examples
+
+### 7.1 Rwanda Stock Exchange: Technical Implementation
+
+The Rwanda Stock Exchange (RSE) integration represents the first comprehensive deployment of the Sereel Protocol in a real-world institutional environment. This implementation demonstrates how traditional stock exchanges can leverage blockchain technology to offer sophisticated financial products while maintaining regulatory compliance.
+
+#### Technical Architecture for RSE Integration
+
+```solidity
+contract RSEIntegration {
+    struct ListedCompany {
+        string companyName;
+        string tickerSymbol;
+        address tokenAddress;
+        uint256 marketCap;
+        uint256 sharesOutstanding;
+        bool isActive;
+        uint256 listingDate;
+    }
+    
+    mapping(string => ListedCompany) public listedCompanies;
+    mapping(address => string) public tokenToTicker;
+    string[] public activeTickers;
+    
+    function tokenizeRSEStock(
+        string calldata companyName,
+        string calldata tickerSymbol,
+        uint256 totalShares,
+        address custodian
+    ) external onlyRSE {
+        // Deploy ERC-3643 compliant token
+        address tokenAddress = tokenFactory.deployToken(
+            companyName,
+            tickerSymbol,
+            address(rseCompliance),
+            custodian,
+            totalShares
+        );
+        
+        // Register with RSE
+        listedCompanies[tickerSymbol] = ListedCompany({
+            companyName: companyName,
+            tickerSymbol: tickerSymbol,
+            tokenAddress: tokenAddress,
+            marketCap: 0, // Will be updated based on trading
+            sharesOutstanding: totalShares,
+            isActive: true,
+            listingDate: block.timestamp
+        });
+        
+        tokenToTicker[tokenAddress] = tickerSymbol;
+        activeTickers.push(tickerSymbol);
+        
+        // Create corresponding Sereel vault
+        address vaultAddress = vaultFactory.createVault(
+            tokenAddress,
+            address(rwfStablecoin),
+            [4000, 4000, 2000] // 40% AMM, 40% lending, 20% options
+        );
+        
+        emit RSEStockTokenized(companyName, tickerSymbol, tokenAddress, vaultAddress);
+    }
+    
+    function updateMarketData(
+        string calldata tickerSymbol,
+        uint256 lastPrice,
+        uint256 volume,
+        uint256 marketCap
+    ) external onlyRSE {
+        require(listedCompanies[tickerSymbol].isActive, "Stock not active");
+        
+        listedCompanies[tickerSymbol].marketCap = marketCap;
+        
+        // Update oracle with new price
+        priceOracle.updatePrice(
+            listedCompanies[tickerSymbol].tokenAddress,
+            lastPrice,
+            block.timestamp
+        );
+        
+        emit MarketDataUpdated(tickerSymbol, lastPrice, volume, marketCap);
+    }
+}
+```
+
+#### RSE-Specific Compliance Framework
+
+```solidity
+contract RSECompliance is ERC3643Compliance {
+    // Rwanda-specific investment rules
+    uint256 public constant MAX_FOREIGN_OWNERSHIP = 4900; // 49%
+    uint256 public constant RETAIL_INVESTMENT_LIMIT = 1000000 * 1e18; // 1M RWF
+    uint256 public constant PROFESSIONAL_INVESTMENT_LIMIT = 10000000 * 1e18; // 10M RWF
+    
+    mapping(address => bool) public rseApprovedBrokers;
+    mapping(address => uint256) public investorClassification;
+    
+    function canTransfer(
+        address from,
+        address to,
+        uint256 amount
+    ) external view override returns (bool) {
+        // Basic compliance checks
+        if (!super.canTransfer(from, to, amount)) {
+            return false;
+        }
+        
+        // RSE-specific checks
+        if (!checkTradingHours()) {
+            return false;
+        }
+        
+        if (!checkInvestorEligibility(to)) {
+            return false;
+        }
+        
+        if (!checkForeignOwnershipLimits(to, amount)) {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    function checkTradingHours() internal view returns (bool) {
+        // RSE trading hours: 9:00 AM - 3:00 PM CAT (Monday-Friday)
+        uint256 currentTime = block.timestamp;
+        uint256 dayOfWeek = (currentTime / 86400 + 4) % 7; // 0 = Thursday
+        
+        // Check if it's a weekday (Monday = 1, Friday = 5)
+        if (dayOfWeek == 0 || dayOfWeek == 6) {
+            return false; // Weekend
+        }
+        
+        // Check if it's within trading hours
+        uint256 timeOfDay = currentTime % 86400;
+        uint256 tradingStart = 9 * 3600; // 9:00 AM
+        uint256 tradingEnd = 15 * 3600; // 3:00 PM
+        
+        return timeOfDay >= tradingStart && timeOfDay <= tradingEnd;
+    }
+    
+    function checkInvestorEligibility(address investor) internal view returns (bool) {        if (sectorInvestment + amount > limits.sectorLimit) {
             return false;
         }
         
@@ -1507,7 +3001,11 @@ contract AuditTrailManager {
         address user,
         uint256 fromTimestamp,
         uint256 toTimestamp
-    ) external view returns (# The Sereel Protocol: Institutional Decentralized Finance Infrastructure for Emerging Markets
+    ) external view returns (
+        
+        
+
+# The Sereel Protocol: Institutional Decentralized Finance Infrastructure for Emerging Markets
 
 **Authors:** Lance Davis & Fredrick Waihenya
 
