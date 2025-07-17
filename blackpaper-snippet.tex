@@ -1,8 +1,57 @@
-# The Sereel Protocol: Institutional Decentralized Finance Infrastructure for Emerging Markets
+% !TeX root = blackpaper-snippet.tex
+% !TeX program = xelatex
 
-**Authors:** Lance Davis & Fredrick Waihenya
+% Sets the document class and font size
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
 
-## Abstract
+\usepackage[utf8]{inputenc}    % Input encoding
+\usepackage[T1]{fontenc}       % Font encoding
+\usepackage{fontspec}          % font encoding
+
+% Advanced math typesetting
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{physics}
+
+% Symbols and Text
+\usepackage{bbold}     % bold font
+\usepackage{ulem}      % strikethrough
+\usepackage{listings}  % Source code listing
+\usepackage{import}    % Importing code and other documents
+
+% graphics
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tcolorbox}
+
+% figure
+\usepackage{float}
+% \usepackage{subfigure}
+
+\usepackage{hyperref}  % Hyperlinks in the document
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Blue,
+    filecolor=red,
+    urlcolor=Blue,
+    citecolor=blue,
+    pdftitle={Article},
+    pdfauthor={Author},
+}
+
+\usepackage{xeCJK}             % Chinese, Japanese, and Korean characters
+% \setCJKmainfont{Noto Sans CJK SC}%================================================================================================
+\begin{document}
+
+\section{The Sereel Protocol: Institutional Decentralized Finance Infrastructure for Emerging Markets} % H1 title
+
+\textbf{Authors:} Lance Davis \& Fredrick Waihenya
+
+\subsection{Abstract} % H2 title
 
 Capital Markets around the world have evolved over centuries, from closed overseas expedition fundraising to open floor calls to modern decentralized finance infrastructure. As we know, evolution never ceases. Everything in nature perpetually grows; so do capital markets. We introduce the concept of Institutional Decentralized Finance (InDeFi) and how the Sereel Protocol can be used by institutions across the world to manage local, multi-yield markets.
 
@@ -10,9 +59,9 @@ Traditional capital markets in emerging economies face significant structural li
 
 Our innovation enables a single pool of tokenized assets to deliver 18-35% annual percentage yields compared to traditional returns of 5-8%, while reducing settlement times from T+3 to near-instant and cutting transaction costs by over 90%. This paper presents the technical architecture, risk management frameworks, and regulatory compliance mechanisms that make institutional-grade decentralized finance accessible to emerging market economies.
 
-## 1. Introduction: The African Capital Markets Opportunity
+\subsection{1. Introduction: The African Capital Markets Opportunity} % H2 title
 
-### 1.1 The History of Capital Markets in Africa
+\subsubsection{1.1 The History of Capital Markets in Africa} % H3 title
 
 Capital markets have served as the backbone of economic development since their inception. The earliest forms of capital markets emerged from the need to finance overseas expeditions and trade ventures, where merchants would pool resources to share both risks and rewards of long-distance commerce. These primitive markets operated on trust networks and informal agreements, laying the foundation for modern financial systems.
 
@@ -24,7 +73,7 @@ The post-independence era saw African countries establishing their own stock exc
 
 Unique cases have emerged across the continent, such as the Victoria Falls Stock Exchange, which denominates its securities in US dollars to provide a hedge against local currency volatility. This exchange serves as a bridge between African companies and international investors, highlighting the ongoing challenge of currency risk in African capital markets.
 
-### 1.2 Current Regulatory Environment for Capital Markets in Africa
+\subsubsection{1.2 Current Regulatory Environment for Capital Markets in Africa} % H3 title
 
 The regulatory landscape across African capital markets varies significantly in sophistication and scope. South Africa's JSE operates under one of the most developed regulatory frameworks globally, with the Financial Sector Conduct Authority (FSCA) overseeing market conduct and the Prudential Authority regulating financial institutions. The JSE offers a full range of derivatives products, including equity derivatives, currency derivatives, and commodity derivatives, making it the only African exchange with comprehensive derivatives markets.
 
@@ -38,7 +87,7 @@ East African markets, including Kenya, Tanzania, Uganda, and Rwanda, operate und
 
 Rwanda's Capital Market Authority (CMA) has been particularly progressive, implementing regulations that enable digital innovation while maintaining investor protection. The country's approach to financial technology regulation, including its draft virtual asset business law, positions it as a potential leader in adopting blockchain-based capital market infrastructure.
 
-### 1.3 Cryptocurrency and Real World Assets (RWAs) in Africa: Progress to Date
+\subsubsection{1.3 Cryptocurrency and Real World Assets (RWAs) in Africa: Progress to Date} % H3 title
 
 The African continent has experienced remarkable growth in cryptocurrency adoption, driven primarily by the need for efficient cross-border payments and protection against currency devaluation. Stablecoin usage has spiked dramatically across the continent, with trading volumes increasing by over 1,000% in countries like Nigeria, Kenya, and South Africa between 2020 and 2024.
 
@@ -52,23 +101,23 @@ Ubuntu Tribe has pioneered tokenized gold in Africa, creating digital representa
 
 However, RWA adoption in Africa has faced significant challenges, primarily around regulatory compliance and the lack of appropriate infrastructure. Most existing DeFi protocols operate in US dollar-denominated markets, creating currency risk for African institutions that need to maintain exposure to local currencies for regulatory and operational reasons.
 
-### 1.4 The Mobile Money Revolution: Lessons for Capital Markets
+\subsubsection{1.4 The Mobile Money Revolution: Lessons for Capital Markets} % H3 title
 
 The mobile money revolution, pioneered by Safaricom's M-Pesa in Kenya in 2007, provides crucial lessons for the adoption of blockchain-based capital market infrastructure in Africa. M-Pesa demonstrated that African consumers could leapfrog traditional banking infrastructure when provided with accessible, mobile-first financial services.
 
 The success of M-Pesa and similar services from MTN and other telecommunications companies across Africa highlights several key principles relevant to capital markets development:
 
-**Public-Private Partnership Models**: Mobile money succeeded because it involved partnerships between private companies (telecommunications providers) and government regulators who provided supportive frameworks. This model contrasts with purely private-sector initiatives that often face regulatory resistance.
+\textbf{Public-Private Partnership Models}: Mobile money succeeded because it involved partnerships between private companies (telecommunications providers) and government regulators who provided supportive frameworks. This model contrasts with purely private-sector initiatives that often face regulatory resistance.
 
-**Localized Solutions**: Mobile money services were designed specifically for African markets, with features like agent networks, SMS-based interfaces, and integration with local banking systems. Generic global solutions often failed because they didn't account for local market conditions.
+\textbf{Localized Solutions}: Mobile money services were designed specifically for African markets, with features like agent networks, SMS-based interfaces, and integration with local banking systems. Generic global solutions often failed because they didn't account for local market conditions.
 
-**Infrastructure Leapfrogging**: Africa's mobile money adoption demonstrates the continent's ability to skip intermediate technological stages and adopt more advanced solutions directly. This pattern has been repeated in telecommunications, where many African countries bypassed landline infrastructure in favor of mobile networks.
+\textbf{Infrastructure Leapfrogging}: Africa's mobile money adoption demonstrates the continent's ability to skip intermediate technological stages and adopt more advanced solutions directly. This pattern has been repeated in telecommunications, where many African countries bypassed landline infrastructure in favor of mobile networks.
 
-**Regulatory Innovation**: Countries like Kenya developed new regulatory frameworks specifically for mobile money, rather than trying to force these services into existing banking regulations. This regulatory flexibility enabled innovation while maintaining consumer protection.
+\textbf{Regulatory Innovation}: Countries like Kenya developed new regulatory frameworks specifically for mobile money, rather than trying to force these services into existing banking regulations. This regulatory flexibility enabled innovation while maintaining consumer protection.
 
 The mobile money revolution also revealed the highly localized nature of African financial markets. Success required understanding local languages, cultural practices, regulatory environments, and economic conditions. This localization principle is crucial for capital market infrastructure development.
 
-### 1.5 Why Sereel is Positioned for Africa's Economic Boom
+\subsubsection{1.5 Why Sereel is Positioned for Africa's Economic Boom} % H3 title
 
 Real World Assets (RWAs) in Africa haven't achieved widespread adoption primarily due to compliance challenges and currency risk management. Traditional DeFi protocols operate in USD-denominated markets, creating significant currency exposure for African institutions that must maintain local currency positions for regulatory and operational reasons.
 
@@ -76,110 +125,147 @@ The Sereel Protocol addresses these fundamental challenges by enabling compliant
 
 Sereel mitigates currency risk through several mechanisms:
 
-**Local Currency Integration**: All Sereel vaults operate with local currency stablecoins paired with locally-relevant tokenized assets. This eliminates the currency conversion risk that has hindered African institutional adoption of existing DeFi protocols.
+\textbf{Local Currency Integration}: All Sereel vaults operate with local currency stablecoins paired with locally-relevant tokenized assets. This eliminates the currency conversion risk that has hindered African institutional adoption of existing DeFi protocols.
 
-**Regulatory Compliance**: Our ERC-3643 compliance framework ensures that all tokenized assets meet local regulatory requirements, including KYC/AML verification, transfer restrictions, and investor eligibility criteria.
+\textbf{Regulatory Compliance}: Our ERC-3643 compliance framework ensures that all tokenized assets meet local regulatory requirements, including KYC/AML verification, transfer restrictions, and investor eligibility criteria.
 
-**Institutional Infrastructure**: Rather than forcing African institutions to adapt to existing DeFi user interfaces, Sereel provides institutional-grade multisig wallet solutions and familiar dashboard interfaces that enable participation without requiring blockchain expertise.
+\textbf{Institutional Infrastructure}: Rather than forcing African institutions to adapt to existing DeFi user interfaces, Sereel provides institutional-grade multisig wallet solutions and familiar dashboard interfaces that enable participation without requiring blockchain expertise.
 
-Africa's economic boom is driven by young, tech-savvy populations, growing middle classes, and increasing digital adoption. The continent's GDP is projected to reach $2.6 trillion by 2030, with financial services representing a significant portion of this growth. Sereel's infrastructure positions African institutions to participate in this growth while accessing global liquidity pools and sophisticated financial instruments.
+Africa's economic boom is driven by young, tech-savvy populations, growing middle classes, and increasing digital adoption. The continent's GDP is projected to reach \$2.6 trillion by 2030, with financial services representing a significant portion of this growth. Sereel's infrastructure positions African institutions to participate in this growth while accessing global liquidity pools and sophisticated financial instruments.
 
 Our positioning in Rwanda represents a strategic entry point into the East African market. Rwanda's progressive regulatory environment, stable governance, and commitment to digital innovation make it an ideal testbed for institutional DeFi infrastructure. The country's NIDA digital identity system provides a foundation for compliant, verifiable participation in global financial markets.
 
-## 2. The Evolution of Decentralized Finance (DeFi)
+\subsection{2. The Evolution of Decentralized Finance (DeFi)} % H2 title
 
-### 2.1 Blockchain Technology: A Brief Overview
+\subsubsection{2.1 Blockchain Technology: A Brief Overview} % H3 title
 
 Blockchain technology emerged from the need to solve the double-spending problem in digital currencies without requiring a trusted third party. The fundamental innovation was creating a distributed ledger system where network participants could reach consensus on the state of the system without relying on a central authority.
 
 The Bitcoin whitepaper, published by Satoshi Nakamoto in 2008, introduced the first practical blockchain system. Bitcoin's innovation lay in combining several existing cryptographic techniques: hash functions, digital signatures, and Merkle trees, with a novel consensus mechanism called Proof of Work.
 
-#### Bitcoin's Proof of Work Mechanism
+\subsub{Bitcoin's Proof of Work Mechanism} % H4 title
 
 Bitcoin's blockchain operates on a simple but powerful principle: the longest valid chain represents the true state of the system. Network participants (miners) compete to solve computationally expensive puzzles to add new blocks to the chain. The mathematical foundation relies on the properties of cryptographic hash functions.
 
 A hash function $H$ takes an input of arbitrary length and produces a fixed-length output. For Bitcoin, the SHA-256 hash function is used, which produces a 256-bit (32-byte) output. The key properties of cryptographic hash functions are:
 
-1. **Deterministic**: The same input always produces the same output
-2. **Avalanche Effect**: Small changes in input produce dramatically different outputs
-3. **Pre-image Resistance**: Given a hash output, it's computationally infeasible to find the input
-4. **Collision Resistance**: It's computationally infeasible to find two different inputs that produce the same output
+\begin{enumerate}
+	\item \textbf{Deterministic}: The same input always produces the same output
+	\item \textbf{Avalanche Effect}: Small changes in input produce dramatically different outputs
+	\item \textbf{Pre-image Resistance}: Given a hash output, it's computationally infeasible to find the input
+	\item \textbf{Collision Resistance}: It's computationally infeasible to find two different inputs that produce the same output
 
+\end{enumerate}
 The Proof of Work puzzle requires miners to find a nonce (number used once) such that:
 
-$$H(\text{block header} || \text{nonce}) < \text{target}$$
+
+\begin{equation}
+H(\text{block header} || \text{nonce}) < \text{target}$$
 
 Where the target is adjusted every 2016 blocks to maintain an average block time of 10 minutes. The difficulty adjustment formula is:
 
-$$\text{new target} = \text{old target} \times \frac{\text{actual time for 2016 blocks}}{20160 \text{ minutes}}$$
+$$\text{new target} = \text{old target} \times \frac{\text{actual time for 2016 blocks}}{20160 \text{ minutes}}
+\end{equation}
 
 This creates a system where the computational work required to alter the blockchain grows exponentially with the number of blocks that have been added since the alteration point.
 
-#### The Ethereum Innovation
+\subsub{The Ethereum Innovation} % H4 title
 
 Ethereum, proposed by Vitalik Buterin in 2013, extended blockchain technology beyond simple value transfer to enable programmable smart contracts. While Bitcoin's scripting language was intentionally limited, Ethereum introduced a Turing-complete virtual machine.
 
 The Ethereum Virtual Machine (EVM) operates as a quasi-Turing complete state machine. "Quasi" because execution is bounded by gas limits, preventing infinite loops. The EVM state consists of:
 
-- **Account State**: Each account has a balance, nonce, storage hash, and code hash
-- **Global State**: The collective state of all accounts
-- **Transaction Pool**: Pending transactions waiting for inclusion
+\begin{itemize}
+	\item \textbf{Account State}: Each account has a balance, nonce, storage hash, and code hash
+	\item \textbf{Global State}: The collective state of all accounts
+	\item \textbf{Transaction Pool}: Pending transactions waiting for inclusion
 
+\end{itemize}
 Smart contracts in Ethereum are immutable code stored on the blockchain. When a transaction calls a smart contract, the EVM executes the code and updates the global state accordingly. The gas mechanism ensures that computational resources are fairly allocated and prevents spam attacks.
 
 The EVM uses a stack-based architecture with opcodes for various operations. For example, the simple addition operation:
 
-```
+
+\begin{lstlisting}
 PUSH1 0x03  ; Push 3 onto stack
-PUSH1 0x05  ; Push 5 onto stack  
+PUSH1 0x05  ; Push 5 onto stack
 ADD         ; Pop both values, push sum (8)
-```
+\end{lstlisting}
 
-This compiles to bytecode: `600360050160005260206000f3`
+This compiles to bytecode: \lstinline{600360050160005260206000f3}
 
-### 2.2 General Blockchain Architecture and Consensus Mechanisms
+\subsubsection{2.2 General Blockchain Architecture and Consensus Mechanisms} % H3 title
 
 Modern blockchain systems consist of several layers that work together to maintain consistency and security:
 
-#### Network Layer
+\subsub{Network Layer} % H4 title
 The peer-to-peer network layer handles communication between nodes. Each node maintains connections to multiple peers and propagates transactions and blocks through the network. The gossip protocol ensures that information spreads throughout the network efficiently.
 
-#### Consensus Layer
+\subsub{Consensus Layer} % H4 title
 The consensus layer determines how nodes agree on the state of the blockchain. Different consensus mechanisms offer various trade-offs between security, scalability, and decentralization:
 
-**Proof of Work (PoW)**: Miners compete to solve computationally expensive puzzles. Security depends on the honest majority controlling more than 50% of the computational power. The probability of successfully attacking a blockchain with $n$ confirmations is approximately:
+\textbf{Proof of Work (PoW)}: Miners compete to solve computationally expensive puzzles. Security depends on the honest majority controlling more than 50% of the computational power. The probability of successfully attacking a blockchain with $n$ confirmations is approximately:
 
-$$P(\text{attack success}) = \left(\frac{q}{p}\right)^n$$
+
+\begin{equation}
+P(\text{attack success}) = \left(\frac{q}{p}\right)^n$$
 
 Where $q$ is the attacker's hash rate and $p$ is the honest network's hash rate, assuming $q < p$.
 
 **Proof of Stake (PoS)**: Validators are chosen to create blocks based on their stake in the network. The probability of being selected as a validator is proportional to stake size. Ethereum's implementation uses a modified RANDAO mechanism for validator selection:
 
-$$\text{Validator Selection} = \text{RANDAO} \bmod \text{Active Validator Set Size}$$
+$$\text{Validator Selection} = \text{RANDAO} \bmod \text{Active Validator Set Size}
+\end{equation}
 
-#### Data Layer
+\subsub{Data Layer} % H4 title
 The data layer organizes transactions into blocks and links them cryptographically. Each block contains:
 
-- **Block Header**: Metadata including previous block hash, Merkle root, timestamp, and nonce
-- **Transaction List**: All transactions included in the block
-- **Merkle Tree**: Efficient cryptographic proof structure for transaction inclusion
+\begin{itemize}
+	\item \textbf{Block Header}: Metadata including previous block hash, Merkle root, timestamp, and nonce
+	\item \textbf{Transaction List}: All transactions included in the block
+	\item \textbf{Merkle Tree}: Efficient cryptographic proof structure for transaction inclusion
 
+\end{itemize}
 The Merkle tree allows for efficient verification of transaction inclusion without downloading the entire block. For a tree with $n$ transactions, verification requires only $\log_2(n)$ hashes.
 
-#### Application Layer
+\subsub{Application Layer} % H4 title
 The application layer includes smart contracts and decentralized applications (dApps) that run on the blockchain. This layer interacts with the underlying blockchain through standardized interfaces and protocols.
 
-### 2.3 Ethereum and the Smart Contract Revolution
+\subsubsection{2.3 Ethereum and the Smart Contract Revolution} % H3 title
 
 The Ethereum Virtual Machine represents a paradigm shift from simple transaction processing to programmable money. Understanding its architecture is crucial for comprehending how complex DeFi protocols operate.
 
-#### EVM Architecture Deep Dive
+\subsub{EVM Architecture Deep Dive} % H4 title
 
 The EVM operates as a stack-based virtual machine with several key components:
 
-**Memory**: A linear, byte-addressable memory that can be expanded during execution. Memory costs gas proportional to the square of the size, creating economic incentives for efficient memory usage:
+\textbf{Memory}: A linear, byte-addressable memory that can be expanded during execution. Memory costs gas proportional to the square of the size, creating economic incentives for efficient memory usage:
 
-$$\text{Memory Cost} = \frac{\text{memory size}^2}{512} + 3 \times \text{memory size}$$
+\subsub{Smart Contract Execution Model} % H4 title
+\begin{enumerate}
+	\item \textbf{Gas Metering}: Every operation consumes gas, preventing infinite loops and ensuring fair resource allocation
+	\item \textbf{Deterministic Operations}: All operations produce identical results regardless of execution environment
+	\item \textbf{State Isolation}: Each contract's state is isolated, preventing unauthorized access
+
+\begin{lstlisting}
+solidity
+function transfer(address to, uint256 amount) public returns (bool) {
+require(balances[msg.sender] >= amount, "Insufficient balance");
+balances[msg.sender] -= amount;
+balances[to] += amount;
+emit Transfer(msg.sender, to, amount);
+return true;
+}
+\end{lstlisting}
+	\item Loading the sender's balance from storage
+	\item Checking if the balance is sufficient
+	\item Updating both balances in storage
+	\item Emitting an event
+	\item Returning true
+\subsub{EIP-1559 and Fee Markets} % H4 title
+
+\begin{equation}
+\text{Memory Cost} = \frac{\text{memory size}^2}{512} + 3 \times \text{memory size}$$
 
 **Storage**: Persistent key-value storage associated with each contract account. Storage operations are expensive (20,000 gas for writing, 5,000 gas for reading) to prevent blockchain bloat.
 
@@ -187,80 +273,71 @@ $$\text{Memory Cost} = \frac{\text{memory size}^2}{512} + 3 \times \text{memory 
 
 **Call Data**: Read-only byte-addressable space containing the data sent with a transaction or message call.
 
-#### Smart Contract Execution Model
 
 Smart contracts execute deterministically across all network nodes. The execution model ensures that given identical inputs, all nodes reach the same state. This is achieved through:
 
-1. **Gas Metering**: Every operation consumes gas, preventing infinite loops and ensuring fair resource allocation
-2. **Deterministic Operations**: All operations produce identical results regardless of execution environment
-3. **State Isolation**: Each contract's state is isolated, preventing unauthorized access
 
 Consider a simple ERC-20 token transfer function:
 
-```solidity
-function transfer(address to, uint256 amount) public returns (bool) {
-    require(balances[msg.sender] >= amount, "Insufficient balance");
-    balances[msg.sender] -= amount;
-    balances[to] += amount;
-    emit Transfer(msg.sender, to, amount);
-    return true;
-}
-```
 
 This compiles to bytecode that manipulates the EVM stack and storage. The execution involves:
 
-1. Loading the sender's balance from storage
-2. Checking if the balance is sufficient
-3. Updating both balances in storage
-4. Emitting an event
-5. Returning true
 
 Each step consumes gas, with storage operations being the most expensive component.
 
-#### EIP-1559 and Fee Markets
 
 The Ethereum Improvement Proposal 1559 introduced a more efficient fee market mechanism. Instead of a simple gas price auction, EIP-1559 implements a base fee that adjusts automatically based on network congestion:
 
-$$\text{base fee}_{n+1} = \text{base fee}_n \times \left(1 + \frac{1}{8} \times \frac{\text{gas used} - \text{gas target}}{\text{gas target}}\right)$$
+$$\text{base fee}_{n+1} = \text{base fee}_n \times \left(1 + \frac{1}{8} \times \frac{\text{gas used} - \text{gas target}}{\text{gas target}}\right)
+\end{equation}
 
+\end{enumerate}
 Users pay a base fee (which is burned) plus a priority fee (which goes to miners/validators). This mechanism provides better fee predictability and reduces ETH supply through the burning mechanism.
 
 The total fee for a transaction is:
 
-$$\text{Total Fee} = \text{gas used} \times (\text{base fee} + \text{priority fee})$$
+\subsubsection{2.4 Stablecoins: The Foundation of DeFi} % H3 title
+\subsub{The Stablecoin Taxonomy} % H4 title
 
-### 2.4 Stablecoins: The Foundation of DeFi
+\begin{equation}
+\text{Total Fee} = \text{gas used} \times (\text{base fee} + \text{priority fee})$$
+
 
 Stablecoins represent a crucial innovation that bridges traditional finance with blockchain technology. By providing price-stable digital assets, stablecoins enable sophisticated financial applications while maintaining the programmability of blockchain systems.
 
-#### The Stablecoin Taxonomy
 
 Stablecoins can be categorized based on their collateralization and stability mechanisms:
 
 **Fiat-Collateralized Stablecoins**: Backed by traditional fiat currency reserves. Examples include USDC, USDT, and BUSD. The theoretical exchange rate is:
 
-$$\text{Exchange Rate} = \frac{\text{Fiat Reserves}}{\text{Stablecoin Supply}}$$
+$$\text{Exchange Rate} = \frac{\text{Fiat Reserves}}{\text{Stablecoin Supply}}
+\end{equation}
 
 In practice, these stablecoins maintain their peg through arbitrage mechanisms and regular attestations of reserves.
 
-**Crypto-Collateralized Stablecoins**: Backed by cryptocurrency collateral, typically over-collateralized to account for volatility. DAI is the primary example, where users lock ETH and other cryptocurrencies to mint DAI. The collateralization ratio is:
+\textbf{Crypto-Collateralized Stablecoins}: Backed by cryptocurrency collateral, typically over-collateralized to account for volatility. DAI is the primary example, where users lock ETH and other cryptocurrencies to mint DAI. The collateralization ratio is:
 
-$$\text{Collateralization Ratio} = \frac{\text{Collateral Value}}{\text{Debt Value}}$$
+\subsub{Regulatory Landscape: The STABLE Act} % H4 title
+\begin{enumerate}
+	\item Maintain full reserves in highly liquid assets
+	\item Provide regular attestations of reserves
+	\item Obtain appropriate banking licenses
+	\item Comply with anti-money laundering requirements
+\subsub{Local Currency Stablecoins} % H4 title
+\subsubsection{2.5 DeFi Summer: Uniswap, Aave, Compound, and the Foundation} % H3 title
+\subsub{Automated Market Makers: The Uniswap Innovation} % H4 title
+
+\begin{equation}
+\text{Collateralization Ratio} = \frac{\text{Collateral Value}}{\text{Debt Value}}$$
 
 **Algorithmic Stablecoins**: Maintain their peg through algorithmic mechanisms rather than direct collateralization. These systems typically use supply adjustments and incentive mechanisms to maintain stability.
 
-#### Regulatory Landscape: The STABLE Act
 
 The STABLE Act and other regulatory initiatives in the United States mark a significant shift toward stablecoin regulation. The legislation requires stablecoin issuers to:
 
-1. Maintain full reserves in highly liquid assets
-2. Provide regular attestations of reserves
-3. Obtain appropriate banking licenses
-4. Comply with anti-money laundering requirements
 
 This regulatory clarity has accelerated institutional adoption of stablecoins, with 2025 marking the beginning of their embrace as a core mechanism for USD exports. The total stablecoin market cap has grown from $5 billion in 2020 to over $150 billion in 2024.
 
-#### Local Currency Stablecoins
 
 While USD-denominated stablecoins dominate the market, there's significant opportunity for local currency stablecoins that provide utility within specific economic regions. These stablecoins address several key needs:
 
@@ -272,175 +349,208 @@ While USD-denominated stablecoins dominate the market, there's significant oppor
 
 The mathematical relationship between local currency stablecoins and their underlying assets follows similar principles to USD stablecoins, but with additional considerations for exchange rate volatility and local market dynamics.
 
-### 2.5 DeFi Summer: Uniswap, Aave, Compound, and the Foundation
 
 The summer of 2020 marked a turning point in blockchain technology, with the emergence of sophisticated DeFi protocols that demonstrated the potential for blockchain-based financial systems. This period saw the launch and rapid growth of protocols that would become the foundation of modern DeFi.
 
-#### Automated Market Makers: The Uniswap Innovation
 
 Uniswap introduced the concept of automated market makers (AMMs) to Ethereum, enabling decentralized trading without order books. The core innovation was the constant product formula:
 
-$$x \times y = k$$
+$$x \times y = k
+\end{equation}
 
+\end{enumerate}
 Where $x$ and $y$ represent the reserves of two tokens in a liquidity pool, and $k$ is a constant. This simple formula enables automatic price discovery and ensures liquidity for any token pair.
 
 When a trader wants to exchange $\Delta x$ of token X for token Y, the AMM calculates the output amount:
 
-$$\Delta y = \frac{y \times \Delta x}{x + \Delta x}$$
+
+\begin{equation}
+\Delta y = \frac{y \times \Delta x}{x + \Delta x}$$
 
 The price after the trade becomes:
 
-$$P = \frac{y - \Delta y}{x + \Delta x}$$
+$$P = \frac{y - \Delta y}{x + \Delta x}
+\end{equation}
 
 This mechanism creates slippage that increases with trade size, providing natural price impact that reflects supply and demand dynamics.
 
-**Liquidity Provider Economics**: Liquidity providers deposit equal values of both tokens and receive a share of trading fees. The fee structure in Uniswap v2 is:
+\textbf{Liquidity Provider Economics}: Liquidity providers deposit equal values of both tokens and receive a share of trading fees. The fee structure in Uniswap v2 is:
 
-$$\text{Fee Share} = \frac{\text{LP Tokens Owned}}{\text{Total LP Tokens}} \times \text{Total Fees Collected}$$
+
+\begin{equation}
+\text{Fee Share} = \frac{\text{LP Tokens Owned}}{\text{Total LP Tokens}} \times \text{Total Fees Collected}$$
 
 Liquidity providers face impermanent loss when token prices diverge. The impermanent loss for a 50/50 pool is:
 
-$$\text{Impermanent Loss} = \frac{2\sqrt{r}}{1 + r} - 1$$
+$$\text{Impermanent Loss} = \frac{2\sqrt{r}}{1 + r} - 1
+\end{equation}
 
 Where $r$ is the ratio of the new price to the original price.
 
-#### Lending Protocols: Aave and Compound
+\subsub{Lending Protocols: Aave and Compound} % H4 title
 
 Compound and Aave pioneered overcollateralized lending on Ethereum, enabling users to borrow against their cryptocurrency holdings without selling them.
 
-**Compound's Interest Rate Model**: Compound uses utilization-based interest rates that adjust automatically based on supply and demand:
+\textbf{Compound's Interest Rate Model}: Compound uses utilization-based interest rates that adjust automatically based on supply and demand:
 
-$$\text{Utilization Rate} = \frac{\text{Total Borrows}}{\text{Total Supplies}}$$
+
+\begin{equation}
+\text{Utilization Rate} = \frac{\text{Total Borrows}}{\text{Total Supplies}}$$
 
 The borrowing interest rate follows a kinked model:
 
-$$\text{Borrow Rate} = \begin{cases}
-\text{Base Rate} + \frac{\text{Utilization Rate}}{\text{Optimal Utilization}} \times \text{Slope 1} & \text{if } U \leq U_{\text{optimal}} \\
-\text{Base Rate} + \text{Slope 1} + \frac{U - U_{\text{optimal}}}{1 - U_{\text{optimal}}} \times \text{Slope 2} & \text{if } U > U_{\text{optimal}}
-\end{cases}$$
+$$\text{Borrow Rate} = \begin{case
+\end{equation}
+\text{Base Rate} + \frac{\text{Utilization Rate}}{\text{Optimal Utilization}} \times \text{Slope 1} & \text{if } U \leq U_{\text{optimal}} \\\text{Base Rate} + \text{Slope 1} + \frac{U - U\textit{{\text{optimal}}}{1 - U}{\text{optimal}}} \times \text{Slope 2} & \text{if } U > U_{\text{optimal}}\end{cases}$$
 
-**Aave's Innovations**: Aave introduced several innovations including flash loans, stable rate borrowing, and credit delegation. Flash loans enable borrowing without collateral, provided the loan is repaid within the same transaction:
+\textbf{Aave's Innovations}: Aave introduced several innovations including flash loans, stable rate borrowing, and credit delegation. Flash loans enable borrowing without collateral, provided the loan is repaid within the same transaction:
 
-$$\text{Flash Loan Fee} = \text{Loan Amount} \times 0.0009$$
+
+\begin{equation}
+\text{Flash Loan Fee} = \text{Loan Amount} \times 0.0009$$
 
 **Liquidation Mechanisms**: Both protocols implement liquidation mechanisms to protect lenders when borrowers' collateral falls below required thresholds:
 
-$$\text{Health Factor} = \frac{\text{Collateral Value} \times \text{Liquidation Threshold}}{\text{Debt Value}}$$
+$$\text{Health Factor} = \frac{\text{Collateral Value} \times \text{Liquidation Threshold}}{\text{Debt Value}}
+\end{equation}
 
 When the health factor falls below 1, liquidation becomes possible.
 
-#### The DeFi Infrastructure Stack
+\subsub{The DeFi Infrastructure Stack} % H4 title
 
 DeFi Summer demonstrated how different protocols could compose together to create complex financial systems. The typical DeFi stack includes:
 
-1. **Base Layer**: Ethereum blockchain providing security and settlement
-2. **Token Standards**: ERC-20 for fungible tokens, ERC-721 for NFTs
-3. **DeFi Primitives**: AMMs, lending protocols, derivatives
-4. **Aggregation Layer**: Protocols that combine multiple primitives
-5. **Application Layer**: User interfaces and specialized applications
+\begin{enumerate}
+	\item \textbf{Base Layer}: Ethereum blockchain providing security and settlement
+	\item \textbf{Token Standards}: ERC-20 for fungible tokens, ERC-721 for NFTs
+	\item \textbf{DeFi Primitives}: AMMs, lending protocols, derivatives
+	\item \textbf{Aggregation Layer}: Protocols that combine multiple primitives
+	\item \textbf{Application Layer}: User interfaces and specialized applications
 
+\end{enumerate}
 This composability enabled rapid innovation and the creation of increasingly sophisticated financial products.
 
-### 2.6 DeFi Innovation Boom: Advanced Protocols
+\subsubsection{2.6 DeFi Innovation Boom: Advanced Protocols} % H3 title
 
 The success of early DeFi protocols sparked a wave of innovation that addressed limitations and expanded the scope of blockchain-based finance.
 
-#### Liquid Staking: Lido's Innovation
+\subsub{Liquid Staking: Lido's Innovation} % H4 title
 
 Ethereum's transition to Proof of Stake created an opportunity for liquid staking protocols. Lido allows users to stake ETH while maintaining liquidity through stETH tokens. The staking rewards are distributed proportionally:
 
-$$\text{stETH Balance} = \text{ETH Staked} \times \frac{\text{Total ETH Staked + Rewards}}{\text{Total ETH Staked}}$$
+\subsub{Restaking and EigenLayer} % H4 title
+
+\begin{equation}
+\text{stETH Balance} = \text{ETH Staked} \times \frac{\text{Total ETH Staked + Rewards}}{\text{Total ETH Staked}}$$
 
 This mechanism ensures that stETH appreciates relative to ETH as staking rewards accumulate.
 
-#### Restaking and EigenLayer
 
 EigenLayer introduced the concept of restaking, allowing ETH stakers to use their staked ETH to secure additional protocols. The economic security provided to a restaking protocol is:
 
-$$\text{Economic Security} = \text{Restaked ETH} \times \text{ETH Price} \times \text{Slashing Conditions}$$
+$$\text{Economic Security} = \text{Restaked ETH} \times \text{ETH Price} \times \text{Slashing Conditions}
+\end{equation}
 
 This innovation enables new protocols to bootstrap security without requiring independent validator sets.
 
-#### Advanced Lending: Morpho
+\subsub{Advanced Lending: Morpho} % H4 title
 
 Morpho improved upon existing lending protocols by creating isolated lending markets that reduce risk through market separation. Each Morpho vault operates with specific:
 
-- **Collateral Asset**: Single asset accepted as collateral
-- **Borrowable Asset**: Single asset that can be borrowed
-- **Risk Parameters**: Loan-to-value ratio, liquidation threshold, interest rate curve
+\begin{itemize}
+	\item \textbf{Collateral Asset}: Single asset accepted as collateral
+	\item \textbf{Borrowable Asset}: Single asset that can be borrowed
+	\item \textbf{Risk Parameters}: Loan-to-value ratio, liquidation threshold, interest rate curve
 
+\end{itemize}
 The isolation prevents contagion between different lending markets while maintaining capital efficiency.
 
-#### On-Chain Options: Ribbon Finance and Derivatives
+\subsub{On-Chain Options: Ribbon Finance and Derivatives} % H4 title
 
 Options protocols brought traditional derivatives to DeFi. The Black-Scholes model provides a foundation for options pricing:
 
-$$C = S_0 \Phi(d_1) - Ke^{-rT}\Phi(d_2)$$
+\begin{itemize}
+	\item $C$ = Call option price
+	\item $S_0$ = Current stock price
+	\item $K$ = Strike price
+	\item $r$ = Risk-free interest rate
+	\item $T$ = Time to expiration
+	\item $\Phi$ = Cumulative standard normal distribution
+
+\begin{equation}
+C = S_0 \Phi(d_1) - Ke^{-rT}\Phi(d_2)$$
 
 Where:
-- $C$ = Call option price
-- $S_0$ = Current stock price
-- $K$ = Strike price
-- $r$ = Risk-free interest rate
-- $T$ = Time to expiration
-- $\Phi$ = Cumulative standard normal distribution
 
-$$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}$$
+$$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}
+\end{equation}
 
-$$d_2 = d_1 - \sigma\sqrt{T}$$
+\end{itemize}
+\subsub{Delta-Neutral Stablecoins: Ethena and Resolv} % H4 title
+\begin{enumerate}
+	\item \textbf{Long Position}: Hold ETH as collateral
+	\item \textbf{Short Position}: Short ETH perpetual futures
+	\item \textbf{Funding Rate Collection}: Collect funding rates from the short position
+
+\begin{equation}
+d_2 = d_1 - \sigma\sqrt{T}$$
 
 DeFi options protocols adapt this model for cryptocurrency markets, adjusting for higher volatility and different risk parameters.
 
-#### Delta-Neutral Stablecoins: Ethena and Resolv
 
 Ethena and Resolv introduced yield-generating stablecoins that maintain stability through delta-neutral hedging strategies. The basic mechanism involves:
 
-1. **Long Position**: Hold ETH as collateral
-2. **Short Position**: Short ETH perpetual futures
-3. **Funding Rate Collection**: Collect funding rates from the short position
 
 The net position is delta-neutral:
 
-$$\Delta_{\text{net}} = \Delta_{\text{long}} + \Delta_{\text{short}} = 1 + (-1) = 0$$
+$$\Delta_{\text{net}} = \Delta_{\text{long}} + \Delta_{\text{short}} = 1 + (-1) = 0
+\end{equation}
 
+\end{enumerate}
 This strategy generates yield from funding rates while maintaining price stability.
 
-### 2.7 The Infrastructure Gap: From DeFi to Institutional DeFi (InDeFi)
+\subsubsection{2.7 The Infrastructure Gap: From DeFi to Institutional DeFi (InDeFi)} % H3 title
 
 Despite its innovations, traditional DeFi faces several challenges that limit institutional adoption:
 
-#### Regulatory Compliance Gaps
+\subsub{Regulatory Compliance Gaps} % H4 title
 
 Traditional DeFi protocols operate with minimal compliance frameworks, making them unsuitable for regulated institutions. Key issues include:
 
-- **Lack of KYC/AML**: Most protocols don't verify user identities
-- **Sanctions Compliance**: No mechanisms to prevent sanctioned addresses from participating
-- **Reporting Requirements**: No standardized reporting for regulatory compliance
+\begin{itemize}
+	\item \textbf{Lack of KYC/AML}: Most protocols don't verify user identities
+	\item \textbf{Sanctions Compliance}: No mechanisms to prevent sanctioned addresses from participating
+	\item \textbf{Reporting Requirements}: No standardized reporting for regulatory compliance
 
-#### Operational Challenges
+\end{itemize}
+\subsub{Operational Challenges} % H4 title
 
 DeFi protocols typically require significant blockchain expertise and create operational burdens for traditional institutions:
 
-- **Private Key Management**: Institutions need sophisticated custody solutions
-- **Gas Management**: Unpredictable transaction costs complicate budgeting
-- **Liquidity Fragmentation**: Liquidity spread across multiple protocols reduces efficiency
+\begin{itemize}
+	\item \textbf{Private Key Management}: Institutions need sophisticated custody solutions
+	\item \textbf{Gas Management}: Unpredictable transaction costs complicate budgeting
+	\item \textbf{Liquidity Fragmentation}: Liquidity spread across multiple protocols reduces efficiency
 
-#### Currency Risk
+\end{itemize}
+\subsub{Currency Risk} % H4 title
 
 Most DeFi protocols operate with USD-denominated assets, creating currency risk for institutions that need local currency exposure for regulatory or operational reasons.
 
 Institutional DeFi (InDeFi) addresses these challenges by providing:
 
-1. **Compliance Infrastructure**: Built-in KYC/AML and regulatory reporting
-2. **Institutional UX**: Familiar interfaces and custody solutions
-3. **Local Currency Support**: Native support for local currency stablecoins
-4. **Risk Management**: Sophisticated risk management tools and monitoring
+\begin{enumerate}
+	\item \textbf{Compliance Infrastructure}: Built-in KYC/AML and regulatory reporting
+	\item \textbf{Institutional UX}: Familiar interfaces and custody solutions
+	\item \textbf{Local Currency Support}: Native support for local currency stablecoins
+	\item \textbf{Risk Management}: Sophisticated risk management tools and monitoring
 
+\end{enumerate}
 The Sereel Protocol represents a new generation of InDeFi infrastructure designed specifically for institutional participants in emerging markets.
 
-## 3. Introducing the Sereel Protocol
+\subsection{3. Introducing the Sereel Protocol} % H2 title
 
-### 3.1 The Protocol's Mission and Market Need
+\subsubsection{3.1 The Protocol's Mission and Market Need} % H3 title
 
 The Sereel Protocol's mission is to maximize the efficiency of the global financial system by making decentralized finance accessible to institutions in emerging markets. While DeFi represents a remarkable innovation in financial infrastructure, its current form remains unsuitable for institutional adoption due to regulatory, operational, and currency risk challenges.
 
@@ -450,315 +560,323 @@ Our approach recognizes that for DeFi to achieve its full potential, it must be 
 
 The specific market need we address is the lack of sophisticated financial instruments in emerging market economies. Traditional capital markets in these regions suffer from:
 
-- **Limited Derivatives Markets**: Most African exchanges lack options, futures, and other derivatives
-- **Fragmented Liquidity**: Small market sizes result in poor liquidity and high transaction costs
-- **High Settlement Costs**: Traditional clearing and settlement infrastructure is expensive and slow
-- **Limited Cross-Border Access**: Regulatory barriers prevent efficient cross-border capital flows
+\begin{itemize}
+	\item \textbf{Limited Derivatives Markets}: Most African exchanges lack options, futures, and other derivatives
+	\item \textbf{Fragmented Liquidity}: Small market sizes result in poor liquidity and high transaction costs
+	\item \textbf{High Settlement Costs}: Traditional clearing and settlement infrastructure is expensive and slow
+	\item \textbf{Limited Cross-Border Access}: Regulatory barriers prevent efficient cross-border capital flows
 
+\end{itemize}
 The Sereel Protocol addresses these challenges by creating unified liquidity pools that can simultaneously serve multiple financial functions while maintaining regulatory compliance and local currency exposure.
 
-### 3.2 Core Architecture Overview
+\subsubsection{3.2 Core Architecture Overview} % H3 title
 
 The Sereel Protocol consists of several interconnected smart contracts and modules that work together to provide institutional-grade DeFi infrastructure. The architecture is designed for modularity, upgradeability, and regulatory compliance.
 
-#### Core Smart Contracts
+\subsub{Core Smart Contracts} % H4 title
 
-**SereelVaultFactory.sol** serves as the primary deployment and management contract for the entire protocol. This factory contract enables the creation of new vault instances while maintaining centralized oversight and parameter management.
+\textbf{SereelVaultFactory.sol} serves as the primary deployment and management contract for the entire protocol. This factory contract enables the creation of new vault instances while maintaining centralized oversight and parameter management.
 
 Key functions include:
-- `createVault(address stockToken, address stablecoin, uint256[3] allocations)`: Deploys new vault instances with specified token pairs and allocation parameters
-- `getVaultByToken(address stockToken)`: Retrieves vault addresses for specific tokenized assets
-- `updateVaultParameters(address vault, VaultConfig config)`: Allows authorized entities to modify vault configurations
+\begin{itemize}
+	\item \lstinline{createVault(address stockToken, address stablecoin, uint256[3] allocations)}: Deploys new vault instances with specified token pairs and allocation parameters
+	\item \lstinline{getVaultByToken(address stockToken)}: Retrieves vault addresses for specific tokenized assets
+	\item \lstinline{updateVaultParameters(address vault, VaultConfig config)}: Allows authorized entities to modify vault configurations
 
+\end{itemize}
 The factory pattern ensures consistent deployment parameters and enables protocol-wide upgrades when necessary.
 
-**SereelVault.sol** represents the core vault contract that manages user positions and routes liquidity across different yield-generating modules. Each vault instance manages a specific tokenized asset and stablecoin pair, implementing sophisticated allocation strategies across AMM, lending, and options protocols.
+\textbf{SereelVault.sol} represents the core vault contract that manages user positions and routes liquidity across different yield-generating modules. Each vault instance manages a specific tokenized asset and stablecoin pair, implementing sophisticated allocation strategies across AMM, lending, and options protocols.
 
 The vault contract maintains detailed user position tracking through:
-- `mapping(address => UserPosition) userPositions`: Stores individual user balances and yield accruals
-- `VaultConfig config`: Defines allocation percentages across different yield modules
-- Module addresses for AMM, lending, and options components
+\begin{itemize}
+	\item \lstinline{mapping(address => UserPosition) userPositions}: Stores individual user balances and yield accruals
+	\item \lstinline{VaultConfig config}: Defines allocation percentages across different yield modules
+	\item Module addresses for AMM, lending, and options components
 
+\end{itemize}
 Core user-facing functions include:
-- `deposit(uint256 stockAmount, uint256 stablecoinAmount)`: Accepts balanced deposits of both assets
-- `depositStockOnly(uint256 stockAmount)`: Enables single-asset deposits with automatic rebalancing
-- `withdraw(uint256 shareAmount)`: Proportional withdrawal from all vault positions
-- `calculateUserYield(address user)`: Real-time yield calculation across all modules
+\begin{itemize}
+	\item \lstinline{deposit(uint256 stockAmount, uint256 stablecoinAmount)}: Accepts balanced deposits of both assets
+	\item \lstinline{depositStockOnly(uint256 stockAmount)}: Enables single-asset deposits with automatic rebalancing
+	\item \lstinline{withdraw(uint256 shareAmount)}: Proportional withdrawal from all vault positions
+	\item \lstinline{calculateUserYield(address user)}: Real-time yield calculation across all modules
 
+\end{itemize}
 The vault implements ERC-3643 compliance checks on all deposit and withdrawal operations, ensuring regulatory compliance throughout the user lifecycle.
 
-#### Protocol Module Contracts
+\subsub{Protocol Module Contracts} % H4 title
 
-**SereelAMMModule.sol** implements an automated market maker based on Uniswap V4 architecture with Rwanda-specific enhancements. The module provides liquidity for tokenized stock and stablecoin pairs while generating yield through trading fees.
+\textbf{SereelAMMModule.sol} implements an automated market maker based on Uniswap V4 architecture with Rwanda-specific enhancements. The module provides liquidity for tokenized stock and stablecoin pairs while generating yield through trading fees.
 
 The AMM uses the constant product formula with dynamic fee adjustments:
 
-$$x \times y = k$$
+$x \times y = k$
 
 Where dynamic fees adjust based on Rwanda Stock Exchange trading hours:
 
-$$\text{Fee} = \begin{cases}
-0.30\% & \text{during market hours (9:00-15:00 CAT)} \\
-0.50\% & \text{outside market hours}
-\end{cases}$$
+$\text{Fee} = \begin{cases}0.30\% & \text{during market hours (9:00-15:00 CAT)} \\0.50\% & \text{outside market hours}\end{cases}$
 
 This mechanism accounts for increased volatility and reduced liquidity during off-market hours.
 
-**SereelLendingModule.sol** provides overcollateralized lending using tokenized stocks and AMM LP tokens as collateral. The module supports multiple collateral types with different risk parameters:
+\textbf{SereelLendingModule.sol} provides overcollateralized lending using tokenized stocks and AMM LP tokens as collateral. The module supports multiple collateral types with different risk parameters:
 
-- Tokenized Rwanda stocks: 150-200% collateralization ratio
-- AMM LP tokens: 130-150% collateralization ratio  
-- Cross-vault positions: 100-120% collateralization ratio
+\begin{itemize}
+	\item Tokenized Rwanda stocks: 150-200% collateralization ratio
+	\item AMM LP tokens: 130-150% collateralization ratio
+	\item Cross-vault positions: 100-120% collateralization ratio
 
-Interest rates follow a kinked utilization-based model:
+\end{itemize}
+Interest rates follow a utilization-based model:
 
-$$\text{Interest Rate} = \begin{cases}
-\text{Base Rate} + \frac{\text{Utilization}}{\text{Optimal Utilization}} \times \text{Slope}_1 & \text{if Utilization} \leq \text{Optimal} \\
-\text{Base Rate} + \text{Slope}_1 + \frac{\text{Utilization} - \text{Optimal}}{1 - \text{Optimal}} \times \text{Slope}_2 & \text{if Utilization} > \text{Optimal}
-\end{cases}$$
+$\text{Interest Rate} = \text{Base Rate} + \frac{\text{Utilization Rate}}{\text{Optimal Utilization}} \times \text{Slope}$
 
 With parameters calibrated for Rwanda's economic conditions:
-- Base Rate: 2%
-- Optimal Utilization: 80%
-- Slope₁: 8%
-- Slope₂: 100%
+\begin{itemize}
+	\item Base Rate: 2%
+	\item Optimal Utilization: 80%
+	\item Slope: 15%
 
-**SereelOptionsModule.sol** implements a simplified Black-Scholes options pricing model adapted for Rwanda's equity markets. The module enables both call and put options with collateral sourced from vault allocations and cross-module positions.
+\end{itemize}
+\textbf{SereelOptionsModule.sol} implements a simplified Black-Scholes options pricing model adapted for Rwanda's equity markets. The module enables both call and put options with collateral sourced from vault allocations and cross-module positions.
 
 Option pricing incorporates Rwanda-specific volatility parameters:
 
-**Call Options:**
-$$C = S_0 \Phi(d_1) - Ke^{-rT}\Phi(d_2)$$
+$C = S_0 \Phi(d_1) - Ke^{-rT}\Phi(d_2)$
 
-**Put Options:**
-$$P = Ke^{-rT}\Phi(-d_2) - S_0\Phi(-d_1)$$
+Where volatility $\sigma$ is calibrated using historical data from Rwanda Stock Exchange securities, typically ranging from 15-25% for major stocks like Bank of Kigali and MTN Rwanda.
 
-Where:
-$$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}$$
+\textbf{SereelLiquidityRouter.sol} orchestrates intelligent fund allocation across all modules. The router continuously monitors yield opportunities and automatically rebalances vault positions to maximize returns while maintaining risk parameters.
 
-$$d_2 = d_1 - \sigma\sqrt{T}$$
+The optimization algorithm uses a multi-objective function:
 
-Volatility $\sigma$ is calibrated using historical data from Rwanda Stock Exchange securities, typically ranging from 15-25% for major stocks like Bank of Kigali and MTN Rwanda.
+$\text{Maximize: } \sum_{i=1}^{3} w_i \times \text{Yield}_i - \lambda \times \text{Risk}_i$
 
-**SereelVaultManager.sol** provides governance and allocation controls for asset managers. Each vault can be configured with fixed allocation strategies across the three modules, with asset managers having the flexibility to adjust exposures based on market conditions and risk tolerance.
+Where $w_i$ represents allocation weights for AMM, lending, and options modules, and $\lambda$ is the risk penalty parameter set by vault governance.
 
-The vault manager supports multiple allocation modes:
+\subsub{Compliance and Governance Framework} % H4 title
 
-$\text{Allocation Strategies} = \begin{cases}
-\text{Conservative} & 70\% \text{ Lending, } 25\% \text{ AMM, } 5\% \text{ Options} \\
-\text{Balanced} & 50\% \text{ Lending, } 35\% \text{ AMM, } 15\% \text{ Options} \\
-\text{Aggressive} & 30\% \text{ Lending, } 40\% \text{ AMM, } 30\% \text{ Options} \\
-\text{Custom} & \text{Manager-defined allocations}
-\end{cases}$
-
-Asset managers can adjust these allocations manually based on:
-- Rwanda Stock Exchange market conditions and volatility
-- Regulatory requirements and compliance needs
-- Risk tolerance and investment mandates
-- Liquidity requirements for client redemptions
-
-#### Compliance and Governance Framework
-
-**SereelCompliance.sol** extends the ERC-3643 compliance framework with Rwanda-specific requirements. The contract integrates with Rwanda's National ID (NIDA) system to verify user eligibility and maintain regulatory compliance.
+\textbf{SereelCompliance.sol} extends the ERC-3643 compliance framework with Rwanda-specific requirements. The contract integrates with Rwanda's National ID (NIDA) system to verify user eligibility and maintain regulatory compliance.
 
 Key compliance functions include:
-- `isVerified(address user)`: Checks KYC/AML status and NIDA verification
-- `canTransfer(address from, address to, uint256 amount)`: Validates transfer compliance
-- `setInvestmentLimit(address user, uint256 limit)`: Enforces individual investment caps
-- `setResidencyStatus(address user, bool isRwandaResident)`: Manages residency-based restrictions
+\begin{itemize}
+	\item \lstinline{isVerified(address user)}: Checks KYC/AML status and NIDA verification
+	\item \lstinline{canTransfer(address from, address to, uint256 amount)}: Validates transfer compliance
+	\item \lstinline{setInvestmentLimit(address user, uint256 limit)}: Enforces individual investment caps
+	\item \lstinline{setResidencyStatus(address user, bool isRwandaResident)}: Manages residency-based restrictions
 
+\end{itemize}
 Rwanda-specific compliance rules include:
-- Foreign ownership limits: Maximum 49% foreign ownership in strategic sectors
-- Individual investment caps: 1M RWF default limit for retail investors
-- Residency requirements: Certain securities restricted to Rwanda residents
+\begin{itemize}
+	\item Foreign ownership limits: Maximum 49% foreign ownership in strategic sectors
+	\item Individual investment caps: 1M RWF default limit for retail investors
+	\item Residency requirements: Certain securities restricted to Rwanda residents
 
-**SereelGovernance.sol** implements a multi-signature governance system combining Rwanda Stock Exchange oversight with Sereel protocol governance. This hybrid approach ensures both regulatory compliance and protocol evolution.
+\end{itemize}
+\textbf{SereelGovernance.sol} implements a multi-signature governance system combining Rwanda Stock Exchange oversight with Sereel protocol governance. This hybrid approach ensures both regulatory compliance and protocol evolution.
 
 Governance functions include:
-- `updateProtocolFees(uint256 newFee)`: Adjusts protocol fee structure
-- `pauseProtocol()`: Emergency pause functionality
-- `updateOracleAddress(address newOracle)`: Oracle address management
-- `emergencyWithdraw(address vault)`: Emergency fund recovery
+\begin{itemize}
+	\item \lstinline{updateProtocolFees(uint256 newFee)}: Adjusts protocol fee structure
+	\item \lstinline{pauseProtocol()}: Emergency pause functionality
+	\item \lstinline{updateOracleAddress(address newOracle)}: Oracle address management
+	\item \lstinline{emergencyWithdraw(address vault)}: Emergency fund recovery
 
-### 3.3 All-Encompassing Tokenization Engine
+\end{itemize}
+\subsubsection{3.3 All-Encompassing Tokenization Engine} % H3 title
 
 The Sereel Protocol includes a comprehensive tokenization engine that enables institutions to convert real-world assets into ERC-3643 compliant tokens. This engine serves as the entry point for traditional assets into the DeFi ecosystem.
 
-#### Tokenization Process
+\subsub{Tokenization Process} % H4 title
 
 The tokenization engine follows a standardized workflow:
 
-1. **Asset Verification**: Legal and financial verification of underlying assets
-2. **Compliance Setup**: Configuration of ERC-3643 compliance parameters
-3. **Token Deployment**: Creation of compliant token contracts
-4. **Custody Integration**: Integration with institutional custody solutions
-5. **Vault Deployment**: Automatic creation of corresponding Sereel vaults
+\begin{enumerate}
+	\item \textbf{Asset Verification}: Legal and financial verification of underlying assets
+	\item \textbf{Compliance Setup}: Configuration of ERC-3643 compliance parameters
+	\item \textbf{Token Deployment}: Creation of compliant token contracts
+	\item \textbf{Custody Integration}: Integration with institutional custody solutions
+	\item \textbf{Vault Deployment}: Automatic creation of corresponding Sereel vaults
 
+\end{enumerate}
 The engine supports various asset types commonly found in African markets:
-- **Equity Securities**: Stocks from Rwanda Stock Exchange and other African exchanges
-- **Government Securities**: Treasury bills and bonds
-- **Corporate Bonds**: Private and public corporate debt instruments
-- **Commodities**: Agricultural products and natural resources
-- **Real Estate**: Commercial and residential property tokens
+\begin{itemize}
+	\item \textbf{Equity Securities}: Stocks from Rwanda Stock Exchange and other African exchanges
+	\item \textbf{Government Securities}: Treasury bills and bonds
+	\item \textbf{Corporate Bonds}: Private and public corporate debt instruments
+	\item \textbf{Commodities}: Agricultural products and natural resources
+	\item \textbf{Real Estate}: Commercial and residential property tokens
 
-#### Technical Implementation
+\end{itemize}
+\subsub{Technical Implementation} % H4 title
 
 Each tokenized asset implements the ERC-3643 standard with custom compliance rules:
 
-```solidity
-contract TokenizedAsset is ERC3643 {
-    using SafeMath for uint256;
-    
-    struct AssetDetails {
-        string assetName;
-        string jurisdiction;
-        uint256 totalSupply;
-        address custodian;
-        uint256 mintingCap;
-    }
-    
-    mapping(address => bool) public authorizedMinters;
-    mapping(address => uint256) public investmentLimits;
-    
-    function mint(address to, uint256 amount) 
-        external 
-        onlyAuthorized 
-        compliance(to) 
-    {
-        require(amount.add(totalSupply()) <= mintingCap, "Exceeds minting cap");
-        _mint(to, amount);
-    }
-    
-    function transfer(address to, uint256 amount) 
-        public 
-        override 
-        returns (bool) 
-    {
-        require(compliance.canTransfer(msg.sender, to, amount), "Transfer not compliant");
-        return super.transfer(to, amount);
-    }
-}
-```
 
-#### Institutional Portal Integration
+\begin{lstlisting}
+solidity
+contract TokenizedAsset is ERC3643 {
+using SafeMath for uint256;
+
+struct AssetDetails {
+string assetName;
+string jurisdiction;
+uint256 totalSupply;
+address custodian;
+uint256 mintingCap;
+}
+
+mapping(address => bool) public authorizedMinters;
+mapping(address => uint256) public investmentLimits;
+
+function mint(address to, uint256 amount)
+external
+onlyAuthorized
+compliance(to)
+{
+require(amount.add(totalSupply()) <= mintingCap, "Exceeds minting cap");
+_mint(to, amount);
+}
+
+function transfer(address to, uint256 amount)
+public
+override
+returns (bool)
+{
+require(compliance.canTransfer(msg.sender, to, amount), "Transfer not compliant");
+return super.transfer(to, amount);
+}
+}
+\end{lstlisting}
+
+\subsub{Institutional Portal Integration} % H4 title
 
 The tokenization engine includes a user-friendly portal that abstracts blockchain complexity for institutional users. The portal provides:
 
-**Dashboard Interface**: Familiar institutional-grade interface showing:
-- Asset performance metrics
-- Compliance status
-- Yield generation across modules
-- Risk analytics and alerts
+\textbf{Dashboard Interface}: Familiar institutional-grade interface showing:
+\begin{itemize}
+	\item Asset performance metrics
+	\item Compliance status
+	\item Yield generation across modules
+	\item Risk analytics and alerts
 
-**Automated Compliance**: Built-in compliance checking that:
-- Verifies KYC/AML status automatically
-- Enforces investment limits
-- Maintains regulatory reporting
-- Handles transfer restrictions
+\end{itemize}
+\textbf{Automated Compliance}: Built-in compliance checking that:
+\begin{itemize}
+	\item Verifies KYC/AML status automatically
+	\item Enforces investment limits
+	\item Maintains regulatory reporting
+	\item Handles transfer restrictions
 
-**Custody Integration**: Seamless integration with institutional custody solutions:
-- Multi-signature wallet support
-- Hardware security module (HSM) integration
-- Audit trail maintenance
-- Emergency recovery procedures
+\end{itemize}
+\textbf{Custody Integration}: Seamless integration with institutional custody solutions:
+\begin{itemize}
+	\item Multi-signature wallet support
+	\item Hardware security module (HSM) integration
+	\item Audit trail maintenance
+	\item Emergency recovery procedures
 
-### 3.4 Unified Liquidity Pools: The Innovation Behind Multi-Source Yield
+\end{itemize}
+\subsubsection{3.4 Unified Liquidity Pools: The Innovation Behind Multi-Source Yield} % H3 title
 
 The core innovation of the Sereel Protocol lies in its unified liquidity pools that address the fundamental challenge of limited liquidity in emerging market capital markets. Traditional DeFi protocols operate in isolation, creating fragmented liquidity that reduces capital efficiency.
 
-#### The Liquidity Fragmentation Problem
+\subsub{The Liquidity Fragmentation Problem} % H4 title
 
 Small local markets typically suffer from:
-- **Low Trading Volumes**: Limited daily trading activity reduces AMM efficiency
-- **High Price Impact**: Small trades cause significant price movements
-- **Underutilized Capital**: Assets sitting idle in single-purpose protocols
-- **Limited Yield Opportunities**: Fewer protocols mean fewer yield sources
+\begin{itemize}
+	\item \textbf{Low Trading Volumes}: Limited daily trading activity reduces AMM efficiency
+	\item \textbf{High Price Impact}: Small trades cause significant price movements
+	\item \textbf{Underutilized Capital}: Assets sitting idle in single-purpose protocols
+	\item \textbf{Limited Yield Opportunities}: Fewer protocols mean fewer yield sources
 
-#### Sereel's Unified Approach
+\end{itemize}
+\subsub{Sereel's Unified Approach} % H4 title
 
 The Sereel Protocol addresses these challenges through intelligent rehypothecation, where the same underlying assets serve multiple functions simultaneously:
 
-1. **AMM Liquidity**: Assets provide liquidity for trading pairs
-2. **Lending Collateral**: LP tokens automatically serve as lending collateral
-3. **Options Backing**: Healthy lending positions support options writing
+\begin{enumerate}
+	\item \textbf{AMM Liquidity}: Assets provide liquidity for trading pairs
+	\item \textbf{Lending Collateral}: LP tokens automatically serve as lending collateral
+	\item \textbf{Options Backing}: Healthy lending positions support options writing
 
+\end{enumerate}
 This creates a multiplier effect where $1M in tokenized assets becomes $2-3M in effective liquidity through cross-protocol capital efficiency.
 
-#### Mathematical Framework
+\subsub{Mathematical Framework} % H4 title
 
 The liquidity multiplier effect can be expressed as:
 
 $\text{Effective Liquidity} = \text{Base Assets} \times (1 + \text{Rehypothecation Factor})$
 
 Where the rehypothecation factor depends on:
-- Collateralization ratios across modules
-- Risk parameters and safety margins
-- Market conditions and volatility
+\begin{itemize}
+	\item Collateralization ratios across modules
+	\item Risk parameters and safety margins
+	\item Market conditions and volatility
 
+\end{itemize}
 For a typical Sereel vault with 40% AMM, 40% lending, and 20% options allocation:
 
 $\text{Effective Liquidity} = L_{\text{base}} \times \left(1 + \frac{0.4}{0.75} + \frac{0.4}{1.5}\right) = L_{\text{base}} \times 1.8$
 
 This represents an 80% increase in effective liquidity compared to traditional single-purpose protocols.
 
-#### Risk Management Framework
+\subsub{Risk Management Framework} % H4 title
 
 The unified liquidity approach requires sophisticated risk management to prevent cascade failures:
 
-**Correlation Monitoring**: Continuous monitoring of asset correlations to detect systemic risks:
+\textbf{Correlation Monitoring}: Continuous monitoring of asset correlations to detect systemic risks:
 
 $\rho_{i,j} = \frac{\text{Cov}(R_i, R_j)}{\sigma_i \sigma_j}$
 
 Where $R_i$ and $R_j$ are returns for assets $i$ and $j$.
 
-**Stress Testing**: Regular stress testing using Monte Carlo simulations to assess portfolio resilience under extreme market conditions.
+\textbf{Stress Testing}: Regular stress testing using Monte Carlo simulations to assess portfolio resilience under extreme market conditions.
 
-**Dynamic Rebalancing**: Automatic rebalancing when risk parameters exceed thresholds:
+\textbf{Dynamic Rebalancing}: Automatic rebalancing when risk parameters exceed thresholds:
 
-$\text{Rebalance Trigger} = \begin{cases}
-\text{True} & \text{if } \text{VaR}_{95\%} > \text{Risk Limit} \\
-\text{False} & \text{otherwise}
-\end{cases}$
+$\text{Rebalance Trigger} = \begin{cases}\text{True} & \text{if } \text{VaR}_{95\%} > \text{Risk Limit} \\\text{False} & \text{otherwise}\end{cases}$
 
-### 3.5 Long-term Benefits to the Global Economy
+\subsubsection{3.5 Long-term Benefits to the Global Economy} % H3 title
 
 The Sereel Protocol's institutional DeFi infrastructure creates significant long-term benefits for the global economy by addressing structural inefficiencies in emerging market capital markets.
 
-#### Capital Market Efficiency
+\subsub{Capital Market Efficiency} % H4 title
 
 By providing sophisticated financial instruments to emerging markets, Sereel enables:
 
-**Improved Price Discovery**: More liquid markets lead to better price discovery mechanisms, reducing information asymmetries and improving capital allocation efficiency.
+\textbf{Improved Price Discovery}: More liquid markets lead to better price discovery mechanisms, reducing information asymmetries and improving capital allocation efficiency.
 
-**Reduced Transaction Costs**: Blockchain-based settlement reduces costs by 90%+ compared to traditional clearing and settlement systems.
+\textbf{Reduced Transaction Costs}: Blockchain-based settlement reduces costs by 90%+ compared to traditional clearing and settlement systems.
 
-**Enhanced Risk Management**: Options and derivatives markets enable better risk management for institutional investors, encouraging greater participation in local markets.
+\textbf{Enhanced Risk Management}: Options and derivatives markets enable better risk management for institutional investors, encouraging greater participation in local markets.
 
-#### Financial Inclusion
+\subsub{Financial Inclusion} % H4 title
 
 The protocol's compliance-first approach enables broader financial inclusion:
 
-**Institutional Participation**: Compliant infrastructure allows pension funds, insurance companies, and asset managers to participate in previously inaccessible markets.
+\textbf{Institutional Participation}: Compliant infrastructure allows pension funds, insurance companies, and asset managers to participate in previously inaccessible markets.
 
-**Cross-Border Capital Flows**: Standardized compliance frameworks facilitate cross-border investment while maintaining local regulatory compliance.
+\textbf{Cross-Border Capital Flows}: Standardized compliance frameworks facilitate cross-border investment while maintaining local regulatory compliance.
 
-**Retail Access**: Institutional infrastructure eventually enables retail access to sophisticated financial instruments previously available only to large institutions.
+\textbf{Retail Access}: Institutional infrastructure eventually enables retail access to sophisticated financial instruments previously available only to large institutions.
 
-#### Economic Development
+\subsub{Economic Development} % H4 title
 
 Efficient capital markets are crucial for economic development:
 
-**SME Financing**: Improved capital markets enable better financing options for small and medium enterprises.
+\textbf{SME Financing}: Improved capital markets enable better financing options for small and medium enterprises.
 
-**Infrastructure Investment**: Efficient bond markets facilitate infrastructure investment and development.
+\textbf{Infrastructure Investment}: Efficient bond markets facilitate infrastructure investment and development.
 
-**Economic Integration**: Standardized protocols enable better integration between African economies and global financial systems.
+\textbf{Economic Integration}: Standardized protocols enable better integration between African economies and global financial systems.
 
-### 3.6 Competitive Advantages Over Traditional Capital Markets
+\subsubsection{3.6 Competitive Advantages Over Traditional Capital Markets} % H3 title
 
 The Sereel Protocol offers several fundamental advantages over traditional capital market infrastructure:
 
-#### Settlement Efficiency
+\subsub{Settlement Efficiency} % H4 title
 
 Traditional capital markets require T+3 settlement, creating counterparty risk and tying up capital. Blockchain-based settlement is near-instantaneous:
 
@@ -766,20 +884,22 @@ $\text{Capital Efficiency} = \frac{\text{Trading Volume}}{\text{Settlement Time}
 
 With settlement times reduced from 3 days to minutes, capital efficiency increases by over 4,000%.
 
-#### Cost Structure
+\subsub{Cost Structure} % H4 title
 
 Traditional capital markets involve multiple intermediaries, each adding fees:
-- Exchange fees: 0.1-0.3%
-- Clearing fees: 0.02-0.05%
-- Settlement fees: 0.01-0.02%
-- Custody fees: 0.1-0.2%
-- Regulatory fees: 0.01-0.02%
+\begin{itemize}
+	\item Exchange fees: 0.1-0.3%
+	\item Clearing fees: 0.02-0.05%
+	\item Settlement fees: 0.01-0.02%
+	\item Custody fees: 0.1-0.2%
+	\item Regulatory fees: 0.01-0.02%
 
+\end{itemize}
 Total traditional costs: 0.24-0.59%
 
 Sereel's unified protocol reduces total costs to 0.05-0.15%, representing savings of 60-80%.
 
-#### Liquidity Efficiency
+\subsub{Liquidity Efficiency} % H4 title
 
 Traditional markets segregate liquidity across different instruments and markets. Sereel's unified approach creates significant efficiency gains:
 
@@ -788,7 +908,7 @@ $\text{Liquidity Efficiency} = \frac{\text{Total Available Liquidity}}{\text{Cap
 Through rehypothecation, the same capital serves multiple functions, effectively multiplying available liquidity by 2-3x.
 
 
-#### Conclusion
+\subsub{Conclusion} % H4 title
 
 The Sereel Protocol represents more than a technological innovation; it embodies a fundamental shift toward more efficient, inclusive, and accessible financial systems. By addressing the specific needs of African capital markets while maintaining global compatibility, the protocol demonstrates how blockchain technology can create meaningful economic impact.
 
@@ -798,7 +918,7 @@ As Africa's economies continue to grow and integrate with global markets, the Se
 
 Through systematic implementation, continuous innovation, and unwavering commitment to regulatory compliance, the Sereel Protocol will establish the foundation for Africa's financial future while creating a template for similar transformations globally. The revolution in African capital markets is not just beginning—it is inevitable.
 
-## References
+\subsection{References} % H2 title
 
 Bitcoin: A Peer-to-Peer Electronic Cash System. Satoshi Nakamoto. 2008. https://bitcoin.org/bitcoin.pdf
 
@@ -991,3 +1111,7 @@ OKX Research. https://www.okx.com/research
 Bitfinex Research. https://www.bitfinex.com/research
 
 Kraken Intelligence. https://kraken.com/intelligence
+
+
+%================================================================================================
+\end{document}

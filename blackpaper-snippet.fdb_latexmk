@@ -1,0 +1,27 @@
+# Fdb version 4
+["pdflatex"] 1752768349.55859 "/Library/Ato/Seree/Research/blackpaper/blackpaper-snippet.tex" "blackpaper-snippet.pdf" "blackpaper-snippet" 1752768349.69426 2
+  "/Library/Ato/Seree/Research/blackpaper/blackpaper-snippet.tex" 1752768349.17059 63823 6500ed8ca62bec93161153e68af49317 ""
+  "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
+  "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls" 1748806692 20144 b966087dda3b194755eb460d32e2ef75 ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/fontenc.sty" 1748806692 5275 2f50a1b91fdc3c2c6ff41843a6854061 ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/inputenc.sty" 1738182759 5048 0270515b828149155424600fd2d58ac5 ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size12.clo" 1748806692 8449 8dc66c6c313c8eb2d774af83bca435dd ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/fontspec/fontspec.sty" 1715459803 3755 4872b99d810c024f9c09bb1c62ffee3b ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/keyval.sty" 1748806692 2671 d9941f4bf4750e9b0603c9a2ec54693b ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1751059413 30351 a2b09edc6c93a742566b222c33d0278e ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3kernel/expl3.sty" 1752274963 6558 d2116f86e3b32d1da3df293c2376aa81 ""
+  "/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1724879202 9783 ab4bee47700c04aadedb8da27591b0ab ""
+  "/usr/local/texlive/2025basic/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
+  "/usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1752616742 2936432 d608ee544f4dc1b1b63973f550b64dcb ""
+  "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
+  "blackpaper-snippet.aux" 1752768341.55817 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "blackpaper-snippet.tex" 1752768349.17059 63823 6500ed8ca62bec93161153e68af49317 ""
+  (generated)
+  "blackpaper-snippet.aux"
+  "blackpaper-snippet.log"
+  "blackpaper-snippet.pdf"
+  (rewritten before read)
