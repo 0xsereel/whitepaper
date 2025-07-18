@@ -1,9 +1,17 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{example}{Example}
 
 \title{The Sereel Protocol: Institutional DeFi for Emerging Markets}
-\author{Lance Davis \& Fredrick Waihenya}
+\author{
+Lance Davis\thanks{lance@sereel.com} \\ 
+\textbf{\small Sereel Technologies}
+\and
+Fredrick Waihenya\thanks{bunny@sereel.com} \\
+\textbf{\small Sereel Technologies}
+}
 \date{\today}
 
 \begin{document}
@@ -11,24 +19,58 @@
 \maketitle
 
 \begin{abstract}
-Traditional capital markets in emerging economies face significant limitations: fragmented liquidity, high settlement costs, limited derivatives markets, and barriers to cross-border capital flows. The Sereel Protocol addresses these challenges by creating unified liquidity pools that simultaneously generate yield from automated market making, collateralized lending, and options trading. Through intelligent rehypothecation and ERC-3643 compliance frameworks, institutional participants can access sophisticated financial instruments while maintaining regulatory compliance in local jurisdictions.
+Traditional capital markets in emerging economies face significant limitations: fragmented liquidity, high settlement costs, limited hedging instruments, and barriers to cross-border capital flows. The Sereel Protocol addresses these challenges by creating multi-purpose vaults that simultaneously generate yield from automated market making, collateralized lending, and options trading. Through intelligent rehypothecation and ERC-3643 compliance frameworks, institutional participants can access sophisticated financial instruments while maintaining regulatory compliance in local jurisdictions.
 \end{abstract}
 
 \section{Introduction}
 
-Capital markets have evolved over centuries from primitive merchant funding arrangements to sophisticated electronic trading platforms. The African continent presents unique challenges and opportunities in this evolution, with its diverse regulatory environments and rapidly growing economies.
-
-The Sereel Protocol introduces the concept of Institutional Decentralized Finance (InDeFi), addressing the specific needs of African institutions through:
+Capital markets have evolved over centuries from primitive merchant funding arrangements to sophisticated electronic trading platforms. The African continent presents unique challenges and opportunities in this evolution, with its diverse regulatory environments and rapidly growing economies. \\
+\\The Sereel Protocol introduces Institutional Decentralized Finance (InDeFi), addressing the specific needs of African institutions through:
 
 \begin{itemize}
-  \item Local Currency Integration: All Sereel vaults operate with local currency stablecoins paired with locally-relevant tokenized assets
-  \item Regulatory Compliance: ERC-3643 compliance framework ensures all tokenized assets meet local regulatory requirements
-  \item Unified Liquidity Pools: Assets simultaneously serve multiple functions across automated market making, lending, and options writing
+  \item \textbf{Local Currency Integration:} All Sereel vaults operate with local currency stablecoins paired with locally-relevant tokenized assets
+  \item \textbf{Regulatory Compliance:} ERC-3643 compliance framework ensures all tokenized assets meet local regulatory requirements
+  \item \textbf{Multi-Purpose DeFi Vaults:} Assets simultaneously serve multiple functions across automated market making, lending, and options writing
 \end{itemize}
 
 The mathematical framework for this liquidity multiplication can be expressed as:
 
 $$\text{Effective Liquidity} = \text{Base Assets} \times \left(1 + \frac{\text{AMM Allocation}}{\text{AMM Collateral Ratio}} + \frac{\text{Lending Allocation}}{\text{Lending Collateral Ratio}}\right)$$
+
+\begin{example}
+\textbf{Liquidity Multiplication in Practice:} Consider a \$1M vault deployed in Rwanda with the following parameters:
+
+\begin{itemize}
+  \item Base Assets: \$1,000,000 in tokenized Bank of Kigali (BK) equity
+  \item AMM Allocation: 40\% (\$400,000)
+  \item Lending Allocation: 40\% (\$400,000)
+  \item Options Allocation: 20\% (\$200,000)
+  \item AMM Collateral Ratio: 75\%
+  \item Lending Collateral Ratio: 150\%
+\end{itemize}
+
+Applying our formula:
+$$\text{Effective Liquidity} = \$1M \times \left(1 + \frac{0.4}{0.75} + \frac{0.4}{1.5}\right) = \$1M \times 1.8 = \$1.8M$$
+
+This represents an 80\% increase in effective capital utilization without requiring additional investment.
+\end{example}
+
+\subsection{Market Impact in Emerging Economies}
+\textbf{The implications for capital-constrained markets like Rwanda are profound:}
+
+\begin{enumerate}
+  \item \textbf{Increased Market Depth:} The Rwanda Stock Exchange (RSE) has an average daily trading volume of approximately \$250,000. A single \$1M Sereel vault effectively adds \$1.8M in liquidity, potentially increasing market depth by over 700\%.
+  
+  \item \textbf{Reduced Transaction Costs:} Traditional equity transactions in East African markets incur 2-3\% in fees. Sereel's AMM reduces this to 0.3\%, representing a 90\% cost reduction.
+  
+  \item \textbf{Access to Derivatives:} While options markets are virtually non-existent in most African exchanges, Sereel's integrated options module creates synthetic derivatives exposure for hedging and yield enhancement.
+  
+  \item \textbf{Improved Capital Efficiency:} Traditional financial institutions in emerging markets maintain high capital reserves due to liquidity constraints. Sereel's rehypothecation model allows the same capital to work efficiently across multiple financial functions.
+  
+  \item \textbf{Cross-Border Capital Flows:} With local currency stablecoin integration, Sereel enables efficient cross-border investment while mitigating currency risk, addressing a key barrier to international investment in African markets.
+\end{enumerate}
+
+For institutions like pension funds and asset managers in Rwanda, this transforms a \$1M allocation from a simple investment into a comprehensive market-making, lending, and derivatives operation—capabilities previously available only to the largest global financial institutions.
 
 \section{Protocol Architecture}
 
