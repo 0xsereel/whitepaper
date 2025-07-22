@@ -493,7 +493,6 @@ These risk parameters can be adjusted by vault curators who specialize in these 
 The Sereel Protocol relies on oracles not only to verify asset backing, but also to provide real-time price feeds for the vaults. In the RWA space, this is typically done with an oracle network such as Chainlink or Redstone. However, Sereel uses cutting-edge zero-knowledge Transport Layer Security to provide verifiable data feeds at a fraction of the cost. 
 
 \subsubsection{ZK-TLS for Verifiable Oracle Data}
-
 To provide trustworthy oracle data while minimizing costs, Sereel implements zero-knowledge Transport Layer Security (ZK-TLS) for verifiable data feeds. Xie et al. demonstrate the utility of garbled circuits and zero knowledge proof to verify TLS handshakes for arbitrary internet connections \cite{xie2023zktls}.
 
 This approach offers significant advantages over traditional oracle networks:
@@ -515,7 +514,38 @@ In the Sereel implementation, oracle data for tokenized assets is verified throu
 
 where ZKP represents a zero-knowledge proof that the data was received through a valid TLS connection from the authoritative source at the specified time.
 
-This approach reduces oracle costs by approximately 85\% compared to traditional multi-party oracles while maintaining equivalent security guarantees, a critical factor for emerging market adoption where infrastructure costs are a significant barrier.
+\subsubsection{Alternative Approach: MPC-TLS}
+
+An alternative to ZK-TLS is MPC-TLS (Multi-Party Computation TLS), as proposed by Dagas et al. \cite{dagas2024mpctls}. MPC-TLS offers enhanced security properties through threshold cryptography, allowing multiple parties to jointly establish TLS connections without any single party having access to the private key.
+
+The key differences between MPC-TLS and ZK-TLS are:
+
+\begin{itemize}
+  \item \textbf{Security Model:} MPC-TLS provides stronger threshold security, requiring multiple parties to be compromised rather than a single prover as in ZK-TLS
+  \item \textbf{Computational Overhead:} MPC-TLS incurs significantly higher computational costs due to interactive multi-party protocols
+  \item \textbf{Latency:} MPC-TLS suffers from higher latency due to communication rounds between parties
+  \item \textbf{Deployment Complexity:} MPC-TLS requires coordinated infrastructure across multiple entities
+\end{itemize}
+
+The MPC-TLS approach distributes trust across multiple parties:
+
+\begin{equation}
+\text{MPC Oracle} = \text{Threshold-Sign}_{t,n}(\text{TLS}_{\text{source} \rightarrow \text{collective}}, \text{Data})
+\end{equation}
+
+where a threshold of $t$ out of $n$ parties must cooperate to produce the signature, ensuring no single party can compromise the connection.
+
+Despite MPC-TLS offering theoretically stronger security guarantees, Sereel opted for the ZK-TLS approach after extensive analysis. The decision was based on:
+
+\begin{itemize}
+  \item ZK-TLS being approximately 85\% less computationally expensive
+  \item Lower latency, with response times 3-5x faster than MPC-TLS
+  \item Sufficient security guarantees for the threat model of oracle data feeds in emerging markets
+  \item Significantly lower infrastructure costs, a critical factor for adoption in cost-sensitive regions
+\end{itemize}
+
+This trade-off prioritizes performance and accessibility while maintaining adequate security for oracle operations in emerging market contexts, where computational resources may be constrained and latency is a critical factor for market operations.
+
 
 \subsection{Native Bridging}
 Our stablecoins and ERC3643 tokens are natively bridgeable to multiple chains thanks to VIA Labs' token bridge. Institutions can select a blockchain they want to provide their vault's liquidity on. If an institution wants to work on a chain that we do not support, we have the facilities to add it in reasonable time.
