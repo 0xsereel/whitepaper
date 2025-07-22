@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1752844673.89611 "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" "pyramid.pdf" "pyramid" 1752844674.24033 0
-  "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" 1752844673.3746 18732 6b1402509050ddb15bd13150a5925893 ""
+["pdflatex"] 1753177189.11889 "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" "pyramid.pdf" "pyramid" 1753177189.4615 0
+  "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" 1753177188.58185 26293 7b2086ced7c226f31b5349d15cb1176b ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -49,7 +49,6 @@
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
-  "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb" 1215737283 154599 ded6d7c21788a8930eadc7fef7518942 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1215737283 136101 f533469f523533d38317ab5729d00c8a ""
@@ -90,9 +89,8 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1752758939 5395930 e0cfea5448ed3376b513fd396d6d17db ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1752616742 2936432 d608ee544f4dc1b1b63973f550b64dcb ""
   "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
-  "pyramid.aux" 1752844674.17763 2605 092e453423faba0e300ae803597bfc51 "pdflatex"
-  "pyramid.tex" 1752844673.3746 18732 6b1402509050ddb15bd13150a5925893 ""
-  "trex.jpeg" 1752838807.64413 44082 3ebe8a84c73461a434ff7c352c62d744 ""
+  "pyramid.aux" 1753177189.39912 2954 6f336a68dc7d556bc11ba3d34933f062 "pdflatex"
+  "pyramid.tex" 1753177188.58185 26293 7b2086ced7c226f31b5349d15cb1176b ""
   (generated)
   "pyramid.aux"
   "pyramid.log"

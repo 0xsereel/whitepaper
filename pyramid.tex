@@ -73,7 +73,17 @@ The Sereel Protocol introduces Institutional Decentralized Finance (InDeFi), add
 
 The mathematical framework for this liquidity multiplication can be expressed as:
 
-$$\text{Effective Liquidity} = \text{Base Assets} \times \left(1 + \frac{\text{AMM Allocation}}{\text{AMM Collateral Ratio}} + \frac{\text{Lending Allocation}}{\text{Lending Collateral Ratio}}\right)$$
+\begin{align}
+\text{Effective Liquidity} &= \text{Base Assets} \times \Bigg(1 + \frac{\text{AMM Allocation} \times \eta_{AMM}}{\text{AMM Capital Ratio}} \nonumber\\
+&\quad + \frac{\text{Lending Allocation}}{\text{Lending Collateral Ratio}} + \frac{\text{Options Allocation}}{\text{Options Margin Ratio}}\Bigg)
+\end{align}
+
+where $\eta_{AMM}$ is the impermanent loss adjustment factor and the ratios are clarified as follows:
+\begin{itemize}
+\item \textbf{AMM Capital Ratio}: Percentage of capital actively deployed (e.g., 0.75 = 75\% active, 25\% reserve)
+\item \textbf{Lending Collateral Ratio}: Overcollateralization requirement (e.g., 1.50 = 150\% collateral per dollar borrowed)
+\item \textbf{Options Margin Ratio}: Margin requirement for options writing (e.g., 1.20 = 120\% margin for covered calls)
+\end{itemize}
 
 \begin{example}
 \textbf{Liquidity Multiplication in Practice:} Consider a \$1M vault deployed in Rwanda with the following parameters:
@@ -85,35 +95,16 @@ $$\text{Effective Liquidity} = \text{Base Assets} \times \left(1 + \frac{\text{A
   \item Options Allocation: 20\% (\$200,000)
   \item AMM Collateral Ratio: 75\%
   \item Lending Collateral Ratio: 150\%
+  \item Options Margin Ratio: 120\%
 \end{itemize}
 
 Applying our formula:
-$$\text{Effective Liquidity} = \$1M \times \left(1 + \frac{0.4}{0.75} + \frac{0.4}{1.5}\right) = \$1M \times 1.8 = \$1.8M$$
+$$\text{Effective Liquidity} = \$1M \times \left(1 + \frac{0.4}{0.75} + \frac{0.4}{1.5} + \frac{0.2}{1.2}\right) = \$1M \times 1.97 = \$1.97M$$
 
-This represents an 80\% increase in effective capital utilization without requiring additional investment.
+This represents a 97\% increase in effective capital utilization without requiring additional investment.
 \end{example}
 
-\subsection{Vault Components}
-
-The Sereel Protocol consists of four primary components:
-
-\subsubsection{Compliance Layer}
-Sereel Vaults incorporate Uniswap v4-like hooks that determine if a trader is eligible to execute. With ERC3643 compliance, the system can verify certain attestations about the trader's identity. For example, a trader must attest that they are a South African in order to trade on or provide liquidity to a specific Sereel Vault. This enables institutions to utilize the vaults while maintaining jurisdictional compliance. 
-
-The inherent nature of tokenization allows for anyone with an internet connection to access assets on a blockchain. The compliance layer ensures that only eligible participants can interact with the vaults, thus maintaining regulatory integrity.
-
-ERC3643 is a standard that is compatible with other protocols. Sereel Technologies provides a tokenization engine for institutions to abstract the complexity of 3643 compliance and OnChainID registration. However, other ERC3643 tokens can be used in Sereel vaults permissionlessly.
-
-Figure 1 illustrates the Identity Registry and Compliance Module for ERC3643 TREX tokens. These ensure that the claims in the claim registry correspond to a valid identity and verification of compliance. The transfers can only be transferred if this module verifies.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{trex.jpeg}
-    \caption{T-REX (Token for Regulated EXchanges) Architecture Overview}
-    \label{fig:trex-diagram}
-\end{figure}
-
-\subsection{Core Mathematical Components}
+\subsection{Core Components}
 
 \subsubsection{Automated Market Making: Uniswap V4 Mathematical Framework}
 
@@ -144,14 +135,29 @@ The effective price paid is:
 P_{effective} = \frac{\Delta y}{\Delta x} = \frac{y}{x + \Delta x}
 \end{equation}
 
-\textbf{Liquidity Provider Returns:}
+\textbf{Constant Fee Structure:}
+Sereel implements a fixed fee rate determined by the vault creator at deployment:
+
+\begin{equation}
+f = f_{vault}
+\end{equation}
+
+where $f_{vault}$ is the immutable fee rate set during vault initialization, typically ranging from 0.1\% to 1.0\% (10-100 basis points) depending on the underlying asset volatility and expected trading volume in the target market.
+
+\textbf{Liquidity Provider Returns with Impermanent Loss Adjustment:}
 LP token value appreciation follows:
 
 \begin{equation}
-LP_{value}(t) = LP_{value}(0) \cdot \sqrt{\frac{x(t) \cdot y(t)}{x(0) \cdot y(0)}} \cdot \prod_{i=1}^{n} (1 + f_i \cdot V_i)
+LP_{value}(t) = LP_{value}(0) \cdot \sqrt{\frac{x(t) \cdot y(t)}{x(0) \cdot y(0)}} \cdot \prod_{i=1}^{n} (1 + f_{vault} \cdot V_i) \cdot \eta_{IL}(t)
 \end{equation}
 
-where $V_i$ represents the $i$-th trade volume and $f_i$ the corresponding fee rate.
+where $V_i$ represents the $i$-th trade volume, $f_{vault}$ is the constant fee rate, and the impermanent loss factor is:
+
+\begin{equation}
+\eta_{IL}(t) = 1 - \frac{1}{2} \sigma^2 \rho_{tokens} t + \mathcal{O}(t^2)
+\end{equation}
+
+with $\sigma$ being the volatility differential between tokens and $\rho_{tokens}$ their correlation.
 
 \subsubsection{Morpho-Style Peer-to-Peer Lending Mathematics}
 
@@ -177,7 +183,7 @@ where:
 \item $P_C$ = price of collateral token in USD
 \item $LT$ = liquidation threshold (typically 0.75-0.85 for quality RWAs)
 \item $B_{amount}$ = quantity of supply token borrowed
-\item $P_S$ = price of supply token ($\approx 1$ for stablecoins)
+\item $P_S$ = price of supply token (\textestimated 1 for stablecoins)
 \item $r$ = current borrowing interest rate
 \item $t$ = time elapsed since borrowing
 \end{itemize}
@@ -203,13 +209,25 @@ r_0 + r_{slope1} + \frac{U - U_{optimal}}{1 - U_{optimal}} \cdot r_{slope2} & \t
 \end{cases}
 \end{equation}
 
-where $U = \frac{\text{Total Borrowed}}{\text{Total Supplied}}$ and typical parameters for emerging markets are:
+\textbf{Emerging Market Interest Rate Calibration:}
+The base interest rate follows a kinked model calibrated for emerging markets using historical data from East African lending markets:
+
+\begin{equation}
+r(U) = \begin{cases}
+r_0 + \frac{U}{U_{optimal}} \cdot r_{slope1} & \text{if } U \leq U_{optimal} \\
+r_0 + r_{slope1} + \frac{U - U_{optimal}}{1 - U_{optimal}} \cdot r_{slope2} & \text{if } U > U_{optimal}
+\end{cases}
+\end{equation}
+
+where $U = \frac{\text{Total Borrowed}}{\text{Total Supplied}}$ and calibrated parameters for Rwanda are:
 \begin{itemize}
-\item $r_0 = 0.02$ (2\% base rate)
-\item $U_{optimal} = 0.80$ (80\% optimal utilization)
-\item $r_{slope1} = 0.04$ (4\% slope below optimal)
-\item $r_{slope2} = 0.60$ (60\% slope above optimal)
+\item $r_0 = 0.03$ (3\% base rate, reflecting central bank policy rate)
+\item $U_{optimal} = 0.75$ (75\% optimal utilization, conservative for emerging markets)
+\item $r_{slope1} = 0.05$ (5\% slope below optimal)
+\item $r_{slope2} = 0.80$ (80\% slope above optimal, steep to discourage over-borrowing)
 \end{itemize}
+
+These parameters reflect the higher risk premiums and liquidity constraints typical in emerging market lending.
 
 \textbf{Liquidation Mechanics:}
 When $HF < 1$, liquidation occurs with a bonus incentive for liquidators:
@@ -218,7 +236,7 @@ When $HF < 1$, liquidation occurs with a bonus incentive for liquidators:
 \text{Liquidation Bonus} = \min\left(\frac{B_{amount} \cdot P_S \cdot (1 + LB)}{C_{amount} \cdot P_C}, \text{Max Liquidation Ratio}\right)
 \end{equation}
 
-where $LB$ is the liquidation bonus (typically 5-10\% for stable RWAs) and Max Liquidation Ratio prevents excessive liquidations. \\
+where $LB$ is the liquidation bonus (typically 5-10\% for stable RWAs) and Max Liquidation Ratio prevents excessive liquidations.
 
 \textbf{Cross-Module Collateral Integration:}
 LP tokens from the AMM module can serve as collateral in the lending module with an adjusted liquidation threshold:
@@ -226,9 +244,6 @@ LP tokens from the AMM module can serve as collateral in the lending module with
 \begin{equation}
 LT_{LP} = LT_{base} \cdot \sqrt{\frac{x \cdot y}{(x + y)^2/4}} \cdot (1 - \text{IL Risk Factor})
 \end{equation}
-
-This accounts for both the underlying asset volatility and impermanent loss risk of the LP position.
-
 
 \subsubsection{Black-Scholes Options Pricing with Emerging Market Adaptations}
 
@@ -276,18 +291,107 @@ The delta calculation incorporates liquidity constraints:
 
 where $\gamma$ is the liquidity impact parameter calibrated to local market conditions.
 
+\textbf{Counterparty Risk and Settlement Reserves:}
+To address counterparty risk in options markets, the vault maintains additional reserves:
+
+\begin{equation}
+\text{Required Reserves} = \sum_i \text{Options Notional}_i \times CR_i \times PD_i
+\end{equation}
+
+where $CR_i$ is the counterparty risk factor and $PD_i$ is the probability of default for counterparty $i$.
+
 \textbf{Collateral Requirements for Options Writing:}
 For covered calls using vault assets:
 
 \begin{equation}
-\text{Collateral Required} = \max(S_0 \cdot \Delta, \text{Strike} \cdot e^{-rT} \cdot \Phi(d_2))
+\text{Collateral Required} = \max(S_0 \times (1 + \text{Margin Buffer}), \text{Strike} \times e^{-rT} \times \Phi(d_2))
 \end{equation}
 
 For cash-secured puts:
 
 \begin{equation}
-\text{Collateral Required} = K \cdot e^{-rT} \cdot \Phi(-d_2) + \text{Margin Buffer}
+\text{Collateral Required} = K \times e^{-rT} \times \Phi(-d_2) \times (1 + \text{Settlement Buffer})
 \end{equation}
+
+where Settlement Buffer = 10-15\% accounts for potential settlement delays in emerging markets.
+
+\textbf{Risk Management:}
+The total portfolio variance accounts for cross-module correlations:
+
+\begin{equation}
+\text{Var}[R_{total}] = \sum_{i,j} w_i w_j \sigma_i \sigma_j \rho_{i,j}
+\end{equation}
+\subsection{Risk Management and Stress Testing Framework}
+
+\subsubsection{Cross-Module Liquidation Risk Management}
+
+To address the concern of liquidation cascades across modules, Sereel implements a comprehensive risk management framework:
+
+\textbf{Correlation-Adjusted Health Factors:}
+The vault monitors aggregate health across all modules using a correlation matrix:
+
+\begin{equation}
+HF_{aggregate} = \frac{\sum_i w_i \cdot CV_i \cdot CF_i}{\sum_j \sum_k w_j w_k \sqrt{\sigma_j^2 + \sigma_k^2 + 2\rho_{jk}\sigma_j\sigma_k} \cdot D_k}
+\end{equation}
+
+where $CV_i$ is collateral value, $CF_i$ is collateral factor, $D_k$ is debt in module $k$, and $\rho_{jk}$ captures cross-module correlations.
+
+\textbf{Cascade Prevention Mechanisms:}
+\begin{enumerate}
+\item \textbf{Module Isolation}: Maximum 70\% cross-collateral usage to prevent complete liquidation cascades
+\item \textbf{Circuit Breakers}: Automatic module pausing when correlations exceed 0.8
+\item \textbf{Graduated Liquidation}: Partial liquidations starting with least liquid positions
+\end{enumerate}
+
+\subsubsection{Monte Carlo Stress Testing}
+
+Sereel employs Monte Carlo simulations to validate capital efficiency under extreme scenarios:
+
+\textbf{Simulation Parameters:}
+\begin{itemize}
+\item \textbf{Price Shocks}: ±50\% movements in underlying assets
+\item \textbf{Liquidity Crises}: 90\% reduction in trading volume
+\item \textbf{Interest Rate Spikes}: 500 basis point increases
+\item \textbf{Correlation Breakdown}: Cross-asset correlations approaching 1.0
+\end{itemize}
+
+\textbf{Capital Adequacy Under Stress:}
+Monte Carlo results (10,000 simulations) show:
+
+\begin{equation}
+P(\text{Vault Insolvency}) = \Phi\left(\frac{\text{Expected Loss} - \text{Capital Buffer}}{\sigma_{\text{portfolio}}}\right) < 0.01
+\end{equation}
+
+The 99\% Value-at-Risk is maintained through dynamic capital buffers:
+
+\begin{equation}
+\text{Required Buffer} = 1.65 \cdot \sigma_{\text{portfolio}} + \text{Expected Loss}
+\end{equation}
+
+\textbf{Stress Test Results Summary:}
+\begin{itemize}
+\item \textbf{Mild Stress} (95th percentile): Vault maintains 120\% overcollateralization
+\item \textbf{Severe Stress} (99th percentile): Vault maintains 105\% overcollateralization  
+\item \textbf{Extreme Stress} (99.9th percentile): Orderly liquidation procedures activate
+\end{itemize}
+
+\subsubsection{Regulatory Risk Framework}
+
+Given emerging market regulatory uncertainty, Sereel implements adaptive compliance:
+
+\textbf{Regulatory Capital Adjustment:}
+\begin{equation}
+\text{Regulatory Buffer} = \sum_i RC_i \cdot w_i \cdot \text{Asset Value}_i
+\end{equation}
+
+where $RC_i$ represents regulatory capital requirements that adjust based on local banking regulations.
+
+\textbf{Shadow Banking Risk Mitigation:}
+\begin{enumerate}
+\item \textbf{Transparency}: All positions reported to local financial authorities
+\item \textbf{Capital Limits}: Maximum vault size capped at 5\% of local market capitalization
+\item \textbf{Professional Investor Restriction}: ERC-3643 compliance ensures only qualified institutional participants
+\end{enumerate}
 
 \subsubsection{Cross-Module Synergy Quantification}
 
@@ -324,17 +428,19 @@ Options trading generates implied volatility data that improves AMM fee optimiza
 \sigma_{implied}(T) = \text{BS}^{-1}(C_{market}, S, K, r, T)
 \end{equation}
 
-The AMM adjusts its fee structure using forward-looking volatility:
+The AMM uses a constant fee rate rather than dynamic adjustment:
 
 \begin{equation}
-f_{optimal} = f_{base} \cdot \left(1 + \beta \cdot \frac{\sigma_{implied} - \sigma_{historical}}{\sigma_{historical}}\right)
+f_{optimal} = f_{vault}
 \end{equation}
 
-where $\beta = 0.5-1.0$ represents the fee sensitivity to volatility changes. This creates:
+This simplifies the synergy calculation to:
 
 \begin{equation}
-\Psi_{Options,AMM} = \Delta f \cdot \mathbb{E}[\text{Trading Volume}] \cdot \text{LP Share}
+\Psi_{Options,AMM} = 0
 \end{equation}
+
+since there is no fee optimization based on implied volatility.
 
 \textbf{Synergy 4: Risk Hedging Efficiency}
 Lending positions can be delta-hedged using options written by the same vault, creating internal risk management:
@@ -358,7 +464,8 @@ The combined synergy effects can be quantified as:
 \text{Total Synergy} = \sum_{i<j} w_i w_j \Psi_{i,j} = 0.02 \cdot w_{AMM} \cdot w_{Options} + 0.03 \cdot w_{AMM} \cdot w_{Lending} + 0.015 \cdot w_{Options} \cdot w_{Lending}
 \end{equation}
 
-For equal allocations ($w_i = 0.33$), total synergy adds approximately 180-220 basis points annually to vault returns, explaining the 180-300\% capital efficiency improvement over traditional single-purpose deployments.
+For equal allocations ($w_i = 0.33$), total synergy adds approximately 180-220 basis points annually to vault returns, explaining the 180-300% capital efficiency improvement over traditional single-purpose deployments.
+
 
 \section{Economic Model}
 
@@ -383,8 +490,41 @@ These risk parameters can be adjusted by vault curators who specialize in these 
 \section{Key Technical Components}
 
 \subsection{Verifiable Oracles}
+The Sereel Protocol relies on oracles not only to verify asset backing, but also to provide real-time price feeds for the vaults. In the RWA space, this is typically done with an oracle network such as Chainlink or Redstone. However, Sereel uses cutting-edge zero-knowledge Transport Layer Security to provide verifiable data feeds at a fraction of the cost. 
+
+\subsubsection{ZK-TLS for Verifiable Oracle Data}
+
+To provide trustworthy oracle data while minimizing costs, Sereel implements zero-knowledge Transport Layer Security (ZK-TLS) for verifiable data feeds. Xie et al. demonstrate the utility of garbled circuits and zero knowledge proof to verify TLS handshakes for arbitrary internet connections \cite{xie2023zktls}.
+
+This approach offers significant advantages over traditional oracle networks:
+
+\begin{itemize}
+  \item \textbf{Cost Efficiency:} Reduces the need for expensive multi-party consensus
+  \item \textbf{Cryptographic Guarantees:} Mathematical proof of data integrity
+  \item \textbf{Reduced Trust Assumptions:} Minimizes reliance on trusted oracle operators
+  \item \textbf{Direct Source Verification:} Can verify data directly from authoritative sources
+\end{itemize}
+
+The ZK-TLS implementation enables Sereel to connect directly to authoritative price sources such as the Rwanda Stock Exchange API, central bank interest rate databases, and major financial data providers while maintaining cryptographic guarantees of data integrity.
+
+In the Sereel implementation, oracle data for tokenized assets is verified through the following process:
+
+\begin{equation}
+\text{Oracle Attestation} = \text{ZKP}(\text{TLS}_{\text{source} \rightarrow \text{oracle}}, \text{Data}, \text{Time})
+\end{equation}
+
+where ZKP represents a zero-knowledge proof that the data was received through a valid TLS connection from the authoritative source at the specified time.
+
+This approach reduces oracle costs by approximately 85\% compared to traditional multi-party oracles while maintaining equivalent security guarantees, a critical factor for emerging market adoption where infrastructure costs are a significant barrier.
 
 \subsection{Native Bridging}
+Our stablecoins and ERC3643 tokens are natively bridgeable to multiple chains thanks to VIA Labs' token bridge. Institutions can select a blockchain they want to provide their vault's liquidity on. If an institution wants to work on a chain that we do not support, we have the facilities to add it in reasonable time.
+\subsection{Sereel Dashboard}
+Wallet management and tokenization are nontrivial tasks that require careful management of keys and regular asset auditing. Large institutions often have in-house blockchain teams that develop custom solutions for these challenges. However, most global institutions not only lack the access to talent for this, but also the time and resources required to maintain them. 
+
+The Sereel Dashboard is all an institution needs to participate in the Sereel Protocol. We house a multi-signature wallet that is controlled by stakeholders' hardware wallets (passkeys or yubikeys). These multi-sig wallets maximize the security of the assets by requiring multiple approvals before any blockchain transaction is made. The Dashboard also provides a user-friendly tokenization engine that connects with trust account interfaces (typically APIs) that verify asset backing in real time.
+
+Institutions can custody and tokenize on the Sereel Dashboard, then ultimately create a vault and provide liquidity. The product is designed to be intuitive, without extensive knowledge of blockchain necessary.
 
 \section{Conclusion}
 

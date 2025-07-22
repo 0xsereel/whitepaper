@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.15)  18 JUL 2025 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.15)  22 JUL 2025 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -276,69 +276,72 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 
 
 [2]
-Overfull \hbox (29.18443pt too wide) detected at line 76
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^B []
- []
-
-
 
 [3]
-<trex.jpeg, id=29, 1284.8pt x 705.63625pt>
-File: trex.jpeg Graphic file (type jpg)
-<use trex.jpeg>
-Package pdftex.def Info: trex.jpeg  used on input line 111.
-(pdftex.def)             Requested size: 362.37569pt x 199.01959pt.
 
-
-[4 <./trex.jpeg>]
+[4]
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
+Overfull \hbox (7.66647pt too wide) in paragraph at lines 285--287
+[]\OT1/cmr/bx/n/12 Liquidity-Adjusted Greeks: \OT1/cmr/m/n/12 The delta cal-cu-la-tion in-cor-po-rates liq-uid-ity con-straints: 
  []
 
 
 
 [6]
-Overfull \hbox (7.66647pt too wide) in paragraph at lines 270--272
-[]\OT1/cmr/bx/n/12 Liquidity-Adjusted Greeks: \OT1/cmr/m/n/12 The delta cal-cu-la-tion in-cor-po-rates liq-uid-ity con-straints: 
- []
-
-
-Overfull \hbox (2.52141pt too wide) in paragraph at lines 320--322
-[]\OT1/cmr/bx/n/12 Synergy 3: Volatil-ity In-for-ma-tion Flow \OT1/cmr/m/n/12 Op-tions trad-ing gen-er-ates im-plied volatil-
+Overfull \hbox (2.75746pt too wide) in paragraph at lines 330--332
+[]\OT1/cmr/bx/n/12 Correlation-Adjusted Health Fac-tors: \OT1/cmr/m/n/12 The vault mon-i-tors ag-gre-gate health across
  []
 
 
 
 [7]
-Overfull \hbox (46.025pt too wide) detected at line 359
+
+[8]
+Overfull \hbox (2.52141pt too wide) in paragraph at lines 424--426
+[]\OT1/cmr/bx/n/12 Synergy 3: Volatil-ity In-for-ma-tion Flow \OT1/cmr/m/n/12 Op-tions trad-ing gen-er-ates im-plied volatil-
+ []
+
+
+Overfull \hbox (46.025pt too wide) detected at line 465
 [][] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 w[]w[]\OT1/cmr/m/n/12 	[] = 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 02 \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[] \OT1/cmr/m/n/12 + 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 03 \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[] \OT1/cmr/m/n/12 + 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 015 \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 w[]
  []
 
 
 
-[8]
+[9]
 
-[9] (./pyramid.aux)
+LaTeX Warning: Citation `xie2023zktls' on page 10 undefined on input line 497.
+
+
+
+[10]
+
+[11]
+
+[12] (./pyramid.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 4016 strings out of 469288
- 59520 string characters out of 5467561
- 465047 words of memory out of 5000000
- 32378 multiletter control sequences out of 15000+600000
+ 4007 strings out of 469288
+ 59347 string characters out of 5467561
+ 467027 words of memory out of 5000000
+ 32369 multiletter control sequences out of 15000+600000
  639804 words of font info for 88 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 57i,11n,65p,669b,371s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on pyramid.pdf (9 pages, 326941 bytes).
+ 57i,12n,65p,669b,371s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on pyramid.pdf (12 pages, 291616 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
