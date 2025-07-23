@@ -1,29 +1,75 @@
 \relax 
+\bibstyle{plainnat}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\citation{buterin2014ethereum}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Market Impact in Emerging Economies}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Related Work}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Protocol Architecture}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Sereel Vault Overview}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Core Components}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Automated Market Making: Uniswap V4 Mathematical Framework}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Morpho-Style Peer-to-Peer Lending Mathematics}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Black-Scholes Options Pricing with Emerging Market Adaptations}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Risk Management and Stress Testing Framework}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Cross-Module Liquidation Risk Management}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Monte Carlo Stress Testing}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Regulatory Risk Framework}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Cross-Module Synergy Quantification}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Automated Market Making}{2}{}\protected@file@percent }
+\citation{buterin2014ethereum}
+\citation{erc3643}
+\@writefile{toc}{\contentsline {paragraph}{Lending Protocols}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Options Protocols}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Perpetuals and Derivatives}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Regulatory Compliance}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-Purpose Capital Efficiency}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Protocol Architecture}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Sereel Vault Overview}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Core Components}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Automated Market Making: Uniswap V4 Mathematical Framework}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Morpho-Style Peer-to-Peer Lending Mathematics}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Black-Scholes Options Pricing with Emerging Market Adaptations}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Ornstein-Uhlenbeck Stochastic Volatility Evolution. The purple line shows the volatility path over 100 time steps, demonstrating mean reversion to the base volatility level (gray dashed line) with confidence bands. This model captures the volatility clustering phenomena observed in emerging market assets, providing more accurate options pricing than constant volatility models.}}{8}{}\protected@file@percent }
+\newlabel{fig:stochastic_volatility}{{1}{8}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Risk Management and Stress Testing Framework}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Cross-Module Liquidation Risk Management}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Health Factor Evolution with Interest Accrual. The simulation shows a borrowing position's health factor declining from 2.0 to near-liquidation levels over 100 time periods, incorporating both interest accrual effects and random market shocks. The red zone indicates liquidation risk (HF < 1.0), while the orange line marks severe distress (HF < 0.5).}}{10}{}\protected@file@percent }
+\newlabel{fig:health_factor_evolution}{{2}{10}{}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Monte Carlo Stress Testing}{10}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Vault Value Distribution Under Extreme Stress Testing. The histogram shows outcomes across 10,000 Monte Carlo simulations with Value-at-Risk thresholds at 95\%, 99\%, and 99.9\% confidence levels. The distribution centers around \$1M base assets with manageable tail risk, validating the protocol's resilience under stress scenarios.}}{11}{}\protected@file@percent }
+\newlabel{fig:vault_distribution}{{3}{11}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Regulatory Risk Framework}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Cross-Module Synergy Quantification}{12}{}\protected@file@percent }
 \citation{xie2023zktls}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Economic Model}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Yield Generation Mechanisms}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Risk Management}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Yield Projections}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Key Technical Components}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Verifiable Oracles}{10}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}ZK-TLS for Verifiable Oracle Data}{10}{}\protected@file@percent }
 \citation{dagas2024mpctls}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Alternative Approach: MPC-TLS}{11}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Native Bridging}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Sereel Dashboard}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{12}{}\protected@file@percent }
-\gdef \@abspage@last{12}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Key Technical Components}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Verifiable Oracles}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}ZK-TLS for Verifiable Oracle Data}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Alternative Approach: MPC-TLS}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Native Bridging}{14}{}\protected@file@percent }
+\bibdata{references}
+\bibcite{buterin2014ethereum}{{1}{2014}{{Buterin}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Sereel Dashboard}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Empirical Validation and Performance Analysis}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Cross-Module Synergy Verification}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Correlation Matrix Dynamics}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{15}{}\protected@file@percent }
+\bibcite{dagas2024mpctls}{{2}{2024}{{Dagas et~al.}}{{Dagas, Wang, Wang, Lan, Guo, and Lin}}}
+\bibcite{erc3643}{{3}{2021}{{EIP-3643}}{{}}}
+\bibcite{xie2023zktls}{{4}{2023}{{Xie et~al.}}{{Xie, Song, Li, and Zhang}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cross-Module Synergy Contributions. The bar chart shows synergy yields in basis points for each module interaction: AMM-Options synergy from improved liquidity provision, AMM-Lending synergy from LP token collateral utilization, and Options-Lending synergy from delta-hedging efficiency. Total synergy contributions validate the 180-300 basis point enhancement claimed in our capital efficiency model.}}{16}{}\protected@file@percent }
+\newlabel{fig:synergy_breakdown}{{4}{16}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Comprehensive Simulation Results}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Risk-Return Profile Analysis}{16}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-Module Correlation Matrix Under Stress. The heatmap displays correlation coefficients between AMM, Lending, and Options modules. During stress scenarios, correlations increase toward dangerous levels (approaching 1.0), triggering circuit breaker mechanisms to prevent cascade failures. The mathematical framework properly captures the increased systemic risk during market turbulence.}}{17}{}\protected@file@percent }
+\newlabel{fig:correlation_matrix}{{5}{17}{}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Operational Metrics and Protocol Health}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Performance Metrics Analysis}{17}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Risk-Return Profile Across Market Scenarios. The scatter plot shows portfolio loss percentage versus annualized yield across 10,000 simulations. Red points indicate correlation breakdown scenarios. The blue line represents the efficient frontier, demonstrating that higher yields are achievable even during moderate stress periods through the multi-module vault architecture.}}{18}{}\protected@file@percent }
+\newlabel{fig:risk_return_profile}{{6}{18}{}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Systemic Risk Event Analysis}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Risk Component Decomposition}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6}Module Performance Comparison}{18}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Vault Operational Metrics Dashboard. The chart displays AMM swap volume, active lending positions, options contracts written, and total liquidity depth in thousands of dollars. These metrics validate the protocol's ability to generate meaningful activity levels suitable for institutional participation in emerging markets.}}{19}{}\protected@file@percent }
+\newlabel{fig:operational_metrics}{{7}{19}{}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7}Overall Protocol Assessment}{19}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Protocol Performance Metrics Scoring. The dashboard shows liquidity ratio (AMM efficiency), utilization rate (lending health), volatility adjustment (options pricing accuracy), and aggregate health factor (system stability). The color-coded scoring system provides immediate visual assessment of protocol health across all modules.}}{20}{}\protected@file@percent }
+\newlabel{fig:performance_metrics}{{8}{20}{}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Systemic Risk Event Frequencies. The bar chart shows the percentage occurrence of correlation breakdown events, cascade failures, and compound risk scenarios across 10,000 Monte Carlo simulations. The low frequency of compound failures (simultaneous correlation breakdown and cascade events) validates the effectiveness of the protocol's risk management framework.}}{20}{}\protected@file@percent }
+\newlabel{fig:systemic_risk_events}{{9}{20}{}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Risk Component Breakdown Analysis. The chart decomposes total portfolio risk into market risk (price volatility), liquidity risk (depth constraints), correlation risk (module interdependence), and operational risk (cascade potential). The 32.8\% market risk component reflects the higher volatility environment typical of emerging market assets.}}{21}{}\protected@file@percent }
+\newlabel{fig:risk_component_breakdown}{{10}{21}{}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Module Performance with Synergistic Enhancements. The comparison shows base yield from each module (light blue) versus additional yield from cross-module synergies (gold). The integrated architecture provides measurable enhancement over standalone module deployment, validating the theoretical framework for capital efficiency improvement.}}{21}{}\protected@file@percent }
+\newlabel{fig:module_performance}{{11}{21}{}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Overall Protocol Assessment Score. The gauge displays the weighted average score across six key dimensions: capital efficiency, yield performance, risk management, liquidation safety, synergy realization, and systemic resilience. The score reflects the protocol's readiness for institutional deployment in emerging market contexts.}}{22}{}\protected@file@percent }
+\newlabel{fig:protocol_score}{{12}{22}{}{figure.12}{}}
+\gdef \@abspage@last{22}
