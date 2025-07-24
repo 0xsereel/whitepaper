@@ -1,0 +1,36 @@
+1 Introduction:
+
+we should cite this data somewhere
+https://www.afdb.org/en/news-and-events/scaling-financing-key-accelerating-africas-structural-transformation-73244
+
+1.1 Market impact:
+we should cite this uniswap paper when we mention converting USD to RWF stablecoins:
+https://app.uniswap.org/OnchainFX.pdf
+
+1.2 Related work:
+we should cite uniswap v4 whitepaper instead of buterin for uniswap: https://app.uniswap.org/whitepaper-v4.pdf
+
+we should refereence the compound whitepaper: https://compound.finance/documents/Compound.Whitepaper.pdf
+
+and the aave whitepaper: https://www.cryptocompare.com/media/38553941/aave_protocol_whitepaper_v1_0.pdf
+
+and the morpho blue whitepaper:
+
+https://github.com/morpho-org/morpho-blue/blob/main/morpho-blue-whitepaper.pdf
+
+2.2.1:
+
+we should reference the uniswap paper for these calculations
+
+2.2.2:
+we should reference the morpho paper for these calculations
+
+2.2.3:
+
+we should reference the black sholes paper:
+https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf
+
+3.2
+
+let's reference via labs: https://vialabs.io/
+

@@ -40,22 +40,21 @@ One such challenge is limited liquidity for local markets. Markets grow more att
 
 The goal of the Sereel Protocol is to utilize smart contracts to maximize the efficiency of capital in these markets. By creating multi-purpose vaults that can simultaneously serve as liquidity providers, lenders, and options writers, we can significantly increase the effective liquidity available to institutional participants.
 
-Our simulations demonstrate that Sereel Vaults can increase capital efficiency by up to 2x or even 3x. This has profound implications for emerging markets, where capital constraints often limit the ability of institutions to deploy large sums effectively.
-
+Our simulations demonstrate that Sereel Vaults can increase capital efficiency by up to 2x. This has profound implications for emerging markets, where capital constraints often limit the ability of institutions to deploy large sums effectively. The African Development Bank estimates that Africa requires \$130-170 billion annually in infrastructure financing alone, highlighting the critical need for more efficient capital deployment mechanisms \citep{afdb2024scaling}.
 
 \subsection{Market Impact in Emerging Economies}
 \textbf{The implications for capital-constrained markets like Rwanda are profound:}
 
 \begin{enumerate}
-    \item \textbf{Increased Market Depth:} The Rwanda Stock Exchange (RSE) had a total annual trading volume of approximately \$24.86 million in 2017\footnote{\url{https://rse.rw/market-statistics/Annual-Statistics/}}, averaging around \$100,000 daily. A single \$1M Sereel vault with tokenized stocks effectively adds \$1.8M in available liquidity, which is 18 times the average daily trading volume (\$100,000) on the RSE. This substantial increase in market depth would significantly reduce price slippage and volatility.
+    \item \textbf{Increased Market Depth:} The Rwanda Stock Exchange (RSE) had a total annual trading volume of approximately \$24.86 million in 2017 \citep{rse2017stats}, averaging around \$100,000 daily. A single \$1M Sereel vault with tokenized stocks effectively adds \$1.8M in available liquidity. This substantial increase in market depth would significantly reduce price slippage and volatility.
   
-  \item \textbf{Reduced Transaction Costs:} Traditional equity transactions in East African markets incur 2-3\% in fees. Sereel's AMM reduces this to \textless 0.5\%, representing an approximately 80\% cost reduction.
+  \item \textbf{Reduced Transaction Costs:} Traditional equity transactions in East African markets incur 2-3\% in fees. Sereel's AMM reduces this to \textless 0.5\%, representing an approximate 80\% cost reduction.
 
   \item \textbf{Access to Derivatives:} While options markets are virtually non-existent in most African exchanges, Sereel's integrated options module creates derivatives markets for hedging and yield enhancement. Investors can write covered calls or cash-secured puts on tokenized assets depending on the performance of the asset and the health factor of the lending pool.
 
   \item \textbf{Improved Capital Efficiency:} Traditional financial institutions in emerging markets maintain high capital reserves due to liquidity constraints. Sereel's rehypothecation model allows the same capital to work efficiently across multiple financial functions.
   
-  \item \textbf{Cross-Border Capital Flows:} With local currency stablecoin integration, Sereel enables efficient cross-border investment while mitigating currency risk, addressing a key barrier to international investment in African markets. Foreign investors with, for example, USD stablecoins can now invest in Rwandan assets by converting their stablecoins to Rwandan Franc (RWF) stablecoins, which are then used to purchase tokenized assets on the Sereel Protocol.
+  \item \textbf{Cross-Border Capital Flows:} With local currency stablecoin integration, Sereel enables efficient cross-border investment while mitigating currency risk, addressing a key barrier to international investment in African markets. Foreign investors with, for example, USD stablecoins can now invest in Rwandan assets by converting their stablecoins to Rwandan Franc (RWF) stablecoins through automated market makers \citep{uniswap2024onchain}, which are then used to purchase tokenized assets on the Sereel Protocol.
 \end{enumerate}
 
 For institutions like pension funds and asset managers in Rwanda, this transforms a \$1M allocation from a simple investment into a comprehensive market-making, lending, and derivatives operation—capabilities previously available only to the largest global financial institutions.
@@ -65,10 +64,10 @@ For institutions like pension funds and asset managers in Rwanda, this transform
 Several prominent DeFi protocols have pioneered different aspects of capital efficiency and market-making that the Sereel Protocol builds upon, while addressing the unique challenges of emerging markets.
 
 \paragraph{Automated Market Making}
-Uniswap \citep{buterin2014ethereum} introduced the constant product formula ($x \cdot y = k$) that forms the foundation of on-chain liquidity provision. While Uniswap V3 implemented concentrated liquidity to improve capital efficiency, it requires active management and sophisticated market knowledge that institutional participants in emerging markets often lack. Sereel adopts Uniswap's reliable constant product model but optimizes fee structures specifically for emerging market volatility profiles and implements a simplified interface suitable for institutional users with limited DeFi experience.
+Uniswap introduced the constant product formula ($x \cdot y = k$) that forms the foundation of on-chain liquidity provision \citep{uniswapv4whitepaper}. While Uniswap V3 implemented concentrated liquidity to improve capital efficiency, it requires active management and sophisticated market knowledge that institutional participants in emerging markets often lack. Sereel adopts Uniswap's reliable constant product model but optimizes fee structures specifically for emerging market volatility profiles and implements a simplified interface suitable for institutional users with limited DeFi experience.
 
 \paragraph{Lending Protocols}
-Compound \citep{buterin2014ethereum} and Aave pioneered the pooled lending model with algorithmic interest rates based on utilization. However, these protocols are primarily designed for established cryptocurrencies rather than tokenized real-world assets. Morpho enhanced this model by introducing peer-to-peer matching to improve interest rates, a concept Sereel adapts with specific modifications for emerging market conditions. Unlike these protocols, Sereel's lending module incorporates local currency stablecoins and maintains higher collateral requirements (typically 150\% vs. 110-130\%) to account for the higher volatility in emerging markets.
+Compound \citep{compound2019whitepaper} and Aave \citep{aave2020whitepaper} pioneered the pooled lending model with algorithmic interest rates based on utilization. However, these protocols are primarily designed for established cryptocurrencies rather than tokenized real-world assets. Morpho enhanced this model by introducing peer-to-peer matching to improve interest rates \citep{morphoblue2023whitepaper}, a concept Sereel adapts with specific modifications for emerging market conditions. Unlike these protocols, Sereel's lending module incorporates local currency stablecoins and maintains higher collateral requirements (typically 150\% vs. 110-130\%) to account for the higher volatility in emerging markets.
 
 \paragraph{Options Protocols}
 Ribbon Finance introduced vault-based options strategies that generate yield through automated options writing. However, Ribbon operates primarily on liquid crypto-assets and requires significant market depth. Sereel's options module adapts these concepts for less liquid emerging markets by incorporating higher margin requirements and settlement buffers (10-15\%) that account for potential settlement delays common in developing financial markets.
@@ -80,7 +79,7 @@ Drift Protocol developed advanced on-chain derivatives with sophisticated risk m
 Unlike most DeFi protocols that operate with minimal compliance mechanisms, Sereel integrates the ERC-3643 standard \citep{erc3643} for tokenized securities. This built-in compliance layer enables institutions to maintain regulatory adherence while participating in DeFi activities—a critical requirement for pension funds, banks, and asset managers in emerging economies with strict regulatory frameworks.
 
 \paragraph{Multi-Purpose Capital Efficiency}
-Sereel's key innovation is not simply adapting these protocols for emerging markets, but combining them into a single capital-efficient structure. While protocols like Aave, Compound, and Uniswap excel at single-purpose functions, Sereel's vault architecture enables capital to simultaneously serve multiple functions. This addresses the fundamental challenge of emerging markets: capital scarcity. By achieving up to 197\% effective capital utilization (as demonstrated in our example), Sereel makes institutional-grade DeFi viable in markets where capital deployment efficiency is paramount.
+Sereel's key innovation is not simply adapting these protocols for emerging markets, but combining them into a single capital-efficient structure. While protocols like Aave, Compound, and Uniswap excel at single-purpose functions, Sereel's vault architecture enables capital to simultaneously serve multiple functions. This addresses the fundamental challenge of emerging markets: capital scarcity. By achieving up to 194\% effective capital utilization (as demonstrated in our example), Sereel makes institutional-grade DeFi viable in markets where capital deployment efficiency is paramount.
 
 Furthermore, Sereel's localization to specific emerging economies through integration with local currency stablecoins addresses the currency risk that has historically deterred international investors from these markets. This combination of capital efficiency, regulatory compliance, and local currency integration creates a DeFi framework specifically engineered for the unique challenges of institutional participants in developing financial markets.
 
@@ -104,15 +103,15 @@ The mathematical framework for this liquidity multiplication can be expressed as
 where $\eta_{AMM}$ is the impermanent loss adjustment factor and the ratios are clarified as follows:
 \begin{itemize}
 \item \textbf{AMM Capital Ratio}: Percentage of capital actively deployed (e.g., 0.75 = 75\% active, 25\% reserve)
-\item \textbf{Lending Collateral Ratio}: Overcollateralization requirement (e.g., 1.50 = 150\% collateral per dollar borrowed)
+\item \textbf{Lending Collateral Ratio}: Overcollateralization requirement (e.g., 1.50 = 150\% collateral per unit of fiat borrowed)
 \item \textbf{Options Margin Ratio}: Margin requirement for options writing (e.g., 1.20 = 120\% margin for covered calls)
 \end{itemize}
 
 \begin{example}
-\textbf{Liquidity Multiplication in Practice:} Consider a \$1M vault deployed in Rwanda with the following parameters:
+\textbf{Liquidity Multiplication in Practice:} Consider a \$1M vault deployed in Rwanda with the following parameters (using dollars for demonstration purposes, but all assets are priced in local currency):
 
 \begin{itemize}
-  \item Base Assets: \$1,000,000 in tokenized Bank of Kigali (BK) equity
+  \item Base Assets: \$1,000,000 split evenly between tokenized Bank of Kigali (BK) equity and RWF stablecoins
   \item AMM Allocation: 40\% (\$400,000)
   \item Lending Allocation: 40\% (\$400,000)
   \item Options Allocation: 20\% (\$200,000)
@@ -131,7 +130,7 @@ This represents a 94\% increase in effective capital utilization without requiri
 
 \subsubsection{Automated Market Making: Uniswap V4 Mathematical Framework}
 
-The Sereel AMM Module implements the Uniswap V4 constant product formula with dynamic parameters optimized for emerging market conditions. The fundamental invariant maintains:
+The Sereel AMM Module implements the Uniswap V4 constant product formula \citep{uniswapv4whitepaper} with dynamic parameters optimized for emerging market conditions. The fundamental invariant maintains:
 
 \begin{equation}
 x \cdot y = k
@@ -165,7 +164,7 @@ Sereel implements a fixed fee rate determined by the vault creator at deployment
 f = f_{vault}
 \end{equation}
 
-where $f_{vault}$ is the immutable fee rate set during vault initialization, typically ranging from 0.1\% to 1.0\% (10-100 basis points) depending on the underlying asset volatility and expected trading volume in the target market.
+where $f_{vault}$ is the upgradeable fee rate set during vault initialization, typically ranging from 0.1\% to 1.0\% (10-100 basis points) depending on the underlying asset volatility and expected trading volume in the target market.
 
 \textbf{Liquidity Provider Returns with Impermanent Loss Adjustment:}
 LP token value appreciation follows:
@@ -184,7 +183,7 @@ with $\sigma$ being the volatility differential between tokens and $\rho_{tokens
 
 \subsubsection{Morpho-Style Peer-to-Peer Lending Mathematics}
 
-The Sereel Lending Module implements a single-market peer-to-peer lending protocol similar to Morpho, optimized for emerging market tokenized assets. Each lending market consists of exactly one collateral token (tokenized RWA) and one supply token (local currency stablecoin).
+The Sereel Lending Module implements a single-market peer-to-peer lending protocol similar to Morpho \citep{morphoblue2023whitepaper}, optimized for emerging market tokenized assets. Each lending market consists of exactly one collateral token (tokenized RWA) and one supply token (local currency stablecoin).
 
 \textbf{Market Structure:}
 Each lending market is defined by the pair $(C, S)$ where:
@@ -203,16 +202,16 @@ HF = \frac{C_{amount} \cdot P_C \cdot LT}{B_{amount} \cdot P_S \cdot (1 + r \cdo
 where:
 \begin{itemize}
 \item $C_{amount}$ = quantity of collateral deposited
-\item $P_C$ = price of collateral token in USD
+\item $P_C$ = price of collateral token in local currency
 \item $LT$ = liquidation threshold (typically 0.75-0.85 for quality RWAs)
 \item $B_{amount}$ = quantity of supply token borrowed
-\item $P_S$ = price of supply token (\textestimated 1 for stablecoins)
+\item $P_S$ = price of supply token ($\approxeq 1$ for stablecoins)
 \item $r$ = current borrowing interest rate
 \item $t$ = time elapsed since borrowing
 \end{itemize}
 
 \textbf{Peer-to-Peer Interest Rate Matching:}
-Following Morpho's design, the lending module attempts to match borrowers and lenders peer-to-peer at improved rates. The rate improvement $\Delta r$ is split between both parties:
+Following Morpho's design \citep{morphoblue2023whitepaper}, the lending module attempts to match borrowers and lenders peer-to-peer at improved rates. The rate improvement $\Delta r$ is split between both parties:
 
 For matched positions:
 \begin{align}
@@ -223,7 +222,7 @@ r_{lender} &= r_{pool} + \Delta r \cdot (1 - \alpha)
 where $r_{pool}$ is the base pool rate and $\alpha \in [0,1]$ determines the rate improvement split.
 
 \textbf{Utilization-Based Interest Rate Model:}
-The base interest rate follows a kinked model calibrated for emerging markets:
+The base interest rate follows a kinked model calibrated for emerging markets, building upon the frameworks established by Compound \citep{compound2019whitepaper} and Aave \citep{aave2020whitepaper}:
 
 \begin{equation}
 r(U) = \begin{cases}
@@ -244,9 +243,9 @@ r_0 + r_{slope1} + \frac{U - U_{optimal}}{1 - U_{optimal}} \cdot r_{slope2} & \t
 
 where $U = \frac{\text{Total Borrowed}}{\text{Total Supplied}}$ and calibrated parameters for Rwanda are:
 \begin{itemize}
-\item $r_0 = 0.03$ (3\% base rate, reflecting central bank policy rate)
-\item $U_{optimal} = 0.75$ (75\% optimal utilization, conservative for emerging markets)
-\item $r_{slope1} = 0.05$ (5\% slope below optimal)
+\item $r_0 = 0.05$ (5\% base rate, reflecting central bank policy rate)
+\item $U_{optimal} = 0.70$ (70\% optimal utilization, conservative for emerging markets)
+\item $r_{slope1} = 0.02$ (2\% slope below optimal)
 \item $r_{slope2} = 0.80$ (80\% slope above optimal, steep to discourage over-borrowing)
 \end{itemize}
 
@@ -270,7 +269,7 @@ LT_{LP} = LT_{base} \cdot \sqrt{\frac{x \cdot y}{(x + y)^2/4}} \cdot (1 - \text{
 
 \subsubsection{Black-Scholes Options Pricing with Emerging Market Adaptations}
 
-The Sereel Options Module implements a modified Black-Scholes framework adapted for emerging market volatility patterns and limited liquidity.
+The Sereel Options Module implements a modified Black-Scholes framework \citep{blackscholes1973pricing} adapted for emerging market volatility patterns and limited liquidity.
 
 \textbf{Classical Black-Scholes Formula:}
 For a European call option:
@@ -325,7 +324,6 @@ The practical implementation of our stochastic volatility model demonstrates sup
 
 The mean-reverting properties of the Ornstein-Uhlenbeck process prove particularly valuable for emerging market applications, where volatility shocks tend to dissipate over time rather than persist indefinitely. The $\kappa = 2.0$ parameter calibration ensures that volatility deviations from the long-term mean correct within approximately 6 months, consistent with empirical observations from African equity markets.
 
-
 \textbf{Counterparty Risk and Settlement Reserves:}
 To address counterparty risk in options markets, the vault maintains additional reserves:
 
@@ -356,6 +354,7 @@ The total portfolio variance accounts for cross-module correlations:
 \begin{equation}
 \text{Var}[R_{total}] = \sum_{i,j} w_i w_j \sigma_i \sigma_j \rho_{i,j}
 \end{equation}
+
 \subsection{Risk Management and Stress Testing Framework}
 
 \subsubsection{Cross-Module Liquidation Risk Management}
@@ -374,15 +373,7 @@ where $CV_i$ is collateral value, $CF_i$ is collateral factor, $D_k$ is debt in 
 \textbf{Dynamic Health Factor Analysis:}
 The time-dependent health factor calculation incorporating interest accrual provides early warning signals for position risk management. Figure \ref{fig:health_factor_evolution} demonstrates how borrowing positions deteriorate over time without active management, validating the importance of continuous monitoring in emerging market lending.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{health_factor_evaluation.jpeg}
-    \caption{Health Factor Evolution with Interest Accrual. The simulation shows a borrowing position's health factor declining from 2.0 to near-liquidation levels over 100 time periods, incorporating both interest accrual effects and random market shocks. The red zone indicates liquidation risk (HF < 1.0), while the orange line marks severe distress (HF < 0.5).}
-    \label{fig:health_factor_evolution}
-\end{figure}
-
 This dynamic modeling approach enables proactive risk management by identifying positions at risk of liquidation before they reach critical thresholds. The gradual decline due to interest accrual, combined with market volatility shocks, provides a realistic framework for institutional lending risk assessment in emerging markets where collateral values may experience higher volatility than developed market assets.
-
 
 \textbf{Cascade Prevention Mechanisms:}
 \begin{enumerate}
@@ -390,6 +381,13 @@ This dynamic modeling approach enables proactive risk management by identifying 
 \item \textbf{Circuit Breakers}: Automatic module pausing when correlations exceed 0.8
 \item \textbf{Graduated Liquidation}: Partial liquidations starting with least liquid positions
 \end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{health_factor_evaluation.jpeg}
+    \caption{Health Factor Evolution with Interest Accrual. The simulation shows a borrowing position's health factor declining from 2.0 to near-liquidation levels over 100 time periods, incorporating both interest accrual effects and random market shocks. The red zone indicates liquidation risk (HF \textless  1.0), while the orange line marks severe distress (HF \textless  0.5).}
+    \label{fig:health_factor_evolution}
+\end{figure}
 
 \subsubsection{Monte Carlo Stress Testing}
 
@@ -424,17 +422,16 @@ The 99\% Value-at-Risk is maintained through dynamic capital buffers:
 \end{itemize}
 
 \textbf{Empirical Validation of Stress Testing Framework:}
-Our comprehensive Monte Carlo simulation framework validates the mathematical models under extreme market conditions. Figure \ref{fig:vault_distribution} demonstrates the vault value distribution across 10,000 simulation scenarios, incorporating correlated shocks, liquidity crises, and correlation breakdown events.
+Our comprehensive Monte Carlo simulation framework validates the mathematical models under extreme market conditions. The code for this simulation is available in the supplementary materials. Figure \ref{fig:vault_distribution} demonstrates the vault value distribution across 10,000 simulation scenarios, incorporating correlated shocks, liquidity crises, and correlation breakdown events.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{vault_value_distribution.jpeg}
-    \caption{Vault Value Distribution Under Extreme Stress Testing. The histogram shows outcomes across 10,000 Monte Carlo simulations with Value-at-Risk thresholds at 95\%, 99\%, and 99.9\% confidence levels. The distribution centers around \$1M base assets with manageable tail risk, validating the protocol's resilience under stress scenarios.}
+    \caption{Vault Value Distribution Under Extreme Stress Testing. The histogram shows outcomes across 10,000 Monte Carlo simulations with Value-at-Risk thresholds at 95\%, 99\%, and 99.9\% confidence levels. The distribution centers around \$800,000 base assets with manageable tail risk, validating the protocol's resilience under stress scenarios.}
     \label{fig:vault_distribution}
 \end{figure}
 
-The simulation results confirm that even under extreme stress scenarios, the protocol maintains structural integrity. The 99\% Value-at-Risk indicates maximum potential losses of approximately 15\% under severe market distress, while the 99.9\% threshold captures black swan events with losses not exceeding 25\% of base capital. This tail risk profile is consistent with institutional risk management requirements for emerging market investments.
-
+The simulation results confirm that even under extreme stress scenarios, the protocol maintains relative structural integrity. The 99\% Value-at-Risk indicates maximum potential losses of approximately 15\% under severe market distress, while the 99.9\% threshold captures black swan events with losses not exceeding 35\% of base capital. This tail risk profile is consistent with institutional risk management requirements for emerging market investments.
 
 \subsubsection{Regulatory Risk Framework}
 
@@ -482,28 +479,7 @@ The synergy coefficient between AMM and lending is:
 
 This typically adds 150-300 basis points to effective lending returns.
 
-\textbf{Synergy 3: Volatility Information Flow}
-Options trading generates implied volatility data that improves AMM fee optimization:
-
-\begin{equation}
-\sigma_{implied}(T) = \text{BS}^{-1}(C_{market}, S, K, r, T)
-\end{equation}
-
-The AMM uses a constant fee rate rather than dynamic adjustment:
-
-\begin{equation}
-f_{optimal} = f_{vault}
-\end{equation}
-
-This simplifies the synergy calculation to:
-
-\begin{equation}
-\Psi_{Options,AMM} = 0
-\end{equation}
-
-since there is no fee optimization based on implied volatility.
-
-\textbf{Synergy 4: Risk Hedging Efficiency}
+\textbf{Synergy 3: Risk Hedging Efficiency}
 Lending positions can be delta-hedged using options written by the same vault, creating internal risk management:
 
 \begin{equation}
@@ -516,24 +492,28 @@ The variance reduction from internal hedging is:
 \sigma^2_{hedged} = \sigma^2_{unhedged} \cdot \left(1 - \rho^2_{hedge,underlying}\right)
 \end{equation}
 
-This cross-hedging capability reduces overall portfolio risk by 15-25% while maintaining return potential.
+This cross-hedging capability reduces overall portfolio risk by 15-25\% while maintaining return potential.
 
 \textbf{Total Synergy Value:}
 The combined synergy effects can be quantified as:
 
 \begin{equation}
-\text{Total Synergy} = \sum_{i<j} w_i w_j \Psi_{i,j} = 0.02 \cdot w_{AMM} \cdot w_{Options} + 0.03 \cdot w_{AMM} \cdot w_{Lending} + 0.015 \cdot w_{Options} \cdot w_{Lending}
+\begin{split}
+\text{Total Synergy} &= \sum_{i<j} w_i w_j \Psi_{i,j} \\
+&= 0.02 \cdot w_{AMM} \cdot w_{Options} + 0.03 \cdot w_{AMM} \cdot w_{Lending} \\
+&\quad + 0.015 \cdot w_{Options} \cdot w_{Lending}
+\end{split}
 \end{equation}
 
-For equal allocations ($w_i = 0.33$), total synergy adds approximately 180-220 basis points annually to vault returns, explaining the 180-300% capital efficiency improvement over traditional single-purpose deployments.
+For equal allocations ($w_i = 0.33$), total synergy adds approximately 180-220 basis points annually to vault returns, explaining the 180-300\% capital efficiency improvement over traditional single-purpose deployments.
 
 \section{Key Technical Components}
 
 \subsection{Verifiable Oracles}
-The Sereel Protocol relies on oracles not only to verify asset backing, but also to provide real-time price feeds for the vaults. In the RWA space, this is typically done with an oracle network such as Chainlink or Redstone. However, Sereel uses cutting-edge zero-knowledge Transport Layer Security to provide verifiable data feeds at a fraction of the cost. 
+The Sereel Protocol relies on oracles not only to verify asset backing, but also to provide real-time price feeds for the vaults. In the RWA space, this is typically done with an oracle network such as Chainlink or Redstone. However, because most vault managers are institutions with readily-available price feeds, Sereel uses cutting-edge verifiable Transport Layer Security (TLS) for reliable data feeds at a fraction of the cost. This enables support for even the most exotic pairs (e.g. tokenized Zimbabwean lithium for ZiG stablecoins).
 
 \subsubsection{ZK-TLS for Verifiable Oracle Data}
-To provide trustworthy oracle data while minimizing costs, Sereel implements zero-knowledge Transport Layer Security (ZK-TLS) for verifiable data feeds. \cite{xie2023zktls} demonstrate the utility of garbled circuits and zero knowledge proof to verify TLS handshakes for arbitrary internet connections.
+To provide trustworthy oracle data while minimizing costs, Sereel implements zero-knowledge Transport Layer Security (ZK-TLS) for verifiable data feeds. \citet{xie2023zktls} demonstrate the utility of garbled circuits and zero knowledge proof to verify TLS handshakes for arbitrary internet connections.
 
 This approach offers significant advantages over traditional oracle networks:
 
@@ -556,12 +536,12 @@ where ZKP represents a zero-knowledge proof that the data was received through a
 
 \subsubsection{Alternative Approach: MPC-TLS}
 
-An alternative to ZK-TLS is MPC-TLS (Multi-Party Computation TLS), as proposed by \cite{dagas2024mpctls}. MPC-TLS offers enhanced security properties through threshold cryptography, allowing multiple parties to jointly establish TLS connections without any single party having access to the private key.
+An alternative to ZK-TLS is MPC-TLS (Multi-Party Computation TLS), as described by \citet{dagas2024mpctls}. MPC-TLS offers enhanced security properties through threshold cryptography, allowing two parties to jointly establish TLS connections without any single party having access to the private key.
 
 The key differences between MPC-TLS and ZK-TLS are:
 
 \begin{itemize}
-  \item \textbf{Security Model:} MPC-TLS provides stronger threshold security, requiring multiple parties (the notary) to be compromised rather than a single prover as in ZK-TLS
+  \item \textbf{Security Model:} MPC-TLS provides stronger threshold security, requiring multiple parties (the notary and the prover) to be compromised rather than a single prover as in ZK-TLS
   \item \textbf{Computational Overhead:} MPC-TLS incurs significantly higher computational costs due to interactive multi-party protocols
   \item \textbf{Latency:} MPC-TLS suffers from higher latency due to communication rounds between parties
   \item \textbf{Deployment Complexity:} MPC-TLS requires coordinated infrastructure across multiple entities along with a trusted notary
@@ -586,21 +566,19 @@ Despite MPC-TLS offering theoretically stronger security guarantees, Sereel opte
 
 This trade-off prioritizes performance and accessibility while maintaining adequate security for oracle operations in emerging market contexts, where computational resources may be constrained and latency is a critical factor for market operations.
 
-
 \subsection{Native Bridging}
-Our stablecoins and ERC3643 tokens are natively bridgeable to multiple chains thanks to VIA Labs' token bridge. Institutions can select a blockchain they want to provide their vault's liquidity on. If an institution wants to work on a chain that we do not support, we have the facilities to add it in reasonable time.
+Our stablecoins and ERC3643 tokens are natively bridgeable to multiple chains thanks to VIA Labs' token bridge \citep{vialabs2024bridge}. Institutions can select a blockchain they want to provide their vault's liquidity on. If an institution wants to work on a chain that we do not support, we have the facilities to add it in reasonable time.
+
 \subsection{Sereel Dashboard}
 Wallet management and tokenization are nontrivial tasks that require careful management of keys and regular asset auditing. Large institutions often have in-house blockchain teams that develop custom solutions for these challenges. However, most global institutions not only lack the access to talent for this, but also the time and resources required to maintain them. 
 
-The Sereel Dashboard is all an institution needs to participate in the Sereel Protocol. We house a multi-signature wallet that is controlled by stakeholders' hardware wallets (passkeys or yubikeys). These multi-sig wallets maximize the security of the assets by requiring multiple approvals before any blockchain transaction is made. The Dashboard also provides a user-friendly tokenization engine that connects with trust account interfaces (typically APIs) that verify asset backing in real time.
+The Sereel Dashboard is all an institution needs to participate in the Sereel Protocol. We house a multi-signature wallet that is controlled by stakeholders' hardware wallets (passkeys or yubikeys). These multi-sig wallets maximize the security of the assets by requiring multiple approvals before any  transaction is made. The Dashboard also provides a user-friendly tokenization engine that connects with trust account interfaces (typically APIs) that verify asset backing in real time.
 
-Institutions can custody and tokenize on the Sereel Dashboard, then ultimately create a vault and provide liquidity. The product is designed to be intuitive, without extensive knowledge of blockchain necessary.
+Institutions can custody and tokenize on the Sereel Dashboard, then ultimately create a vault and provide liquidity. The product is designed to be intuitive, without extensive knowledge of blockchain or decentralized finance necessary.
 
 \section{Empirical Validation and Performance Analysis}
 
 \subsection{Cross-Module Synergy Verification}
-
-Our mathematical framework for cross-module synergies has been empirically validated through comprehensive simulation testing. Figure \ref{fig:synergy_breakdown} quantifies the synergistic effects between AMM, lending, and options modules, demonstrating measurable yield enhancements beyond individual module performance.
 
 \begin{figure}[h]
     \centering
@@ -608,6 +586,8 @@ Our mathematical framework for cross-module synergies has been empirically valid
     \caption{Cross-Module Synergy Contributions. The bar chart shows synergy yields in basis points for each module interaction: AMM-Options synergy from improved liquidity provision, AMM-Lending synergy from LP token collateral utilization, and Options-Lending synergy from delta-hedging efficiency. Total synergy contributions validate the 180-300 basis point enhancement claimed in our capital efficiency model.}
     \label{fig:synergy_breakdown}
 \end{figure}
+
+Our mathematical framework for cross-module synergies has been empirically validated through comprehensive simulation testing. Figure \ref{fig:synergy_breakdown} quantifies the synergistic effects between AMM, lending, and options modules, demonstrating measurable yield enhancements beyond individual module performance.
 
 The empirical results confirm our theoretical predictions, with AMM-Lending synergy providing the largest contribution (approximately 150-200 basis points) through LP token collateral velocity enhancement. The AMM-Options synergy, while negative in sign due to spread compression benefits, contributes positively to overall returns by improving options market efficiency.
 
@@ -624,19 +604,36 @@ The correlation matrix implementation demonstrates the protocol's ability to ada
 
 The stress-adjusted correlation matrix validates our cascade prevention mechanisms. When correlations exceed 0.8 (our circuit breaker threshold), the protocol implements module isolation procedures to prevent systemic failures across the integrated vault structure.
 
-
 \section{Conclusion}
 
 The Sereel Protocol represents a paradigm shift in how capital markets can leverage blockchain technology to overcome traditional limitations. By creating unified vaults that simultaneously serve multiple functions, we unlock unprecedented yield opportunities while maintaining regulatory compliance and reducing systemic risk.
 
 \bibliography{references}
+
 \appendix
 
-\section{Comprehensive Simulation Results}
+\section{Appendix}
+\subsection{Simulation Result Summaries}
 
-\subsection{Risk-Return Profile Analysis}
-
+\subsubsection{Risk-Return Profile Analysis}
 The risk-return characteristics of Sereel vaults demonstrate superior performance compared to traditional single-purpose deployments. Figure \ref{fig:risk_return_profile} illustrates the relationship between portfolio losses and yields across various market scenarios.
+
+The analysis reveals that Sereel's integrated approach maintains positive yields even during moderate portfolio stress, validating the resilience of the multi-purpose capital deployment strategy in emerging market conditions.
+
+\subsubsection{Systemic Risk Event Analysis}
+
+Comprehensive stress testing reveals the frequency and impact of various systemic risk events. Figure \ref{fig:systemic_risk_events} quantifies the probability of different failure modes across the simulation framework.
+
+The systemic risk analysis demonstrates that correlation breakdown events occur in approximately 5\% of simulations, while compound failures (multiple simultaneous risk events) remain below 0.5\%, confirming the robustness of the cascade prevention mechanisms.
+
+\subsubsection{Risk Component Decomposition}
+
+The comprehensive risk framework identifies and quantifies different sources of portfolio risk. Figure \ref{fig:risk_component_breakdown} provides a detailed analysis of risk contributions from various sources.
+
+The risk decomposition analysis confirms that market risk dominates the risk profile at 32.8\%, consistent with emerging market volatility characteristics. The relatively low operational risk (cascade potential) validates the effectiveness of the protocol's risk management architecture.
+
+\newpage
+\subsection{Figures}
 
 \begin{figure}[h]
     \centering
@@ -645,38 +642,6 @@ The risk-return characteristics of Sereel vaults demonstrate superior performanc
     \label{fig:risk_return_profile}
 \end{figure}
 
-The analysis reveals that Sereel's integrated approach maintains positive yields even during moderate portfolio stress, validating the resilience of the multi-purpose capital deployment strategy in emerging market conditions.
-
-\subsection{Operational Metrics and Protocol Health}
-
-Operational efficiency metrics demonstrate the practical viability of the protocol for institutional deployment. Figure \ref{fig:operational_metrics} presents key performance indicators across all vault modules.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{operational_metrics.jpg}
-    \caption{Vault Operational Metrics Dashboard. The chart displays AMM swap volume, active lending positions, options contracts written, and total liquidity depth in thousands of dollars. These metrics validate the protocol's ability to generate meaningful activity levels suitable for institutional participation in emerging markets.}
-    \label{fig:operational_metrics}
-\end{figure}
-
-The operational metrics confirm that a \$1M vault generates sufficient trading activity to justify the computational and gas costs associated with multi-module operations, with estimated transaction volumes exceeding \$500K monthly across all modules.
-
-\subsection{Performance Metrics Analysis}
-
-Protocol health indicators provide real-time assessment of vault performance across multiple dimensions. Figure \ref{fig:performance_metrics} shows the scoring methodology for key performance indicators.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{performance_metrics.jpeg}
-    \caption{Protocol Performance Metrics Scoring. The dashboard shows liquidity ratio (AMM efficiency), utilization rate (lending health), volatility adjustment (options pricing accuracy), and aggregate health factor (system stability). The color-coded scoring system provides immediate visual assessment of protocol health across all modules.}
-    \label{fig:performance_metrics}
-\end{figure}
-
-The performance metrics validation confirms that 45\% lending utilization represents optimal efficiency for emerging market conditions, balancing yield generation with liquidity risk management requirements for institutional participants.
-
-\subsection{Systemic Risk Event Analysis}
-
-Comprehensive stress testing reveals the frequency and impact of various systemic risk events. Figure \ref{fig:systemic_risk_events} quantifies the probability of different failure modes across the simulation framework.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{systemic_risk_events.jpeg}
@@ -684,45 +649,11 @@ Comprehensive stress testing reveals the frequency and impact of various systemi
     \label{fig:systemic_risk_events}
 \end{figure}
 
-The systemic risk analysis demonstrates that correlation breakdown events occur in approximately 5\% of simulations, while compound failures (multiple simultaneous risk events) remain below 0.5\%, confirming the robustness of the cascade prevention mechanisms.
-
-\subsection{Risk Component Decomposition}
-
-The comprehensive risk framework identifies and quantifies different sources of portfolio risk. Figure \ref{fig:risk_component_breakdown} provides a detailed analysis of risk contributions from various sources.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{risk_component_breakdown.jpeg}
     \caption{Risk Component Breakdown Analysis. The chart decomposes total portfolio risk into market risk (price volatility), liquidity risk (depth constraints), correlation risk (module interdependence), and operational risk (cascade potential). The 32.8\% market risk component reflects the higher volatility environment typical of emerging market assets.}
     \label{fig:risk_component_breakdown}
 \end{figure}
-
-The risk decomposition analysis confirms that market risk dominates the risk profile at 32.8\%, consistent with emerging market volatility characteristics. The relatively low operational risk (cascade potential) validates the effectiveness of the protocol's risk management architecture.
-
-\subsection{Module Performance Comparison}
-
-Individual module performance with synergistic enhancements demonstrates the value creation from integrated vault architecture. Figure \ref{fig:module_performance} compares base yields with synergy-enhanced returns.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{module_performance_comparison.jpeg}
-    \caption{Module Performance with Synergistic Enhancements. The comparison shows base yield from each module (light blue) versus additional yield from cross-module synergies (gold). The integrated architecture provides measurable enhancement over standalone module deployment, validating the theoretical framework for capital efficiency improvement.}
-    \label{fig:module_performance}
-\end{figure}
-
-The module performance analysis confirms that synergistic enhancements contribute 15-25\% additional yield beyond base module performance, supporting the protocol's value proposition for institutional deployment in capital-constrained emerging markets.
-
-\subsection{Overall Protocol Assessment}
-
-The comprehensive testing framework culminates in an overall protocol assessment score based on weighted performance across all evaluated dimensions. Figure \ref{fig:protocol_score} presents the final evaluation methodology.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{protocol_score_gauge.jpeg}
-    \caption{Overall Protocol Assessment Score. The gauge displays the weighted average score across six key dimensions: capital efficiency, yield performance, risk management, liquidation safety, synergy realization, and systemic resilience. The score reflects the protocol's readiness for institutional deployment in emerging market contexts.}
-    \label{fig:protocol_score}
-\end{figure}
-
-The overall protocol assessment score provides a comprehensive evaluation of the Sereel Protocol's viability for institutional deployment, incorporating both performance metrics and risk management effectiveness across all operational dimensions.
 
 \end{document}

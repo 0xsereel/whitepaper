@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex pyramid"] 1753269992.75249 "pyramid.aux" "pyramid.bbl" "pyramid" 1753270008.37391 0
+["bibtex surreal"] 1753270109.51386 "surreal.aux" "surreal.bbl" "surreal" 1753270124.01101 0
   "./references.bib" 1753269772.30392 3235 9a774d428a6700a276fbacd68c503bf0 ""
   "/usr/local/texlive/2025basic/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "pyramid.aux" 1753270007.1169 9877 195b22cb205f0d83ffbcb062859c4a14 "pdflatex"
+  "surreal.aux" 1753270117.97338 9877 195b22cb205f0d83ffbcb062859c4a14 "pdflatex"
   (generated)
-  "pyramid.bbl"
-  "pyramid.blg"
+  "surreal.bbl"
+  "surreal.blg"
   (rewritten before read)
-["pdflatex"] 1753269993.18722 "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" "pyramid.pdf" "pyramid" 1753270008.37513 0
-  "/Library/Ato/Seree/Research/blackpaper/pyramid.tex" 1753269994.37213 41629 a30627c30d56837c99ea2f5d602ef2a3 ""
+["pdflatex"] 1753270109.87868 "/Library/Ato/Seree/Research/blackpaper/surreal.tex" "surreal.pdf" "surreal" 1753270124.05924 0
+  "/Library/Ato/Seree/Research/blackpaper/surreal.tex" 1753270094.86441 41629 a30627c30d56837c99ea2f5d602ef2a3 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -100,17 +100,17 @@
   "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
   "correlation_matrix.jpg" 1753259586.36091 42462 6bdd0d4428ecb94b62e052f6786e1bfb ""
   "health_factor_evaluation.jpeg" 1753259621.58708 65931 208e76e662c17f71bb40ff48252b137e ""
-  "pyramid.aux" 1753270007.1169 9877 195b22cb205f0d83ffbcb062859c4a14 "pdflatex"
-  "pyramid.bbl" 1753269993.17231 2953 20900879068673d959abccd5ad096200 "bibtex pyramid"
-  "pyramid.tex" 1753269994.37213 41629 a30627c30d56837c99ea2f5d602ef2a3 ""
   "risk_component_breakdown.jpeg" 1753259777.98252 46402 32d42f1b97c87af7d9fcb8e799a9977f ""
   "risk_return_profile.jpeg" 1753259703.48093 62799 8b1f406045309272238f52a45357d78a ""
   "stochastic_volatility_path.jpeg" 1753259675.17847 53679 01c98bf736f9dfdba3c03e1ad22770ec ""
+  "surreal.aux" 1753270117.97338 9877 195b22cb205f0d83ffbcb062859c4a14 "pdflatex"
+  "surreal.bbl" 1753270109.862 2953 20900879068673d959abccd5ad096200 "bibtex surreal"
+  "surreal.tex" 1753270094.86441 41629 a30627c30d56837c99ea2f5d602ef2a3 ""
   "synergy_breakdown.jpeg" 1753259604.5484 45858 3f5223ac95ae60344898e13d422d4305 ""
   "systemic_risk_events.jpeg" 1753259690.99859 40802 b2a5f01297d9bd44dfbd79dfb24ffb18 ""
   "vault_value_distribution.jpeg" 1753259561.70327 79454 2f1e2aff55ba2bbf9436d47ac353e4f0 ""
   (generated)
-  "pyramid.aux"
-  "pyramid.log"
-  "pyramid.pdf"
+  "surreal.aux"
+  "surreal.log"
+  "surreal.pdf"
   (rewritten before read)
