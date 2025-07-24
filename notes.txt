@@ -1,2 +1,0 @@
-npm install -g md2tex
-md2tex blackpaper-claude.md black.tex
