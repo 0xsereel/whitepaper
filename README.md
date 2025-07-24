@@ -1,4 +1,4 @@
-![Sereel Protocol Logo](./Sereel.png)
+![s](Sereel.png)
 # Sereel Protocol Whitepaper Repository
 
 This repository contains the official whitepaper and supporting materials for the **Sereel Protocol**.
