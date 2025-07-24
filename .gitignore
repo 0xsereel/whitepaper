@@ -4,6 +4,8 @@
 # But keep these specific files
 !surreal.pdf
 !surreal.py
+!pyramid.py
+!README.md
 
 # Keep the .gitignore file itself
 !.gitignore
