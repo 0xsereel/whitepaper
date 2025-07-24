@@ -1,0 +1,9 @@
+# Ignore all files
+*
+
+# But keep these specific files
+!surreal.pdf
+!surreal.py
+
+# Keep the .gitignore file itself
+!.gitignore
